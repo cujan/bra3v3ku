@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<parent>
+		<groupId>eAutoskola.sk</groupId>
+		<artifactId>eAutoskola-parent</artifactId>
+		<version>0.1-SNAPSHOT</version>
+		<relativePath>eAutoskola-parent/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>eAutoskola</artifactId>
+	<packaging>pom</packaging>
+	<name>eAutoskola</name>
+
+
+	<modules>
+		<module>eAutoskola-parent</module>
+		<module>eAutoskola-core</module>
+	</modules>
+
+</project>
