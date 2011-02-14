@@ -12,9 +12,12 @@ import javax.persistence.Query;
 public class BasicDaoImpl<T, ID extends Serializable> implements BasicDao<T, ID> {
 	private static EntityManagerFactory factory;
 
+	@SuppressWarnings("unchecked")
 	public T getEntityByID(Object entityType,ID entityID) {
 		EntityManager em = factory.createEntityManager();
-		return (T)em.find(entityType.getClass(), entityID);
+		Object ent = em.find(entityType.getClass(), entityID);
+		em.close();
+		return (T)ent;
 	}
 
 	public BasicDaoImpl(String persistenceUnitName) {
@@ -22,11 +25,40 @@ public class BasicDaoImpl<T, ID extends Serializable> implements BasicDao<T, ID>
 		factory = Persistence.createEntityManagerFactory(persistenceUnitName);
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<T> getEntityList(Object entityType) {
 		EntityManager em = factory.createEntityManager();
 		Query q = em.createQuery("select t from "+entityType.getClass().getSimpleName()+" t");
 		List<T> entity = q.getResultList();
 		em.close();
 		return entity;
+	}
+
+	@Override
+	public void insert(T entity) {
+		EntityManager em = factory.createEntityManager();
+		em.getTransaction().begin();
+		em.persist(entity);
+		em.getTransaction().commit();
+		em.close();		
+	}
+
+	
+	public void update(T entity) {
+	T entity1= null;
+	EntityManager em = factory.createEntityManager();
+	em.getTransaction().begin();
+	entity1=entity;
+	em.getTransaction().commit();
+	em.close();		
+	
+	}
+
+	public void delete(T entity) {
+		EntityManager em = factory.createEntityManager();
+		em.getTransaction().begin();
+		em.remove(entity);
+		em.getTransaction().commit();
+		em.close();		
 	}
 }
