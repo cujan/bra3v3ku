@@ -20,6 +20,10 @@
 		</repository>
 	</repositories>
 
+	<properties>
+  		<derby.version>10.6.1.0</derby.version>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
@@ -38,6 +42,12 @@
 			<version>5.1.13</version>
 			<type>jar</type>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>${derby.version}</version>
+			<scope>compile</scope> 
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

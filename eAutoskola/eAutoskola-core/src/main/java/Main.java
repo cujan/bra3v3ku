@@ -8,7 +8,7 @@ import com.bra3v3ku.autoskola.dao.Automobil;
 
 
 public class Main {
-	private static final String PERSISTENCE_UNIT_NAME = "eAutoskola";
+	private static final String PERSISTENCE_UNIT_NAME = "eAutoskolaDerby";
 	private static EntityManagerFactory factory;
 
 	public static void main(String[] args) {

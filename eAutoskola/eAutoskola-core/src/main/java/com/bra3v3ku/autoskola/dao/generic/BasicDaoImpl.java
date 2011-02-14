@@ -10,16 +10,16 @@ import javax.persistence.Query;
 
 
 public class BasicDaoImpl<T, ID extends Serializable> implements BasicDao<T, ID> {
-	private static final String PERSISTENCE_UNIT_NAME = "eAutoskola";
-	private static EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+	private static EntityManagerFactory factory;
 
 	public T getEntityByID(Object entityType,ID entityID) {
 		EntityManager em = factory.createEntityManager();
 		return (T)em.find(entityType.getClass(), entityID);
 	}
 
-	public BasicDaoImpl() {
+	public BasicDaoImpl(String persistenceUnitName) {
 		super();
+		factory = Persistence.createEntityManagerFactory(persistenceUnitName);
 	}
 
 	public List<T> getEntityList(Object entityType) {
