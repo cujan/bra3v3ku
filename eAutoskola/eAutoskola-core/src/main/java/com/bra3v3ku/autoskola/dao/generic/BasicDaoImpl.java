@@ -13,9 +13,9 @@ public class BasicDaoImpl<T, ID extends Serializable> implements BasicDao<T, ID>
 	private static EntityManagerFactory factory;
 
 	@SuppressWarnings("unchecked")
-	public T getEntityByID(Object entityType,ID entityID) {
+	public T getEntityByID(Class<T> entityType,ID entityID) {
 		EntityManager em = factory.createEntityManager();
-		Object ent = em.find(entityType.getClass(), entityID);
+		Object ent = em.find(entityType, entityID);
 		em.close();
 		return (T)ent;
 	}
@@ -26,9 +26,9 @@ public class BasicDaoImpl<T, ID extends Serializable> implements BasicDao<T, ID>
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<T> getEntityList(Object entityType) {
+	public List<T> getEntityList(Class<T> entityType) {
 		EntityManager em = factory.createEntityManager();
-		Query q = em.createQuery("select t from "+entityType.getClass().getSimpleName()+" t");
+		Query q = em.createQuery("select t from "+entityType.getSimpleName()+" t");
 		List<T> entity = q.getResultList();
 		em.close();
 		return entity;
@@ -42,16 +42,13 @@ public class BasicDaoImpl<T, ID extends Serializable> implements BasicDao<T, ID>
 		em.getTransaction().commit();
 		em.close();		
 	}
-
 	
 	public void update(T entity) {
-	T entity1= null;
 	EntityManager em = factory.createEntityManager();
 	em.getTransaction().begin();
-	entity1=entity;
+	em.merge(entity);
 	em.getTransaction().commit();
-	em.close();		
-	
+	em.close();	
 	}
 
 	public void delete(T entity) {
