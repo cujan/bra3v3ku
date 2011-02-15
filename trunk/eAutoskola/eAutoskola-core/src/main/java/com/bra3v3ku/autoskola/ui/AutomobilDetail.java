@@ -1,14 +1,23 @@
 package com.bra3v3ku.autoskola.ui;
 
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Dimension;
+import java.awt.EventQueue;
+
 import javax.swing.JLabel;
 import java.awt.Component;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JTextField;
 
-public class AutomobilDetail extends JPanel {
+import com.bra3v3ku.autoskola.dao.Automobil;
+import com.bra3v3ku.autoskola.dao.generic.BasicDao;
+import com.bra3v3ku.autoskola.dao.generic.BasicDaoImpl;
+
+public class AutomobilDetail extends JFrame{
+	private static final String PERSISTENCE_UNIT_NAME = "eAutoskola";
+	private BasicDao<Automobil, Integer> autoDao= new BasicDaoImpl<Automobil,Integer>(PERSISTENCE_UNIT_NAME);
 	private JTextField idTF;
 	private JTextField znackaTF;
 	private JTextField modelTF;
@@ -18,10 +27,25 @@ public class AutomobilDetail extends JPanel {
 	private JTextField ekPlatnostTF;
 	private JTextField vinTF;
 
+	public static void main(final Integer arg) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AutomobilDetail frame = new AutomobilDetail(arg);
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	
 	/**
 	 * Create the panel.
 	 */
-	public AutomobilDetail() {
+	public AutomobilDetail(Integer id) {
+		Automobil auto = autoDao.getEntityByID(Automobil.class, id);
 		setSize(new Dimension(800, 600));
 		setLayout(null);
 		
@@ -113,6 +137,9 @@ public class AutomobilDetail extends JPanel {
 		vinTF.setBounds(237, 170, 86, 20);
 		add(vinTF);
 		vinTF.setColumns(10);
+		
+		znackaTF.setText(auto.getZnacka());
+		modelTF.setText(auto.getModel());
 
 	}
 }
