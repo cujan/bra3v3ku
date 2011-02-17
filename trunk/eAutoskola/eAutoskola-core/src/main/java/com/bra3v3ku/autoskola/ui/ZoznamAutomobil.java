@@ -19,9 +19,12 @@ import org.jdesktop.beansbinding.AutoBinding.UpdateStrategy;
 import org.jdesktop.beansbinding.BeanProperty;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ZoznamAutomobil extends JFrame {
-	private static final String PERSISTENCE_UNIT_NAME = "eAutoskola";
+	private static final String PERSISTENCE_UNIT_NAME = "eAutoskolaDerby";
 	private JPanel contentPane;
 	private JTable table;
 	private BasicDao<Automobil, Integer> autoDao= new BasicDaoImpl<Automobil,Integer>(PERSISTENCE_UNIT_NAME);
@@ -64,8 +67,17 @@ public class ZoznamAutomobil extends JFrame {
 				}
 			}
 		});
-		table.setBounds(30, 35, 389, 208);
+		table.setBounds(30, 45, 389, 208);
 		contentPane.add(table);
+		
+		JButton insertBtn = new JButton("Novy zaznam");
+		insertBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				AutomobilDetail.main(-1);				
+			}
+		});
+		insertBtn.setBounds(89, 11, 117, 23);
+		contentPane.add(insertBtn);
 		initDataBindings();
 	}
 	protected void initDataBindings() {
