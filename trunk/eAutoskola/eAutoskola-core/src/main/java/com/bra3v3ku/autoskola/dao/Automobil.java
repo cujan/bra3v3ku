@@ -14,7 +14,8 @@ import java.util.Date;
 @Table(name="automobil")
 public class Automobil implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	@Id
 	private int id;
 
