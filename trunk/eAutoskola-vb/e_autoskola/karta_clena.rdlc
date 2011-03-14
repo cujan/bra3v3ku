@@ -1,0 +1,1674 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="spz_evidenciaConnectionString">
+      <rd:DataSourceID>dd17f445-b3e0-40c9-936c-d47cd19260b2</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>
+        </DataProvider>
+        <ConnectString>
+        </ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <rd:ReportID>9c0df49a-5f1a-4b96-9aff-5a94ca00528a</rd:ReportID>
+  <Width>12.69841cm</Width>
+  <Body>
+    <Height>51.53016cm</Height>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>20pt</FontSize>
+          <Color>SteelBlue</Color>
+          <FontWeight>Bold</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Value>karta_clena</Value>
+        <CanGrow>true</CanGrow>
+        <Height>0.91429cm</Height>
+      </Textbox>
+      <List Name="List1">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>14pt</FontSize>
+          <Color>SlateGray</Color>
+        </Style>
+        <ReportItems>
+          <Textbox Name="titul">
+            <Style>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>14pt</FontSize>
+              <Color>SlateGray</Color>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <rd:DefaultName>titul</rd:DefaultName>
+            <Value>=Fields!titul.Value</Value>
+            <CanGrow>true</CanGrow>
+            <Height>0.68571cm</Height>
+          </Textbox>
+          <List Name="List2">
+            <Style>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>12pt</FontSize>
+            </Style>
+            <ReportItems>
+              <Textbox Name="meno">
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <rd:DefaultName>meno</rd:DefaultName>
+                <Value>=Fields!meno.Value</Value>
+                <CanGrow>true</CanGrow>
+                <Height>0.60952cm</Height>
+              </Textbox>
+              <List Name="List3">
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>10pt</FontSize>
+                </Style>
+                <ReportItems>
+                  <Textbox Name="priezvisko">
+                    <Style>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>10pt</FontSize>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                    <rd:DefaultName>priezvisko</rd:DefaultName>
+                    <Value>=Fields!priezvisko.Value</Value>
+                    <CanGrow>true</CanGrow>
+                    <Height>0.53333cm</Height>
+                  </Textbox>
+                  <List Name="List4">
+                    <Style>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>10pt</FontSize>
+                    </Style>
+                    <ReportItems>
+                      <Textbox Name="rodne_cislo">
+                        <Style>
+                          <FontFamily>Tahoma</FontFamily>
+                          <FontSize>10pt</FontSize>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                        <rd:DefaultName>rodne_cislo</rd:DefaultName>
+                        <Value>=Fields!rodne_cislo.Value</Value>
+                        <CanGrow>true</CanGrow>
+                        <Height>0.53333cm</Height>
+                      </Textbox>
+                      <List Name="List5">
+                        <Style>
+                          <FontFamily>Tahoma</FontFamily>
+                          <FontSize>10pt</FontSize>
+                        </Style>
+                        <ReportItems>
+                          <Textbox Name="miesto_narodenia">
+                            <Style>
+                              <FontFamily>Tahoma</FontFamily>
+                              <FontSize>10pt</FontSize>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                            <rd:DefaultName>miesto_narodenia</rd:DefaultName>
+                            <Value>=Fields!miesto_narodenia.Value</Value>
+                            <CanGrow>true</CanGrow>
+                            <Height>0.53333cm</Height>
+                          </Textbox>
+                          <List Name="List6">
+                            <Style>
+                              <FontFamily>Tahoma</FontFamily>
+                              <FontSize>10pt</FontSize>
+                            </Style>
+                            <ReportItems>
+                              <Textbox Name="okres_narodenia">
+                                <Style>
+                                  <FontFamily>Tahoma</FontFamily>
+                                  <FontSize>10pt</FontSize>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                                <rd:DefaultName>okres_narodenia</rd:DefaultName>
+                                <Value>=Fields!okres_narodenia.Value</Value>
+                                <CanGrow>true</CanGrow>
+                                <Height>0.53333cm</Height>
+                              </Textbox>
+                              <List Name="List7">
+                                <Style>
+                                  <FontFamily>Tahoma</FontFamily>
+                                  <FontSize>10pt</FontSize>
+                                </Style>
+                                <ReportItems>
+                                  <Textbox Name="bydlisko">
+                                    <Style>
+                                      <FontFamily>Tahoma</FontFamily>
+                                      <FontSize>10pt</FontSize>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                    <rd:DefaultName>bydlisko</rd:DefaultName>
+                                    <Value>=Fields!bydlisko.Value</Value>
+                                    <CanGrow>true</CanGrow>
+                                    <Height>0.53333cm</Height>
+                                  </Textbox>
+                                  <List Name="List8">
+                                    <Style>
+                                      <FontFamily>Tahoma</FontFamily>
+                                      <FontSize>10pt</FontSize>
+                                    </Style>
+                                    <ReportItems>
+                                      <Textbox Name="psc">
+                                        <Style>
+                                          <FontFamily>Tahoma</FontFamily>
+                                          <FontSize>10pt</FontSize>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                        <rd:DefaultName>psc</rd:DefaultName>
+                                        <Value>=Fields!psc.Value</Value>
+                                        <CanGrow>true</CanGrow>
+                                        <Height>0.53333cm</Height>
+                                      </Textbox>
+                                      <List Name="List9">
+                                        <Style>
+                                          <FontFamily>Tahoma</FontFamily>
+                                          <FontSize>10pt</FontSize>
+                                        </Style>
+                                        <ReportItems>
+                                          <Textbox Name="statna_prislusnost">
+                                            <Style>
+                                              <FontFamily>Tahoma</FontFamily>
+                                              <FontSize>10pt</FontSize>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                            <rd:DefaultName>statna_prislusnost</rd:DefaultName>
+                                            <Value>=Fields!statna_prislusnost.Value</Value>
+                                            <CanGrow>true</CanGrow>
+                                            <Height>0.53333cm</Height>
+                                          </Textbox>
+                                          <List Name="List10">
+                                            <Style>
+                                              <FontFamily>Tahoma</FontFamily>
+                                              <FontSize>10pt</FontSize>
+                                            </Style>
+                                            <ReportItems>
+                                              <Textbox Name="cislo_op">
+                                                <Style>
+                                                  <FontFamily>Tahoma</FontFamily>
+                                                  <FontSize>10pt</FontSize>
+                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                  <PaddingRight>2pt</PaddingRight>
+                                                  <PaddingTop>2pt</PaddingTop>
+                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                </Style>
+                                                <rd:DefaultName>cislo_op</rd:DefaultName>
+                                                <Value>=Fields!cislo_op.Value</Value>
+                                                <CanGrow>true</CanGrow>
+                                                <Height>0.53333cm</Height>
+                                              </Textbox>
+                                              <List Name="List11">
+                                                <Style>
+                                                  <FontFamily>Tahoma</FontFamily>
+                                                  <FontSize>10pt</FontSize>
+                                                </Style>
+                                                <ReportItems>
+                                                  <Textbox Name="datum_vydania_op">
+                                                    <Style>
+                                                      <FontFamily>Tahoma</FontFamily>
+                                                      <FontSize>10pt</FontSize>
+                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                      <PaddingRight>2pt</PaddingRight>
+                                                      <PaddingTop>2pt</PaddingTop>
+                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                    </Style>
+                                                    <rd:DefaultName>datum_vydania_op</rd:DefaultName>
+                                                    <Value>=Fields!datum_vydania_op.Value</Value>
+                                                    <CanGrow>true</CanGrow>
+                                                    <Height>0.53333cm</Height>
+                                                  </Textbox>
+                                                  <List Name="List12">
+                                                    <Style>
+                                                      <FontFamily>Tahoma</FontFamily>
+                                                      <FontSize>10pt</FontSize>
+                                                    </Style>
+                                                    <ReportItems>
+                                                      <Textbox Name="cislo_pl">
+                                                        <Style>
+                                                          <FontFamily>Tahoma</FontFamily>
+                                                          <FontSize>10pt</FontSize>
+                                                          <PaddingLeft>2pt</PaddingLeft>
+                                                          <PaddingRight>2pt</PaddingRight>
+                                                          <PaddingTop>2pt</PaddingTop>
+                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                        </Style>
+                                                        <rd:DefaultName>cislo_pl</rd:DefaultName>
+                                                        <Value>=Fields!cislo_pl.Value</Value>
+                                                        <CanGrow>true</CanGrow>
+                                                        <Height>0.53333cm</Height>
+                                                      </Textbox>
+                                                      <List Name="List13">
+                                                        <Style>
+                                                          <FontFamily>Tahoma</FontFamily>
+                                                          <FontSize>10pt</FontSize>
+                                                        </Style>
+                                                        <ReportItems>
+                                                          <Textbox Name="datum_vydania_pl">
+                                                            <Style>
+                                                              <FontFamily>Tahoma</FontFamily>
+                                                              <FontSize>10pt</FontSize>
+                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                              <PaddingRight>2pt</PaddingRight>
+                                                              <PaddingTop>2pt</PaddingTop>
+                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                            </Style>
+                                                            <rd:DefaultName>datum_vydania_pl</rd:DefaultName>
+                                                            <Value>=Fields!datum_vydania_pl.Value</Value>
+                                                            <CanGrow>true</CanGrow>
+                                                            <Height>0.53333cm</Height>
+                                                          </Textbox>
+                                                          <List Name="List14">
+                                                            <Style>
+                                                              <FontFamily>Tahoma</FontFamily>
+                                                              <FontSize>10pt</FontSize>
+                                                            </Style>
+                                                            <ReportItems>
+                                                              <Textbox Name="cislo_zp">
+                                                                <Style>
+                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                  <FontSize>10pt</FontSize>
+                                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                                  <PaddingRight>2pt</PaddingRight>
+                                                                  <PaddingTop>2pt</PaddingTop>
+                                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                                </Style>
+                                                                <rd:DefaultName>cislo_zp</rd:DefaultName>
+                                                                <Value>=Fields!cislo_zp.Value</Value>
+                                                                <CanGrow>true</CanGrow>
+                                                                <Height>0.53333cm</Height>
+                                                              </Textbox>
+                                                              <List Name="List15">
+                                                                <Style>
+                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                  <FontSize>10pt</FontSize>
+                                                                </Style>
+                                                                <ReportItems>
+                                                                  <Textbox Name="datum_vydania_zp">
+                                                                    <Style>
+                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                      <FontSize>10pt</FontSize>
+                                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                                      <PaddingRight>2pt</PaddingRight>
+                                                                      <PaddingTop>2pt</PaddingTop>
+                                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                                    </Style>
+                                                                    <rd:DefaultName>datum_vydania_zp</rd:DefaultName>
+                                                                    <Value>=Fields!datum_vydania_zp.Value</Value>
+                                                                    <CanGrow>true</CanGrow>
+                                                                    <Height>0.53333cm</Height>
+                                                                  </Textbox>
+                                                                  <List Name="List16">
+                                                                    <Style>
+                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                      <FontSize>10pt</FontSize>
+                                                                    </Style>
+                                                                    <ReportItems>
+                                                                      <Textbox Name="cislo_clenskeho_preukazu_spz">
+                                                                        <Style>
+                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                          <FontSize>10pt</FontSize>
+                                                                          <PaddingLeft>2pt</PaddingLeft>
+                                                                          <PaddingRight>2pt</PaddingRight>
+                                                                          <PaddingTop>2pt</PaddingTop>
+                                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                                        </Style>
+                                                                        <rd:DefaultName>cislo_clenskeho_preukazu_spz</rd:DefaultName>
+                                                                        <Value>=Fields!cislo_clenskeho_preukazu_spz.Value</Value>
+                                                                        <CanGrow>true</CanGrow>
+                                                                        <Height>0.53333cm</Height>
+                                                                      </Textbox>
+                                                                      <List Name="List17">
+                                                                        <Style>
+                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                          <FontSize>10pt</FontSize>
+                                                                        </Style>
+                                                                        <ReportItems>
+                                                                          <Textbox Name="clen_spz_od">
+                                                                            <Style>
+                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                              <FontSize>10pt</FontSize>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                            <rd:DefaultName>clen_spz_od</rd:DefaultName>
+                                                                            <Value>=Fields!clen_spz_od.Value</Value>
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <Height>0.53333cm</Height>
+                                                                          </Textbox>
+                                                                          <List Name="List18">
+                                                                            <Style>
+                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                              <FontSize>10pt</FontSize>
+                                                                            </Style>
+                                                                            <ReportItems>
+                                                                              <Textbox Name="clenske_do">
+                                                                                <Style>
+                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                  <FontSize>10pt</FontSize>
+                                                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                                                  <PaddingRight>2pt</PaddingRight>
+                                                                                  <PaddingTop>2pt</PaddingTop>
+                                                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                                                </Style>
+                                                                                <rd:DefaultName>clenske_do</rd:DefaultName>
+                                                                                <Value>=Fields!clenske_do.Value</Value>
+                                                                                <CanGrow>true</CanGrow>
+                                                                                <Height>0.53333cm</Height>
+                                                                              </Textbox>
+                                                                              <List Name="List19">
+                                                                                <Style>
+                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                  <FontSize>10pt</FontSize>
+                                                                                </Style>
+                                                                                <ReportItems>
+                                                                                  <Textbox Name="cislo_dokladu_clenske">
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontSize>10pt</FontSize>
+                                                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                                                      <PaddingRight>2pt</PaddingRight>
+                                                                                      <PaddingTop>2pt</PaddingTop>
+                                                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                                                    </Style>
+                                                                                    <rd:DefaultName>cislo_dokladu_clenske</rd:DefaultName>
+                                                                                    <Value>=Fields!cislo_dokladu_clenske.Value</Value>
+                                                                                    <CanGrow>true</CanGrow>
+                                                                                    <Height>0.53333cm</Height>
+                                                                                  </Textbox>
+                                                                                  <List Name="List20">
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontSize>10pt</FontSize>
+                                                                                    </Style>
+                                                                                    <ReportItems>
+                                                                                      <Textbox Name="clen_pz">
+                                                                                        <Style>
+                                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                                          <FontSize>10pt</FontSize>
+                                                                                          <PaddingLeft>2pt</PaddingLeft>
+                                                                                          <PaddingRight>2pt</PaddingRight>
+                                                                                          <PaddingTop>2pt</PaddingTop>
+                                                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                                                        </Style>
+                                                                                        <rd:DefaultName>clen_pz</rd:DefaultName>
+                                                                                        <Value>=Fields!clen_pz.Value</Value>
+                                                                                        <CanGrow>true</CanGrow>
+                                                                                        <Height>0.53333cm</Height>
+                                                                                      </Textbox>
+                                                                                      <List Name="List21">
+                                                                                        <Style>
+                                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                                          <FontSize>10pt</FontSize>
+                                                                                        </Style>
+                                                                                        <ReportItems>
+                                                                                          <Textbox Name="skuska_z_polovnictva">
+                                                                                            <Style>
+                                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                                              <FontSize>10pt</FontSize>
+                                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                                            </Style>
+                                                                                            <rd:DefaultName>skuska_z_polovnictva</rd:DefaultName>
+                                                                                            <Value>=Fields!skuska_z_polovnictva.Value</Value>
+                                                                                            <CanGrow>true</CanGrow>
+                                                                                            <Height>0.53333cm</Height>
+                                                                                          </Textbox>
+                                                                                          <List Name="List22">
+                                                                                            <Style>
+                                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                                              <FontSize>10pt</FontSize>
+                                                                                            </Style>
+                                                                                            <ReportItems>
+                                                                                              <Textbox Name="miesto_skusky_z__polovnictva">
+                                                                                                <Style>
+                                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                                  <FontSize>10pt</FontSize>
+                                                                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                                                                  <PaddingRight>2pt</PaddingRight>
+                                                                                                  <PaddingTop>2pt</PaddingTop>
+                                                                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                                                                </Style>
+                                                                                                <rd:DefaultName>miesto_skusky_z__polovnictva</rd:DefaultName>
+                                                                                                <Value>=Fields!miesto_skusky_z__polovnictva.Value</Value>
+                                                                                                <CanGrow>true</CanGrow>
+                                                                                                <Height>0.53333cm</Height>
+                                                                                              </Textbox>
+                                                                                              <List Name="List23">
+                                                                                                <Style>
+                                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                                  <FontSize>10pt</FontSize>
+                                                                                                </Style>
+                                                                                                <ReportItems>
+                                                                                                  <Textbox Name="skuska_pre_polovnych_hospodarov">
+                                                                                                    <Style>
+                                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                                      <FontSize>10pt</FontSize>
+                                                                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                                                                      <PaddingRight>2pt</PaddingRight>
+                                                                                                      <PaddingTop>2pt</PaddingTop>
+                                                                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                                                                    </Style>
+                                                                                                    <rd:DefaultName>skuska_pre_polovnych_hospodarov</rd:DefaultName>
+                                                                                                    <Value>=Fields!skuska_pre_polovnych_hospodarov.Value</Value>
+                                                                                                    <CanGrow>true</CanGrow>
+                                                                                                    <Height>0.53333cm</Height>
+                                                                                                  </Textbox>
+                                                                                                  <List Name="List24">
+                                                                                                    <Style>
+                                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                                      <FontSize>10pt</FontSize>
+                                                                                                    </Style>
+                                                                                                    <ReportItems>
+                                                                                                      <Textbox Name="miesto_skusky_pre_polovnych_hospodarov">
+                                                                                                        <Style>
+                                                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                                                          <FontSize>10pt</FontSize>
+                                                                                                          <PaddingLeft>2pt</PaddingLeft>
+                                                                                                          <PaddingRight>2pt</PaddingRight>
+                                                                                                          <PaddingTop>2pt</PaddingTop>
+                                                                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                                                                        </Style>
+                                                                                                        <rd:DefaultName>miesto_skusky_pre_polovnych_hospodarov</rd:DefaultName>
+                                                                                                        <Value>=Fields!miesto_skusky_pre_polovnych_hospodarov.Value</Value>
+                                                                                                        <CanGrow>true</CanGrow>
+                                                                                                        <Height>0.53333cm</Height>
+                                                                                                      </Textbox>
+                                                                                                      <List Name="List25">
+                                                                                                        <Style>
+                                                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                                                          <FontSize>10pt</FontSize>
+                                                                                                        </Style>
+                                                                                                        <ReportItems>
+                                                                                                          <Textbox Name="vyzsia_skuska_z_polovnictva">
+                                                                                                            <Style>
+                                                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                                                              <FontSize>10pt</FontSize>
+                                                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                                                            </Style>
+                                                                                                            <rd:DefaultName>vyzsia_skuska_z_polovnictva</rd:DefaultName>
+                                                                                                            <Value>=Fields!vyzsia_skuska_z_polovnictva.Value</Value>
+                                                                                                            <CanGrow>true</CanGrow>
+                                                                                                            <Height>0.53333cm</Height>
+                                                                                                          </Textbox>
+                                                                                                          <List Name="List26">
+                                                                                                            <Style>
+                                                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                                                              <FontSize>10pt</FontSize>
+                                                                                                            </Style>
+                                                                                                            <ReportItems>
+                                                                                                              <Textbox Name="miesto_vyzsia_skuska_z_polovnictva">
+                                                                                                                <Style>
+                                                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                                                  <FontSize>10pt</FontSize>
+                                                                                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                  <PaddingRight>2pt</PaddingRight>
+                                                                                                                  <PaddingTop>2pt</PaddingTop>
+                                                                                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                </Style>
+                                                                                                                <rd:DefaultName>miesto_vyzsia_skuska_z_polovnictva</rd:DefaultName>
+                                                                                                                <Value>=Fields!miesto_vyzsia_skuska_z_polovnictva.Value</Value>
+                                                                                                                <CanGrow>true</CanGrow>
+                                                                                                                <Height>0.53333cm</Height>
+                                                                                                              </Textbox>
+                                                                                                              <List Name="List27">
+                                                                                                                <Style>
+                                                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                                                  <FontSize>10pt</FontSize>
+                                                                                                                </Style>
+                                                                                                                <ReportItems>
+                                                                                                                  <Textbox Name="brokova_zbran">
+                                                                                                                    <Style>
+                                                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                                                      <FontSize>10pt</FontSize>
+                                                                                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                      <PaddingRight>2pt</PaddingRight>
+                                                                                                                      <PaddingTop>2pt</PaddingTop>
+                                                                                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                    </Style>
+                                                                                                                    <rd:DefaultName>brokova_zbran</rd:DefaultName>
+                                                                                                                    <Value>=Fields!brokova_zbran.Value</Value>
+                                                                                                                    <CanGrow>true</CanGrow>
+                                                                                                                    <Height>0.53333cm</Height>
+                                                                                                                  </Textbox>
+                                                                                                                  <List Name="List28">
+                                                                                                                    <Style>
+                                                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                                                      <FontSize>10pt</FontSize>
+                                                                                                                    </Style>
+                                                                                                                    <ReportItems>
+                                                                                                                      <Textbox Name="kontrolne_strelby_brok">
+                                                                                                                        <Style>
+                                                                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                                                                          <FontSize>10pt</FontSize>
+                                                                                                                          <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                          <PaddingRight>2pt</PaddingRight>
+                                                                                                                          <PaddingTop>2pt</PaddingTop>
+                                                                                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                        </Style>
+                                                                                                                        <rd:DefaultName>kontrolne_strelby_brok</rd:DefaultName>
+                                                                                                                        <Value>=Fields!kontrolne_strelby_brok.Value</Value>
+                                                                                                                        <CanGrow>true</CanGrow>
+                                                                                                                        <Height>0.53333cm</Height>
+                                                                                                                      </Textbox>
+                                                                                                                      <List Name="List29">
+                                                                                                                        <Style>
+                                                                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                                                                          <FontSize>10pt</FontSize>
+                                                                                                                        </Style>
+                                                                                                                        <ReportItems>
+                                                                                                                          <Textbox Name="gulova_zbran">
+                                                                                                                            <Style>
+                                                                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                                                                              <FontSize>10pt</FontSize>
+                                                                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                            </Style>
+                                                                                                                            <rd:DefaultName>gulova_zbran</rd:DefaultName>
+                                                                                                                            <Value>=Fields!gulova_zbran.Value</Value>
+                                                                                                                            <CanGrow>true</CanGrow>
+                                                                                                                            <Height>0.53333cm</Height>
+                                                                                                                          </Textbox>
+                                                                                                                          <List Name="List30">
+                                                                                                                            <Style>
+                                                                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                                                                              <FontSize>10pt</FontSize>
+                                                                                                                            </Style>
+                                                                                                                            <ReportItems>
+                                                                                                                              <Textbox Name="kontrolne_strelby_gulova_zbran">
+                                                                                                                                <Style>
+                                                                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                                                                  <FontSize>10pt</FontSize>
+                                                                                                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                  <PaddingRight>2pt</PaddingRight>
+                                                                                                                                  <PaddingTop>2pt</PaddingTop>
+                                                                                                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                </Style>
+                                                                                                                                <rd:DefaultName>kontrolne_strelby_gulova_zbran</rd:DefaultName>
+                                                                                                                                <Value>=Fields!kontrolne_strelby_gulova_zbran.Value</Value>
+                                                                                                                                <CanGrow>true</CanGrow>
+                                                                                                                                <Height>0.53333cm</Height>
+                                                                                                                              </Textbox>
+                                                                                                                              <List Name="List31">
+                                                                                                                                <Style>
+                                                                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                                                                  <FontSize>10pt</FontSize>
+                                                                                                                                </Style>
+                                                                                                                                <ReportItems>
+                                                                                                                                  <Textbox Name="vyznamenanie_III">
+                                                                                                                                    <Style>
+                                                                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                                                                      <FontSize>10pt</FontSize>
+                                                                                                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                      <PaddingRight>2pt</PaddingRight>
+                                                                                                                                      <PaddingTop>2pt</PaddingTop>
+                                                                                                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                    </Style>
+                                                                                                                                    <rd:DefaultName>vyznamenanie_III</rd:DefaultName>
+                                                                                                                                    <Value>=Fields!vyznamenanie_III.Value</Value>
+                                                                                                                                    <CanGrow>true</CanGrow>
+                                                                                                                                    <Height>0.53333cm</Height>
+                                                                                                                                  </Textbox>
+                                                                                                                                  <List Name="List32">
+                                                                                                                                    <Style>
+                                                                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                                                                      <FontSize>10pt</FontSize>
+                                                                                                                                    </Style>
+                                                                                                                                    <ReportItems>
+                                                                                                                                      <Textbox Name="vyznamenanie_II">
+                                                                                                                                        <Style>
+                                                                                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                                                                                          <FontSize>10pt</FontSize>
+                                                                                                                                          <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                          <PaddingRight>2pt</PaddingRight>
+                                                                                                                                          <PaddingTop>2pt</PaddingTop>
+                                                                                                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                        </Style>
+                                                                                                                                        <rd:DefaultName>vyznamenanie_II</rd:DefaultName>
+                                                                                                                                        <Value>=Fields!vyznamenanie_II.Value</Value>
+                                                                                                                                        <CanGrow>true</CanGrow>
+                                                                                                                                        <Height>0.53333cm</Height>
+                                                                                                                                      </Textbox>
+                                                                                                                                      <List Name="List33">
+                                                                                                                                        <Style>
+                                                                                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                                                                                          <FontSize>10pt</FontSize>
+                                                                                                                                        </Style>
+                                                                                                                                        <ReportItems>
+                                                                                                                                          <Textbox Name="vyznamenanie_I">
+                                                                                                                                            <Style>
+                                                                                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                                                                                              <FontSize>10pt</FontSize>
+                                                                                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                            </Style>
+                                                                                                                                            <rd:DefaultName>vyznamenanie_I</rd:DefaultName>
+                                                                                                                                            <Value>=Fields!vyznamenanie_I.Value</Value>
+                                                                                                                                            <CanGrow>true</CanGrow>
+                                                                                                                                            <Height>0.53333cm</Height>
+                                                                                                                                          </Textbox>
+                                                                                                                                          <List Name="List34">
+                                                                                                                                            <Style>
+                                                                                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                                                                                              <FontSize>10pt</FontSize>
+                                                                                                                                            </Style>
+                                                                                                                                            <ReportItems>
+                                                                                                                                              <Textbox Name="vyznamenanie_ZK">
+                                                                                                                                                <Style>
+                                                                                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                  <FontSize>10pt</FontSize>
+                                                                                                                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                                  <PaddingRight>2pt</PaddingRight>
+                                                                                                                                                  <PaddingTop>2pt</PaddingTop>
+                                                                                                                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                                </Style>
+                                                                                                                                                <rd:DefaultName>vyznamenanie_ZK</rd:DefaultName>
+                                                                                                                                                <Value>=Fields!vyznamenanie_ZK.Value</Value>
+                                                                                                                                                <CanGrow>true</CanGrow>
+                                                                                                                                                <Height>0.53333cm</Height>
+                                                                                                                                              </Textbox>
+                                                                                                                                              <List Name="List35">
+                                                                                                                                                <Style>
+                                                                                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                  <FontSize>10pt</FontSize>
+                                                                                                                                                </Style>
+                                                                                                                                                <ReportItems>
+                                                                                                                                                  <Textbox Name="vyznamenanie_ine">
+                                                                                                                                                    <Style>
+                                                                                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                      <FontSize>10pt</FontSize>
+                                                                                                                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                                      <PaddingRight>2pt</PaddingRight>
+                                                                                                                                                      <PaddingTop>2pt</PaddingTop>
+                                                                                                                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                                    </Style>
+                                                                                                                                                    <rd:DefaultName>vyznamenanie_ine</rd:DefaultName>
+                                                                                                                                                    <Value>=Fields!vyznamenanie_ine.Value</Value>
+                                                                                                                                                    <CanGrow>true</CanGrow>
+                                                                                                                                                    <Height>0.53333cm</Height>
+                                                                                                                                                  </Textbox>
+                                                                                                                                                  <List Name="List36">
+                                                                                                                                                    <Style>
+                                                                                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                      <FontSize>10pt</FontSize>
+                                                                                                                                                    </Style>
+                                                                                                                                                    <ReportItems>
+                                                                                                                                                      <Textbox Name="udelene_tresty">
+                                                                                                                                                        <Style>
+                                                                                                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                          <FontSize>10pt</FontSize>
+                                                                                                                                                          <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                                          <PaddingRight>2pt</PaddingRight>
+                                                                                                                                                          <PaddingTop>2pt</PaddingTop>
+                                                                                                                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                                        </Style>
+                                                                                                                                                        <rd:DefaultName>udelene_tresty</rd:DefaultName>
+                                                                                                                                                        <Value>=Fields!udelene_tresty.Value</Value>
+                                                                                                                                                        <CanGrow>true</CanGrow>
+                                                                                                                                                        <Height>0.53333cm</Height>
+                                                                                                                                                      </Textbox>
+                                                                                                                                                      <List Name="List37">
+                                                                                                                                                        <Style>
+                                                                                                                                                          <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                          <FontSize>10pt</FontSize>
+                                                                                                                                                        </Style>
+                                                                                                                                                        <ReportItems>
+                                                                                                                                                          <Textbox Name="poznamky">
+                                                                                                                                                            <Style>
+                                                                                                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                              <FontSize>10pt</FontSize>
+                                                                                                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                                                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                                                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                                            </Style>
+                                                                                                                                                            <rd:DefaultName>poznamky</rd:DefaultName>
+                                                                                                                                                            <Value>=Fields!poznamky.Value</Value>
+                                                                                                                                                            <CanGrow>true</CanGrow>
+                                                                                                                                                            <Height>0.53333cm</Height>
+                                                                                                                                                          </Textbox>
+                                                                                                                                                          <List Name="List38">
+                                                                                                                                                            <Style>
+                                                                                                                                                              <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                              <FontSize>10pt</FontSize>
+                                                                                                                                                            </Style>
+                                                                                                                                                            <ReportItems>
+                                                                                                                                                              <Textbox Name="datum_narodenia">
+                                                                                                                                                                <Style>
+                                                                                                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                                  <FontSize>10pt</FontSize>
+                                                                                                                                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                                                  <PaddingRight>2pt</PaddingRight>
+                                                                                                                                                                  <PaddingTop>2pt</PaddingTop>
+                                                                                                                                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                                                </Style>
+                                                                                                                                                                <rd:DefaultName>datum_narodenia</rd:DefaultName>
+                                                                                                                                                                <Value>=Fields!datum_narodenia.Value</Value>
+                                                                                                                                                                <CanGrow>true</CanGrow>
+                                                                                                                                                                <Height>0.53333cm</Height>
+                                                                                                                                                              </Textbox>
+                                                                                                                                                              <List Name="List39">
+                                                                                                                                                                <Style>
+                                                                                                                                                                  <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                                  <FontSize>10pt</FontSize>
+                                                                                                                                                                </Style>
+                                                                                                                                                                <ReportItems>
+                                                                                                                                                                  <Textbox Name="narodnost">
+                                                                                                                                                                    <Style>
+                                                                                                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                                      <FontSize>10pt</FontSize>
+                                                                                                                                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                                                      <PaddingRight>2pt</PaddingRight>
+                                                                                                                                                                      <PaddingTop>2pt</PaddingTop>
+                                                                                                                                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                                                    </Style>
+                                                                                                                                                                    <rd:DefaultName>narodnost</rd:DefaultName>
+                                                                                                                                                                    <Value>=Fields!narodnost.Value</Value>
+                                                                                                                                                                    <CanGrow>true</CanGrow>
+                                                                                                                                                                    <Height>0.53333cm</Height>
+                                                                                                                                                                  </Textbox>
+                                                                                                                                                                  <Table Name="table1">
+                                                                                                                                                                    <Top>1.26984cm</Top>
+                                                                                                                                                                    <Style />
+                                                                                                                                                                    <Header>
+                                                                                                                                                                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                                                                                                                                                                      <TableRows>
+                                                                                                                                                                        <TableRow>
+                                                                                                                                                                          <TableCells>
+                                                                                                                                                                            <TableCell>
+                                                                                                                                                                              <ReportItems>
+                                                                                                                                                                                <Textbox Name="textbox2">
+                                                                                                                                                                                  <Style>
+                                                                                                                                                                                    <BackgroundColor>SteelBlue</BackgroundColor>
+                                                                                                                                                                                    <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                                                    <FontSize>11pt</FontSize>
+                                                                                                                                                                                    <FontWeight>Bold</FontWeight>
+                                                                                                                                                                                    <Color>White</Color>
+                                                                                                                                                                                    <BorderStyle>
+                                                                                                                                                                                      <Default>Solid</Default>
+                                                                                                                                                                                    </BorderStyle>
+                                                                                                                                                                                    <BorderColor>
+                                                                                                                                                                                      <Default>LightGrey</Default>
+                                                                                                                                                                                    </BorderColor>
+                                                                                                                                                                                    <TextAlign>Right</TextAlign>
+                                                                                                                                                                                    <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                                                                    <PaddingRight>2pt</PaddingRight>
+                                                                                                                                                                                    <PaddingTop>2pt</PaddingTop>
+                                                                                                                                                                                    <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                                                                  </Style>
+                                                                                                                                                                                  <rd:DefaultName>textbox2</rd:DefaultName>
+                                                                                                                                                                                  <Value>ID</Value>
+                                                                                                                                                                                  <CanGrow>true</CanGrow>
+                                                                                                                                                                                  <Height>0.55873cm</Height>
+                                                                                                                                                                                  <Width>2.53968cm</Width>
+                                                                                                                                                                                </Textbox>
+                                                                                                                                                                              </ReportItems>
+                                                                                                                                                                            </TableCell>
+                                                                                                                                                                          </TableCells>
+                                                                                                                                                                          <Height>0.55873cm</Height>
+                                                                                                                                                                        </TableRow>
+                                                                                                                                                                      </TableRows>
+                                                                                                                                                                    </Header>
+                                                                                                                                                                    <Details>
+                                                                                                                                                                      <TableRows>
+                                                                                                                                                                        <TableRow>
+                                                                                                                                                                          <TableCells>
+                                                                                                                                                                            <TableCell>
+                                                                                                                                                                              <ReportItems>
+                                                                                                                                                                                <Textbox Name="ID">
+                                                                                                                                                                                  <Style>
+                                                                                                                                                                                    <FontFamily>Tahoma</FontFamily>
+                                                                                                                                                                                    <FontSize>10pt</FontSize>
+                                                                                                                                                                                    <BorderStyle>
+                                                                                                                                                                                      <Default>Solid</Default>
+                                                                                                                                                                                    </BorderStyle>
+                                                                                                                                                                                    <BorderColor>
+                                                                                                                                                                                      <Default>LightGrey</Default>
+                                                                                                                                                                                    </BorderColor>
+                                                                                                                                                                                    <PaddingLeft>2pt</PaddingLeft>
+                                                                                                                                                                                    <PaddingRight>2pt</PaddingRight>
+                                                                                                                                                                                    <PaddingTop>2pt</PaddingTop>
+                                                                                                                                                                                    <PaddingBottom>2pt</PaddingBottom>
+                                                                                                                                                                                  </Style>
+                                                                                                                                                                                  <rd:DefaultName>ID</rd:DefaultName>
+                                                                                                                                                                                  <Value>=Fields!ID.Value</Value>
+                                                                                                                                                                                  <CanGrow>true</CanGrow>
+                                                                                                                                                                                  <Height>0.53333cm</Height>
+                                                                                                                                                                                  <Width>2.53968cm</Width>
+                                                                                                                                                                                </Textbox>
+                                                                                                                                                                              </ReportItems>
+                                                                                                                                                                            </TableCell>
+                                                                                                                                                                          </TableCells>
+                                                                                                                                                                          <Height>0.53333cm</Height>
+                                                                                                                                                                        </TableRow>
+                                                                                                                                                                      </TableRows>
+                                                                                                                                                                    </Details>
+                                                                                                                                                                    <TableColumns>
+                                                                                                                                                                      <TableColumn>
+                                                                                                                                                                        <Width>2.53968cm</Width>
+                                                                                                                                                                      </TableColumn>
+                                                                                                                                                                    </TableColumns>
+                                                                                                                                                                    <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                                                                  </Table>
+                                                                                                                                                                </ReportItems>
+                                                                                                                                                                <Grouping Name="list1_narodnost">
+                                                                                                                                                                  <GroupExpressions>
+                                                                                                                                                                    <GroupExpression>=Fields!narodnost.Value</GroupExpression>
+                                                                                                                                                                  </GroupExpressions>
+                                                                                                                                                                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                                                                </Grouping>
+                                                                                                                                                                <Sorting>
+                                                                                                                                                                  <SortBy>
+                                                                                                                                                                    <SortExpression>=Fields!narodnost.Value</SortExpression>
+                                                                                                                                                                  </SortBy>
+                                                                                                                                                                </Sorting>
+                                                                                                                                                                <Top>1.26984cm</Top>
+                                                                                                                                                                <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                                                              </List>
+                                                                                                                                                            </ReportItems>
+                                                                                                                                                            <Grouping Name="list1_datum_narodenia">
+                                                                                                                                                              <GroupExpressions>
+                                                                                                                                                                <GroupExpression>=Fields!datum_narodenia.Value</GroupExpression>
+                                                                                                                                                              </GroupExpressions>
+                                                                                                                                                              <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                                                            </Grouping>
+                                                                                                                                                            <Sorting>
+                                                                                                                                                              <SortBy>
+                                                                                                                                                                <SortExpression>=Fields!datum_narodenia.Value</SortExpression>
+                                                                                                                                                              </SortBy>
+                                                                                                                                                            </Sorting>
+                                                                                                                                                            <Top>1.26984cm</Top>
+                                                                                                                                                            <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                                                          </List>
+                                                                                                                                                        </ReportItems>
+                                                                                                                                                        <Grouping Name="list1_poznamky">
+                                                                                                                                                          <GroupExpressions>
+                                                                                                                                                            <GroupExpression>=Fields!poznamky.Value</GroupExpression>
+                                                                                                                                                          </GroupExpressions>
+                                                                                                                                                          <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                                                        </Grouping>
+                                                                                                                                                        <Sorting>
+                                                                                                                                                          <SortBy>
+                                                                                                                                                            <SortExpression>=Fields!poznamky.Value</SortExpression>
+                                                                                                                                                          </SortBy>
+                                                                                                                                                        </Sorting>
+                                                                                                                                                        <Top>1.26984cm</Top>
+                                                                                                                                                        <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                                                      </List>
+                                                                                                                                                    </ReportItems>
+                                                                                                                                                    <Grouping Name="list1_udelene_tresty">
+                                                                                                                                                      <GroupExpressions>
+                                                                                                                                                        <GroupExpression>=Fields!udelene_tresty.Value</GroupExpression>
+                                                                                                                                                      </GroupExpressions>
+                                                                                                                                                      <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                                                    </Grouping>
+                                                                                                                                                    <Sorting>
+                                                                                                                                                      <SortBy>
+                                                                                                                                                        <SortExpression>=Fields!udelene_tresty.Value</SortExpression>
+                                                                                                                                                      </SortBy>
+                                                                                                                                                    </Sorting>
+                                                                                                                                                    <Top>1.26984cm</Top>
+                                                                                                                                                    <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                                                  </List>
+                                                                                                                                                </ReportItems>
+                                                                                                                                                <Grouping Name="list1_vyznamenanie_ine">
+                                                                                                                                                  <GroupExpressions>
+                                                                                                                                                    <GroupExpression>=Fields!vyznamenanie_ine.Value</GroupExpression>
+                                                                                                                                                  </GroupExpressions>
+                                                                                                                                                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                                                </Grouping>
+                                                                                                                                                <Sorting>
+                                                                                                                                                  <SortBy>
+                                                                                                                                                    <SortExpression>=Fields!vyznamenanie_ine.Value</SortExpression>
+                                                                                                                                                  </SortBy>
+                                                                                                                                                </Sorting>
+                                                                                                                                                <Top>1.26984cm</Top>
+                                                                                                                                                <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                                              </List>
+                                                                                                                                            </ReportItems>
+                                                                                                                                            <Grouping Name="list1_vyznamenanie_ZK">
+                                                                                                                                              <GroupExpressions>
+                                                                                                                                                <GroupExpression>=Fields!vyznamenanie_ZK.Value</GroupExpression>
+                                                                                                                                              </GroupExpressions>
+                                                                                                                                              <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                                            </Grouping>
+                                                                                                                                            <Sorting>
+                                                                                                                                              <SortBy>
+                                                                                                                                                <SortExpression>=Fields!vyznamenanie_ZK.Value</SortExpression>
+                                                                                                                                              </SortBy>
+                                                                                                                                            </Sorting>
+                                                                                                                                            <Top>1.26984cm</Top>
+                                                                                                                                            <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                                          </List>
+                                                                                                                                        </ReportItems>
+                                                                                                                                        <Grouping Name="list1_vyznamenanie_I">
+                                                                                                                                          <GroupExpressions>
+                                                                                                                                            <GroupExpression>=Fields!vyznamenanie_I.Value</GroupExpression>
+                                                                                                                                          </GroupExpressions>
+                                                                                                                                          <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                                        </Grouping>
+                                                                                                                                        <Sorting>
+                                                                                                                                          <SortBy>
+                                                                                                                                            <SortExpression>=Fields!vyznamenanie_I.Value</SortExpression>
+                                                                                                                                          </SortBy>
+                                                                                                                                        </Sorting>
+                                                                                                                                        <Top>1.26984cm</Top>
+                                                                                                                                        <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                                      </List>
+                                                                                                                                    </ReportItems>
+                                                                                                                                    <Grouping Name="list1_vyznamenanie_II">
+                                                                                                                                      <GroupExpressions>
+                                                                                                                                        <GroupExpression>=Fields!vyznamenanie_II.Value</GroupExpression>
+                                                                                                                                      </GroupExpressions>
+                                                                                                                                      <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                                    </Grouping>
+                                                                                                                                    <Sorting>
+                                                                                                                                      <SortBy>
+                                                                                                                                        <SortExpression>=Fields!vyznamenanie_II.Value</SortExpression>
+                                                                                                                                      </SortBy>
+                                                                                                                                    </Sorting>
+                                                                                                                                    <Top>1.26984cm</Top>
+                                                                                                                                    <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                                  </List>
+                                                                                                                                </ReportItems>
+                                                                                                                                <Grouping Name="list1_vyznamenanie_III">
+                                                                                                                                  <GroupExpressions>
+                                                                                                                                    <GroupExpression>=Fields!vyznamenanie_III.Value</GroupExpression>
+                                                                                                                                  </GroupExpressions>
+                                                                                                                                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                                </Grouping>
+                                                                                                                                <Sorting>
+                                                                                                                                  <SortBy>
+                                                                                                                                    <SortExpression>=Fields!vyznamenanie_III.Value</SortExpression>
+                                                                                                                                  </SortBy>
+                                                                                                                                </Sorting>
+                                                                                                                                <Top>1.26984cm</Top>
+                                                                                                                                <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                              </List>
+                                                                                                                            </ReportItems>
+                                                                                                                            <Grouping Name="list1_kontrolne_strelby_gulova_zbran">
+                                                                                                                              <GroupExpressions>
+                                                                                                                                <GroupExpression>=Fields!kontrolne_strelby_gulova_zbran.Value</GroupExpression>
+                                                                                                                              </GroupExpressions>
+                                                                                                                              <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                            </Grouping>
+                                                                                                                            <Sorting>
+                                                                                                                              <SortBy>
+                                                                                                                                <SortExpression>=Fields!kontrolne_strelby_gulova_zbran.Value</SortExpression>
+                                                                                                                              </SortBy>
+                                                                                                                            </Sorting>
+                                                                                                                            <Top>1.26984cm</Top>
+                                                                                                                            <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                          </List>
+                                                                                                                        </ReportItems>
+                                                                                                                        <Grouping Name="list1_gulova_zbran">
+                                                                                                                          <GroupExpressions>
+                                                                                                                            <GroupExpression>=Fields!gulova_zbran.Value</GroupExpression>
+                                                                                                                          </GroupExpressions>
+                                                                                                                          <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                        </Grouping>
+                                                                                                                        <Sorting>
+                                                                                                                          <SortBy>
+                                                                                                                            <SortExpression>=Fields!gulova_zbran.Value</SortExpression>
+                                                                                                                          </SortBy>
+                                                                                                                        </Sorting>
+                                                                                                                        <Top>1.26984cm</Top>
+                                                                                                                        <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                      </List>
+                                                                                                                    </ReportItems>
+                                                                                                                    <Grouping Name="list1_kontrolne_strelby_brok">
+                                                                                                                      <GroupExpressions>
+                                                                                                                        <GroupExpression>=Fields!kontrolne_strelby_brok.Value</GroupExpression>
+                                                                                                                      </GroupExpressions>
+                                                                                                                      <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                    </Grouping>
+                                                                                                                    <Sorting>
+                                                                                                                      <SortBy>
+                                                                                                                        <SortExpression>=Fields!kontrolne_strelby_brok.Value</SortExpression>
+                                                                                                                      </SortBy>
+                                                                                                                    </Sorting>
+                                                                                                                    <Top>1.26984cm</Top>
+                                                                                                                    <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                                  </List>
+                                                                                                                </ReportItems>
+                                                                                                                <Grouping Name="list1_brokova_zbran">
+                                                                                                                  <GroupExpressions>
+                                                                                                                    <GroupExpression>=Fields!brokova_zbran.Value</GroupExpression>
+                                                                                                                  </GroupExpressions>
+                                                                                                                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                                </Grouping>
+                                                                                                                <Sorting>
+                                                                                                                  <SortBy>
+                                                                                                                    <SortExpression>=Fields!brokova_zbran.Value</SortExpression>
+                                                                                                                  </SortBy>
+                                                                                                                </Sorting>
+                                                                                                                <Top>1.26984cm</Top>
+                                                                                                                <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                              </List>
+                                                                                                            </ReportItems>
+                                                                                                            <Grouping Name="list1_miesto_vyzsia_skuska_z_polovnictva">
+                                                                                                              <GroupExpressions>
+                                                                                                                <GroupExpression>=Fields!miesto_vyzsia_skuska_z_polovnictva.Value</GroupExpression>
+                                                                                                              </GroupExpressions>
+                                                                                                              <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                            </Grouping>
+                                                                                                            <Sorting>
+                                                                                                              <SortBy>
+                                                                                                                <SortExpression>=Fields!miesto_vyzsia_skuska_z_polovnictva.Value</SortExpression>
+                                                                                                              </SortBy>
+                                                                                                            </Sorting>
+                                                                                                            <Top>1.26984cm</Top>
+                                                                                                            <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                          </List>
+                                                                                                        </ReportItems>
+                                                                                                        <Grouping Name="list1_vyzsia_skuska_z_polovnictva">
+                                                                                                          <GroupExpressions>
+                                                                                                            <GroupExpression>=Fields!vyzsia_skuska_z_polovnictva.Value</GroupExpression>
+                                                                                                          </GroupExpressions>
+                                                                                                          <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                        </Grouping>
+                                                                                                        <Sorting>
+                                                                                                          <SortBy>
+                                                                                                            <SortExpression>=Fields!vyzsia_skuska_z_polovnictva.Value</SortExpression>
+                                                                                                          </SortBy>
+                                                                                                        </Sorting>
+                                                                                                        <Top>1.26984cm</Top>
+                                                                                                        <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                      </List>
+                                                                                                    </ReportItems>
+                                                                                                    <Grouping Name="list1_miesto_skusky_pre_polovnych_hospodarov">
+                                                                                                      <GroupExpressions>
+                                                                                                        <GroupExpression>=Fields!miesto_skusky_pre_polovnych_hospodarov.Value</GroupExpression>
+                                                                                                      </GroupExpressions>
+                                                                                                      <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                    </Grouping>
+                                                                                                    <Sorting>
+                                                                                                      <SortBy>
+                                                                                                        <SortExpression>=Fields!miesto_skusky_pre_polovnych_hospodarov.Value</SortExpression>
+                                                                                                      </SortBy>
+                                                                                                    </Sorting>
+                                                                                                    <Top>1.26984cm</Top>
+                                                                                                    <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                                  </List>
+                                                                                                </ReportItems>
+                                                                                                <Grouping Name="list1_skuska_pre_polovnych_hospodarov">
+                                                                                                  <GroupExpressions>
+                                                                                                    <GroupExpression>=Fields!skuska_pre_polovnych_hospodarov.Value</GroupExpression>
+                                                                                                  </GroupExpressions>
+                                                                                                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                                </Grouping>
+                                                                                                <Sorting>
+                                                                                                  <SortBy>
+                                                                                                    <SortExpression>=Fields!skuska_pre_polovnych_hospodarov.Value</SortExpression>
+                                                                                                  </SortBy>
+                                                                                                </Sorting>
+                                                                                                <Top>1.26984cm</Top>
+                                                                                                <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                              </List>
+                                                                                            </ReportItems>
+                                                                                            <Grouping Name="list1_miesto_skusky_z__polovnictva">
+                                                                                              <GroupExpressions>
+                                                                                                <GroupExpression>=Fields!miesto_skusky_z__polovnictva.Value</GroupExpression>
+                                                                                              </GroupExpressions>
+                                                                                              <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                            </Grouping>
+                                                                                            <Sorting>
+                                                                                              <SortBy>
+                                                                                                <SortExpression>=Fields!miesto_skusky_z__polovnictva.Value</SortExpression>
+                                                                                              </SortBy>
+                                                                                            </Sorting>
+                                                                                            <Top>1.26984cm</Top>
+                                                                                            <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                          </List>
+                                                                                        </ReportItems>
+                                                                                        <Grouping Name="list1_skuska_z_polovnictva">
+                                                                                          <GroupExpressions>
+                                                                                            <GroupExpression>=Fields!skuska_z_polovnictva.Value</GroupExpression>
+                                                                                          </GroupExpressions>
+                                                                                          <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                        </Grouping>
+                                                                                        <Sorting>
+                                                                                          <SortBy>
+                                                                                            <SortExpression>=Fields!skuska_z_polovnictva.Value</SortExpression>
+                                                                                          </SortBy>
+                                                                                        </Sorting>
+                                                                                        <Top>1.26984cm</Top>
+                                                                                        <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                      </List>
+                                                                                    </ReportItems>
+                                                                                    <Grouping Name="list1_clen_pz">
+                                                                                      <GroupExpressions>
+                                                                                        <GroupExpression>=Fields!clen_pz.Value</GroupExpression>
+                                                                                      </GroupExpressions>
+                                                                                      <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                    </Grouping>
+                                                                                    <Sorting>
+                                                                                      <SortBy>
+                                                                                        <SortExpression>=Fields!clen_pz.Value</SortExpression>
+                                                                                      </SortBy>
+                                                                                    </Sorting>
+                                                                                    <Top>1.26984cm</Top>
+                                                                                    <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                                  </List>
+                                                                                </ReportItems>
+                                                                                <Grouping Name="list1_cislo_dokladu_clenske">
+                                                                                  <GroupExpressions>
+                                                                                    <GroupExpression>=Fields!cislo_dokladu_clenske.Value</GroupExpression>
+                                                                                  </GroupExpressions>
+                                                                                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                                </Grouping>
+                                                                                <Sorting>
+                                                                                  <SortBy>
+                                                                                    <SortExpression>=Fields!cislo_dokladu_clenske.Value</SortExpression>
+                                                                                  </SortBy>
+                                                                                </Sorting>
+                                                                                <Top>1.26984cm</Top>
+                                                                                <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                              </List>
+                                                                            </ReportItems>
+                                                                            <Grouping Name="list1_clenske_do">
+                                                                              <GroupExpressions>
+                                                                                <GroupExpression>=Fields!clenske_do.Value</GroupExpression>
+                                                                              </GroupExpressions>
+                                                                              <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                            </Grouping>
+                                                                            <Sorting>
+                                                                              <SortBy>
+                                                                                <SortExpression>=Fields!clenske_do.Value</SortExpression>
+                                                                              </SortBy>
+                                                                            </Sorting>
+                                                                            <Top>1.26984cm</Top>
+                                                                            <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                          </List>
+                                                                        </ReportItems>
+                                                                        <Grouping Name="list1_clen_spz_od">
+                                                                          <GroupExpressions>
+                                                                            <GroupExpression>=Fields!clen_spz_od.Value</GroupExpression>
+                                                                          </GroupExpressions>
+                                                                          <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                        </Grouping>
+                                                                        <Sorting>
+                                                                          <SortBy>
+                                                                            <SortExpression>=Fields!clen_spz_od.Value</SortExpression>
+                                                                          </SortBy>
+                                                                        </Sorting>
+                                                                        <Top>1.26984cm</Top>
+                                                                        <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                      </List>
+                                                                    </ReportItems>
+                                                                    <Grouping Name="list1_cislo_clenskeho_preukazu_spz">
+                                                                      <GroupExpressions>
+                                                                        <GroupExpression>=Fields!cislo_clenskeho_preukazu_spz.Value</GroupExpression>
+                                                                      </GroupExpressions>
+                                                                      <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                    </Grouping>
+                                                                    <Sorting>
+                                                                      <SortBy>
+                                                                        <SortExpression>=Fields!cislo_clenskeho_preukazu_spz.Value</SortExpression>
+                                                                      </SortBy>
+                                                                    </Sorting>
+                                                                    <Top>1.26984cm</Top>
+                                                                    <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                                  </List>
+                                                                </ReportItems>
+                                                                <Grouping Name="list1_datum_vydania_zp">
+                                                                  <GroupExpressions>
+                                                                    <GroupExpression>=Fields!datum_vydania_zp.Value</GroupExpression>
+                                                                  </GroupExpressions>
+                                                                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                                </Grouping>
+                                                                <Sorting>
+                                                                  <SortBy>
+                                                                    <SortExpression>=Fields!datum_vydania_zp.Value</SortExpression>
+                                                                  </SortBy>
+                                                                </Sorting>
+                                                                <Top>1.26984cm</Top>
+                                                                <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                              </List>
+                                                            </ReportItems>
+                                                            <Grouping Name="list1_cislo_zp">
+                                                              <GroupExpressions>
+                                                                <GroupExpression>=Fields!cislo_zp.Value</GroupExpression>
+                                                              </GroupExpressions>
+                                                              <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                            </Grouping>
+                                                            <Sorting>
+                                                              <SortBy>
+                                                                <SortExpression>=Fields!cislo_zp.Value</SortExpression>
+                                                              </SortBy>
+                                                            </Sorting>
+                                                            <Top>1.26984cm</Top>
+                                                            <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                          </List>
+                                                        </ReportItems>
+                                                        <Grouping Name="list1_datum_vydania_pl">
+                                                          <GroupExpressions>
+                                                            <GroupExpression>=Fields!datum_vydania_pl.Value</GroupExpression>
+                                                          </GroupExpressions>
+                                                          <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                        </Grouping>
+                                                        <Sorting>
+                                                          <SortBy>
+                                                            <SortExpression>=Fields!datum_vydania_pl.Value</SortExpression>
+                                                          </SortBy>
+                                                        </Sorting>
+                                                        <Top>1.26984cm</Top>
+                                                        <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                      </List>
+                                                    </ReportItems>
+                                                    <Grouping Name="list1_cislo_pl">
+                                                      <GroupExpressions>
+                                                        <GroupExpression>=Fields!cislo_pl.Value</GroupExpression>
+                                                      </GroupExpressions>
+                                                      <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                    </Grouping>
+                                                    <Sorting>
+                                                      <SortBy>
+                                                        <SortExpression>=Fields!cislo_pl.Value</SortExpression>
+                                                      </SortBy>
+                                                    </Sorting>
+                                                    <Top>1.26984cm</Top>
+                                                    <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                                  </List>
+                                                </ReportItems>
+                                                <Grouping Name="list1_datum_vydania_op">
+                                                  <GroupExpressions>
+                                                    <GroupExpression>=Fields!datum_vydania_op.Value</GroupExpression>
+                                                  </GroupExpressions>
+                                                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                                                </Grouping>
+                                                <Sorting>
+                                                  <SortBy>
+                                                    <SortExpression>=Fields!datum_vydania_op.Value</SortExpression>
+                                                  </SortBy>
+                                                </Sorting>
+                                                <Top>1.26984cm</Top>
+                                                <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                              </List>
+                                            </ReportItems>
+                                            <Grouping Name="list1_cislo_op">
+                                              <GroupExpressions>
+                                                <GroupExpression>=Fields!cislo_op.Value</GroupExpression>
+                                              </GroupExpressions>
+                                              <PageBreakAtEnd>true</PageBreakAtEnd>
+                                            </Grouping>
+                                            <Sorting>
+                                              <SortBy>
+                                                <SortExpression>=Fields!cislo_op.Value</SortExpression>
+                                              </SortBy>
+                                            </Sorting>
+                                            <Top>1.26984cm</Top>
+                                            <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                          </List>
+                                        </ReportItems>
+                                        <Grouping Name="list1_statna_prislusnost">
+                                          <GroupExpressions>
+                                            <GroupExpression>=Fields!statna_prislusnost.Value</GroupExpression>
+                                          </GroupExpressions>
+                                          <PageBreakAtEnd>true</PageBreakAtEnd>
+                                        </Grouping>
+                                        <Sorting>
+                                          <SortBy>
+                                            <SortExpression>=Fields!statna_prislusnost.Value</SortExpression>
+                                          </SortBy>
+                                        </Sorting>
+                                        <Top>1.26984cm</Top>
+                                        <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                      </List>
+                                    </ReportItems>
+                                    <Grouping Name="list1_psc">
+                                      <GroupExpressions>
+                                        <GroupExpression>=Fields!psc.Value</GroupExpression>
+                                      </GroupExpressions>
+                                      <PageBreakAtEnd>true</PageBreakAtEnd>
+                                    </Grouping>
+                                    <Sorting>
+                                      <SortBy>
+                                        <SortExpression>=Fields!psc.Value</SortExpression>
+                                      </SortBy>
+                                    </Sorting>
+                                    <Top>1.26984cm</Top>
+                                    <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                                  </List>
+                                </ReportItems>
+                                <Grouping Name="list1_bydlisko">
+                                  <GroupExpressions>
+                                    <GroupExpression>=Fields!bydlisko.Value</GroupExpression>
+                                  </GroupExpressions>
+                                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                                </Grouping>
+                                <Sorting>
+                                  <SortBy>
+                                    <SortExpression>=Fields!bydlisko.Value</SortExpression>
+                                  </SortBy>
+                                </Sorting>
+                                <Top>1.26984cm</Top>
+                                <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                              </List>
+                            </ReportItems>
+                            <Grouping Name="list1_okres_narodenia">
+                              <GroupExpressions>
+                                <GroupExpression>=Fields!okres_narodenia.Value</GroupExpression>
+                              </GroupExpressions>
+                              <PageBreakAtEnd>true</PageBreakAtEnd>
+                            </Grouping>
+                            <Sorting>
+                              <SortBy>
+                                <SortExpression>=Fields!okres_narodenia.Value</SortExpression>
+                              </SortBy>
+                            </Sorting>
+                            <Top>1.26984cm</Top>
+                            <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                          </List>
+                        </ReportItems>
+                        <Grouping Name="list1_miesto_narodenia">
+                          <GroupExpressions>
+                            <GroupExpression>=Fields!miesto_narodenia.Value</GroupExpression>
+                          </GroupExpressions>
+                          <PageBreakAtEnd>true</PageBreakAtEnd>
+                        </Grouping>
+                        <Sorting>
+                          <SortBy>
+                            <SortExpression>=Fields!miesto_narodenia.Value</SortExpression>
+                          </SortBy>
+                        </Sorting>
+                        <Top>1.26984cm</Top>
+                        <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                      </List>
+                    </ReportItems>
+                    <Grouping Name="list1_rodne_cislo">
+                      <GroupExpressions>
+                        <GroupExpression>=Fields!rodne_cislo.Value</GroupExpression>
+                      </GroupExpressions>
+                      <PageBreakAtEnd>true</PageBreakAtEnd>
+                    </Grouping>
+                    <Sorting>
+                      <SortBy>
+                        <SortExpression>=Fields!rodne_cislo.Value</SortExpression>
+                      </SortBy>
+                    </Sorting>
+                    <Top>1.26984cm</Top>
+                    <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+                  </List>
+                </ReportItems>
+                <Grouping Name="list1_priezvisko">
+                  <GroupExpressions>
+                    <GroupExpression>=Fields!priezvisko.Value</GroupExpression>
+                  </GroupExpressions>
+                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                </Grouping>
+                <Sorting>
+                  <SortBy>
+                    <SortExpression>=Fields!priezvisko.Value</SortExpression>
+                  </SortBy>
+                </Sorting>
+                <Top>1.26984cm</Top>
+                <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+              </List>
+            </ReportItems>
+            <Grouping Name="list1_meno">
+              <GroupExpressions>
+                <GroupExpression>=Fields!meno.Value</GroupExpression>
+              </GroupExpressions>
+              <PageBreakAtEnd>true</PageBreakAtEnd>
+            </Grouping>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=Fields!meno.Value</SortExpression>
+              </SortBy>
+            </Sorting>
+            <Top>1.26984cm</Top>
+            <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+          </List>
+        </ReportItems>
+        <Grouping Name="list1_titul">
+          <GroupExpressions>
+            <GroupExpression>=Fields!titul.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!titul.Value</SortExpression>
+          </SortBy>
+        </Sorting>
+        <Top>0.91429cm</Top>
+        <DataSetName>clenoviaDataSet1_clenovia</DataSetName>
+      </List>
+    </ReportItems>
+  </Body>
+  <Language>en-US</Language>
+  <LeftMargin>2.5cm</LeftMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <TopMargin>2.5cm</TopMargin>
+  <BottomMargin>2.5cm</BottomMargin>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <PageWidth>21cm</PageWidth>
+  <PageHeight>29.7cm</PageHeight>
+  <DataSets>
+    <DataSet Name="clenoviaDataSet1_clenovia">
+      <rd:DataSetInfo>
+        <rd:DataSetName>clenoviaDataSet1</rd:DataSetName>
+        <rd:TableName>clenovia</rd:TableName>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterName>clenoviaTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT ID, titul, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, [miesto_skusky_z _polovnictva], skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gulova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, poznamky, datum_narodenia, narodnost FROM clenovia</CommandText>
+        <DataSourceName>spz_evidenciaConnectionString</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="titul">
+          <DataField>titul</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="meno">
+          <DataField>meno</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="priezvisko">
+          <DataField>priezvisko</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rodne_cislo">
+          <DataField>rodne_cislo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="miesto_narodenia">
+          <DataField>miesto_narodenia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="okres_narodenia">
+          <DataField>okres_narodenia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="bydlisko">
+          <DataField>bydlisko</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="psc">
+          <DataField>psc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="statna_prislusnost">
+          <DataField>statna_prislusnost</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cislo_op">
+          <DataField>cislo_op</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="datum_vydania_op">
+          <DataField>datum_vydania_op</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="cislo_pl">
+          <DataField>cislo_pl</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="datum_vydania_pl">
+          <DataField>datum_vydania_pl</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="cislo_zp">
+          <DataField>cislo_zp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="datum_vydania_zp">
+          <DataField>datum_vydania_zp</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="cislo_clenskeho_preukazu_spz">
+          <DataField>cislo_clenskeho_preukazu_spz</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="clen_spz_od">
+          <DataField>clen_spz_od</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="clenske_do">
+          <DataField>clenske_do</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="cislo_dokladu_clenske">
+          <DataField>cislo_dokladu_clenske</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="clen_pz">
+          <DataField>clen_pz</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="skuska_z_polovnictva">
+          <DataField>skuska_z_polovnictva</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="miesto_skusky_z__polovnictva">
+          <DataField>miesto_skusky_z _polovnictva</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="skuska_pre_polovnych_hospodarov">
+          <DataField>skuska_pre_polovnych_hospodarov</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="miesto_skusky_pre_polovnych_hospodarov">
+          <DataField>miesto_skusky_pre_polovnych_hospodarov</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="vyzsia_skuska_z_polovnictva">
+          <DataField>vyzsia_skuska_z_polovnictva</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="miesto_vyzsia_skuska_z_polovnictva">
+          <DataField>miesto_vyzsia_skuska_z_polovnictva</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="brokova_zbran">
+          <DataField>brokova_zbran</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="kontrolne_strelby_brok">
+          <DataField>kontrolne_strelby_brok</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="gulova_zbran">
+          <DataField>gulova_zbran</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="kontrolne_strelby_gulova_zbran">
+          <DataField>kontrolne_strelby_gulova_zbran</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="vyznamenanie_III">
+          <DataField>vyznamenanie_III</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="vyznamenanie_II">
+          <DataField>vyznamenanie_II</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="vyznamenanie_I">
+          <DataField>vyznamenanie_I</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="vyznamenanie_ZK">
+          <DataField>vyznamenanie_ZK</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="vyznamenanie_ine">
+          <DataField>vyznamenanie_ine</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="udelene_tresty">
+          <DataField>udelene_tresty</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="poznamky">
+          <DataField>poznamky</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="datum_narodenia">
+          <DataField>datum_narodenia</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="narodnost">
+          <DataField>narodnost</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+</Report>
