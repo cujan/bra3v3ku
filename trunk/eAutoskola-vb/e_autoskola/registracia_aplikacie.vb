@@ -14,7 +14,7 @@ Public Class registracia_aplikacie
         'TODO: This line of code loads data into the 'Spz_vseobecne_udaje.vseobecne_udaje' table. You can move, or remove it, as needed.
 
         Me.ica.Text = hlavna_aplikacia.ica_hodnota.Text
-        Me.reg_cislo.Text = hlavna_aplikacia.Reg_cisloTextBox.Text
+        'Me.reg_cislo.Text = hlavna_aplikacia.Reg_cisloTextBox.Text
 
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False

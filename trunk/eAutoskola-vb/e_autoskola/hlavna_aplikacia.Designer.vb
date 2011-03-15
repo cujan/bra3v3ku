@@ -23,7 +23,7 @@ Partial Class hlavna_aplikacia
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim TelefonLabel As System.Windows.Forms.Label
         Dim FaxLabel As System.Windows.Forms.Label
         Dim EmailLabel As System.Windows.Forms.Label
@@ -32,162 +32,146 @@ Partial Class hlavna_aplikacia
         Dim DicLabel As System.Windows.Forms.Label
         Dim Reg_cisloLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(hlavna_aplikacia))
-        Me.MenuStrip = New System.Windows.Forms.MenuStrip
-        Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator
-        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator
-        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PrintPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PrintSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator
-        Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator
-        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ViewMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.StatusBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolsMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CascadeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TileVerticalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TileHorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ArrangeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ČíselníkyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TitulyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ŠtátnaPríslušnosťToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TitulZaMenomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStrip = New System.Windows.Forms.ToolStrip
-        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.PrintPreviewToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.StatusStrip = New System.Windows.Forms.StatusStrip
-        Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
+        Me.MenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrintPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrintSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CascadeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TileVerticalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TileHorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ArrangeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ČíselníkyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TitulyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ŠtátnaPríslušnosťToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TitulZaMenomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.PrintPreviewToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.StatusStrip = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.hlavny_splitter = New System.Windows.Forms.SplitContainer
-        Me.nastavenia_splitter = New System.Windows.Forms.SplitContainer
-        Me.nastavenia_button = New System.Windows.Forms.Button
-        Me.nastavenia_label = New System.Windows.Forms.Label
-        Me.zalohuj = New System.Windows.Forms.Button
-        Me.o_aplikacii_button = New System.Windows.Forms.Button
-        Me.registracia = New System.Windows.Forms.Button
-        Me.nastavenia_ciselniky_button = New System.Windows.Forms.Button
-        Me.tl_zostavy_splitter = New System.Windows.Forms.SplitContainer
-        Me.tl_zostavy_button = New System.Windows.Forms.Button
-        Me.tl_zostavy_label = New System.Windows.Forms.Label
-        Me.zoznam_clenov_podla_zdruzeni = New System.Windows.Forms.Button
-        Me.narodeniny = New System.Windows.Forms.Button
-        Me.kont_strelby_gula_button = New System.Windows.Forms.Button
-        Me.kont_strelby_brok_button = New System.Windows.Forms.Button
-        Me.platnost_clenstva_button = New System.Windows.Forms.Button
-        Me.zoznam_zdruzeni_button = New System.Windows.Forms.Button
-        Me.zoznam_clenov_button = New System.Windows.Forms.Button
-        Me.karty_clenov_button = New System.Windows.Forms.Button
-        Me.sprava_zdruzeni_splitter = New System.Windows.Forms.SplitContainer
-        Me.sprava_zdruzeni_button = New System.Windows.Forms.Button
-        Me.sprava_zdruzeni_label = New System.Windows.Forms.Label
-        Me.nove_zdruzenie_button = New System.Windows.Forms.Button
-        Me.prehlad_zdruzeni_button = New System.Windows.Forms.Button
-        Me.sprava_clenov_splitter = New System.Windows.Forms.SplitContainer
-        Me.sprava_clenov_button = New System.Windows.Forms.Button
-        Me.sprava_clenov_label = New System.Windows.Forms.Label
-        Me.prehlad_clenov_button = New System.Windows.Forms.Button
-        Me.novy_clen_button = New System.Windows.Forms.Button
-        Me.verzia_text = New System.Windows.Forms.Label
-        Me.versionLabel = New System.Windows.Forms.Label
-        Me.copyrightLabel = New System.Windows.Forms.Label
-        Me.registrovat = New System.Windows.Forms.Button
-        Me.poznamka2 = New System.Windows.Forms.Label
-        Me.ica_hodnota = New System.Windows.Forms.Label
-        Me.ica_cislo = New System.Windows.Forms.Label
-        Me.Reg_cisloTextBox = New System.Windows.Forms.TextBox
-        Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-
-        Me.poznamky = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.upravit_udaje_button = New System.Windows.Forms.Button
-        Me.lomene_label = New System.Windows.Forms.Label
-        Me.DicTextBox = New System.Windows.Forms.TextBox
-        Me.IcoTextBox = New System.Windows.Forms.TextBox
-        Me.EmailTextBox = New System.Windows.Forms.TextBox
-        Me.FaxTextBox = New System.Windows.Forms.TextBox
-        Me.TelefonTextBox = New System.Windows.Forms.TextBox
-        Me.kontakt_label = New System.Windows.Forms.Label
-        Me.PscTextBox = New System.Windows.Forms.TextBox
-        Me.MestoTextBox = New System.Windows.Forms.TextBox
-        Me.UlicaTextBox = New System.Windows.Forms.TextBox
-        Me.adresa_label = New System.Windows.Forms.Label
-        Me.Nazov_organizacieTextBox = New System.Windows.Forms.TextBox
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
-      
-        Me.Vseobecne_udajeBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        TelefonLabel = New System.Windows.Forms.Label
-        FaxLabel = New System.Windows.Forms.Label
-        EmailLabel = New System.Windows.Forms.Label
-        WebLabel = New System.Windows.Forms.Label
-        IcoLabel = New System.Windows.Forms.Label
-        DicLabel = New System.Windows.Forms.Label
-        Reg_cisloLabel = New System.Windows.Forms.Label
+        Me.hlavny_splitter = New System.Windows.Forms.SplitContainer()
+        Me.nastavenia_splitter = New System.Windows.Forms.SplitContainer()
+        Me.nastavenia_button = New System.Windows.Forms.Button()
+        Me.nastavenia_label = New System.Windows.Forms.Label()
+        Me.zalohuj = New System.Windows.Forms.Button()
+        Me.o_aplikacii_button = New System.Windows.Forms.Button()
+        Me.registracia = New System.Windows.Forms.Button()
+        Me.nastavenia_ciselniky_button = New System.Windows.Forms.Button()
+        Me.tl_zostavy_splitter = New System.Windows.Forms.SplitContainer()
+        Me.tl_zostavy_button = New System.Windows.Forms.Button()
+        Me.tl_zostavy_label = New System.Windows.Forms.Label()
+        Me.zoznam_clenov_podla_zdruzeni = New System.Windows.Forms.Button()
+        Me.narodeniny = New System.Windows.Forms.Button()
+        Me.kont_strelby_gula_button = New System.Windows.Forms.Button()
+        Me.kont_strelby_brok_button = New System.Windows.Forms.Button()
+        Me.platnost_clenstva_button = New System.Windows.Forms.Button()
+        Me.zoznam_zdruzeni_button = New System.Windows.Forms.Button()
+        Me.zoznam_clenov_button = New System.Windows.Forms.Button()
+        Me.karty_clenov_button = New System.Windows.Forms.Button()
+        Me.sprava_zdruzeni_splitter = New System.Windows.Forms.SplitContainer()
+        Me.sprava_zdruzeni_button = New System.Windows.Forms.Button()
+        Me.sprava_zdruzeni_label = New System.Windows.Forms.Label()
+        Me.nove_zdruzenie_button = New System.Windows.Forms.Button()
+        Me.prehlad_zdruzeni_button = New System.Windows.Forms.Button()
+        Me.sprava_clenov_splitter = New System.Windows.Forms.SplitContainer()
+        Me.sprava_clenov_button = New System.Windows.Forms.Button()
+        Me.sprava_clenov_label = New System.Windows.Forms.Label()
+        Me.prehlad_clenov_button = New System.Windows.Forms.Button()
+        Me.novy_clen_button = New System.Windows.Forms.Button()
+        Me.verzia_text = New System.Windows.Forms.Label()
+        Me.versionLabel = New System.Windows.Forms.Label()
+        Me.copyrightLabel = New System.Windows.Forms.Label()
+        Me.registrovat = New System.Windows.Forms.Button()
+        Me.poznamka2 = New System.Windows.Forms.Label()
+        Me.ica_hodnota = New System.Windows.Forms.Label()
+        Me.ica_cislo = New System.Windows.Forms.Label()
+        Me.poznamky = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.upravit_udaje_button = New System.Windows.Forms.Button()
+        Me.lomene_label = New System.Windows.Forms.Label()
+        Me.DicTextBox = New System.Windows.Forms.TextBox()
+        Me.IcoTextBox = New System.Windows.Forms.TextBox()
+        Me.EmailTextBox = New System.Windows.Forms.TextBox()
+        Me.FaxTextBox = New System.Windows.Forms.TextBox()
+        Me.TelefonTextBox = New System.Windows.Forms.TextBox()
+        Me.kontakt_label = New System.Windows.Forms.Label()
+        Me.PscTextBox = New System.Windows.Forms.TextBox()
+        Me.MestoTextBox = New System.Windows.Forms.TextBox()
+        Me.UlicaTextBox = New System.Windows.Forms.TextBox()
+        Me.adresa_label = New System.Windows.Forms.Label()
+        Me.Nazov_organizacieTextBox = New System.Windows.Forms.TextBox()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        TelefonLabel = New System.Windows.Forms.Label()
+        FaxLabel = New System.Windows.Forms.Label()
+        EmailLabel = New System.Windows.Forms.Label()
+        WebLabel = New System.Windows.Forms.Label()
+        IcoLabel = New System.Windows.Forms.Label()
+        DicLabel = New System.Windows.Forms.Label()
+        Reg_cisloLabel = New System.Windows.Forms.Label()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
+        CType(Me.hlavny_splitter, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.hlavny_splitter.Panel1.SuspendLayout()
         Me.hlavny_splitter.Panel2.SuspendLayout()
         Me.hlavny_splitter.SuspendLayout()
+        CType(Me.nastavenia_splitter, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.nastavenia_splitter.Panel1.SuspendLayout()
         Me.nastavenia_splitter.Panel2.SuspendLayout()
         Me.nastavenia_splitter.SuspendLayout()
+        CType(Me.tl_zostavy_splitter, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tl_zostavy_splitter.Panel1.SuspendLayout()
         Me.tl_zostavy_splitter.Panel2.SuspendLayout()
         Me.tl_zostavy_splitter.SuspendLayout()
+        CType(Me.sprava_zdruzeni_splitter, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.sprava_zdruzeni_splitter.Panel1.SuspendLayout()
         Me.sprava_zdruzeni_splitter.Panel2.SuspendLayout()
         Me.sprava_zdruzeni_splitter.SuspendLayout()
+        CType(Me.sprava_clenov_splitter, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.sprava_clenov_splitter.Panel1.SuspendLayout()
         Me.sprava_clenov_splitter.Panel2.SuspendLayout()
         Me.sprava_clenov_splitter.SuspendLayout()
-        CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-
-        CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Vseobecne_udajeBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
         '
         'TelefonLabel
@@ -700,7 +684,6 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel2.Controls.Add(Me.ica_hodnota)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.ica_cislo)
         Me.hlavny_splitter.Panel2.Controls.Add(Reg_cisloLabel)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Reg_cisloTextBox)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.poznamky)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Label2)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Label1)
@@ -1174,27 +1157,6 @@ Partial Class hlavna_aplikacia
         Me.ica_cislo.TabIndex = 30
         Me.ica_cislo.Text = "IČA"
         '
-        'Reg_cisloTextBox
-        '
-        Me.Reg_cisloTextBox.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Reg_cisloTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Reg_cisloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "reg_cislo", True))
-        Me.Reg_cisloTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Reg_cisloTextBox.Location = New System.Drawing.Point(450, 527)
-        Me.Reg_cisloTextBox.Name = "Reg_cisloTextBox"
-        Me.Reg_cisloTextBox.ReadOnly = True
-        Me.Reg_cisloTextBox.Size = New System.Drawing.Size(100, 10)
-        Me.Reg_cisloTextBox.TabIndex = 1
-        '
-        'Vseobecne_udajeBindingSource
-        '
-        Me.Vseobecne_udajeBindingSource.DataMember = "vseobecne_udaje"
-
-        '
-        'Spz_vseobecne_udaje
-        '
-       
-        '
         'poznamky
         '
         Me.poznamky.AutoSize = True
@@ -1218,7 +1180,6 @@ Partial Class hlavna_aplikacia
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "web", True))
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Label1.Location = New System.Drawing.Point(505, 224)
         Me.Label1.Name = "Label1"
@@ -1251,7 +1212,6 @@ Partial Class hlavna_aplikacia
         '
         Me.DicTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.DicTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "dic", True))
         Me.DicTextBox.Location = New System.Drawing.Point(439, 60)
         Me.DicTextBox.Name = "DicTextBox"
         Me.DicTextBox.ReadOnly = True
@@ -1262,7 +1222,6 @@ Partial Class hlavna_aplikacia
         '
         Me.IcoTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.IcoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ico", True))
         Me.IcoTextBox.Location = New System.Drawing.Point(335, 60)
         Me.IcoTextBox.Name = "IcoTextBox"
         Me.IcoTextBox.ReadOnly = True
@@ -1273,7 +1232,6 @@ Partial Class hlavna_aplikacia
         '
         Me.EmailTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "email", True))
         Me.EmailTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EmailTextBox.Location = New System.Drawing.Point(503, 209)
         Me.EmailTextBox.Name = "EmailTextBox"
@@ -1285,7 +1243,6 @@ Partial Class hlavna_aplikacia
         '
         Me.FaxTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.FaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.FaxTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "fax", True))
         Me.FaxTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FaxTextBox.Location = New System.Drawing.Point(503, 194)
         Me.FaxTextBox.Name = "FaxTextBox"
@@ -1297,7 +1254,6 @@ Partial Class hlavna_aplikacia
         '
         Me.TelefonTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.TelefonTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "telefon", True))
         Me.TelefonTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TelefonTextBox.Location = New System.Drawing.Point(503, 178)
         Me.TelefonTextBox.Name = "TelefonTextBox"
@@ -1319,7 +1275,6 @@ Partial Class hlavna_aplikacia
         '
         Me.PscTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.PscTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "psc", True))
         Me.PscTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PscTextBox.Location = New System.Drawing.Point(313, 191)
         Me.PscTextBox.Name = "PscTextBox"
@@ -1331,7 +1286,6 @@ Partial Class hlavna_aplikacia
         '
         Me.MestoTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.MestoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "mesto", True))
         Me.MestoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MestoTextBox.Location = New System.Drawing.Point(235, 191)
         Me.MestoTextBox.Name = "MestoTextBox"
@@ -1343,7 +1297,6 @@ Partial Class hlavna_aplikacia
         '
         Me.UlicaTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.UlicaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ulica", True))
         Me.UlicaTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UlicaTextBox.Location = New System.Drawing.Point(235, 173)
         Me.UlicaTextBox.Name = "UlicaTextBox"
@@ -1365,7 +1318,6 @@ Partial Class hlavna_aplikacia
         '
         Me.Nazov_organizacieTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Nazov_organizacieTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Nazov_organizacieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "nazov_organizacie", True))
         Me.Nazov_organizacieTextBox.Font = New System.Drawing.Font("Candara", 22.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Nazov_organizacieTextBox.Location = New System.Drawing.Point(130, 20)
         Me.Nazov_organizacieTextBox.Name = "Nazov_organizacieTextBox"
@@ -1392,133 +1344,12 @@ Partial Class hlavna_aplikacia
         Me.LineShape1.Y1 = 325
         Me.LineShape1.Y2 = 325
         '
-        'Vseobecne_udajeTableAdapter
-        '
-
-        '
-        'TableAdapterManager
-        '
-        
-        '
-        'Vseobecne_udajeBindingNavigator
-        '
-        Me.Vseobecne_udajeBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.Vseobecne_udajeBindingNavigator.BindingSource = Me.Vseobecne_udajeBindingSource
-        Me.Vseobecne_udajeBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.Vseobecne_udajeBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.Vseobecne_udajeBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.Vseobecne_udajeBindingNavigatorSaveItem})
-        Me.Vseobecne_udajeBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.Vseobecne_udajeBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.Vseobecne_udajeBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.Vseobecne_udajeBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.Vseobecne_udajeBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.Vseobecne_udajeBindingNavigator.Name = "Vseobecne_udajeBindingNavigator"
-        Me.Vseobecne_udajeBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Vseobecne_udajeBindingNavigator.Size = New System.Drawing.Size(903, 25)
-        Me.Vseobecne_udajeBindingNavigator.TabIndex = 11
-        Me.Vseobecne_udajeBindingNavigator.Text = "BindingNavigator1"
-        Me.Vseobecne_udajeBindingNavigator.Visible = False
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'Vseobecne_udajeBindingNavigatorSaveItem
-        '
-        Me.Vseobecne_udajeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.Vseobecne_udajeBindingNavigatorSaveItem.Image = CType(resources.GetObject("Vseobecne_udajeBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.Vseobecne_udajeBindingNavigatorSaveItem.Name = "Vseobecne_udajeBindingNavigatorSaveItem"
-        Me.Vseobecne_udajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.Vseobecne_udajeBindingNavigatorSaveItem.Text = "Save Data"
-        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.ClientSize = New System.Drawing.Size(1092, 562)
-        Me.Controls.Add(Me.Vseobecne_udajeBindingNavigator)
         Me.Controls.Add(Me.hlavny_splitter)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.ToolStrip)
@@ -1537,24 +1368,24 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel1.ResumeLayout(False)
         Me.hlavny_splitter.Panel2.ResumeLayout(False)
         Me.hlavny_splitter.Panel2.PerformLayout()
+        CType(Me.hlavny_splitter, System.ComponentModel.ISupportInitialize).EndInit()
         Me.hlavny_splitter.ResumeLayout(False)
         Me.nastavenia_splitter.Panel1.ResumeLayout(False)
         Me.nastavenia_splitter.Panel2.ResumeLayout(False)
+        CType(Me.nastavenia_splitter, System.ComponentModel.ISupportInitialize).EndInit()
         Me.nastavenia_splitter.ResumeLayout(False)
         Me.tl_zostavy_splitter.Panel1.ResumeLayout(False)
         Me.tl_zostavy_splitter.Panel2.ResumeLayout(False)
+        CType(Me.tl_zostavy_splitter, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tl_zostavy_splitter.ResumeLayout(False)
         Me.sprava_zdruzeni_splitter.Panel1.ResumeLayout(False)
         Me.sprava_zdruzeni_splitter.Panel2.ResumeLayout(False)
+        CType(Me.sprava_zdruzeni_splitter, System.ComponentModel.ISupportInitialize).EndInit()
         Me.sprava_zdruzeni_splitter.ResumeLayout(False)
         Me.sprava_clenov_splitter.Panel1.ResumeLayout(False)
         Me.sprava_clenov_splitter.Panel2.ResumeLayout(False)
+        CType(Me.sprava_clenov_splitter, System.ComponentModel.ISupportInitialize).EndInit()
         Me.sprava_clenov_splitter.ResumeLayout(False)
-        CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-
-        CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Vseobecne_udajeBindingNavigator.ResumeLayout(False)
-        Me.Vseobecne_udajeBindingNavigator.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1629,21 +1460,7 @@ Partial Class hlavna_aplikacia
     Friend WithEvents nastavenia_label As System.Windows.Forms.Label
     Friend WithEvents nastavenia_ciselniky_button As System.Windows.Forms.Button
 
-    Friend WithEvents Vseobecne_udajeBindingSource As System.Windows.Forms.BindingSource
-   
-    Friend WithEvents Vseobecne_udajeBindingNavigator As System.Windows.Forms.BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As System.Windows.Forms.ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents Vseobecne_udajeBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
+
     Friend WithEvents EmailTextBox As System.Windows.Forms.TextBox
     Friend WithEvents FaxTextBox As System.Windows.Forms.TextBox
     Friend WithEvents TelefonTextBox As System.Windows.Forms.TextBox
@@ -1675,7 +1492,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents registracia As System.Windows.Forms.Button
-    Friend WithEvents Reg_cisloTextBox As System.Windows.Forms.TextBox
     Friend WithEvents ica_hodnota As System.Windows.Forms.Label
     Friend WithEvents ica_cislo As System.Windows.Forms.Label
     Friend WithEvents registrovat As System.Windows.Forms.Button

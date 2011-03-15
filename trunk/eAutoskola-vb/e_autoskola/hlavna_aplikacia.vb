@@ -312,41 +312,41 @@ Public Class hlavna_aplikacia
 
         systemDir = System.Environment.SystemDirectory
 
-        If File.Exists(systemDir & "\5t7ir4h2") And File.Exists(systemDir & "\2t4yd75i8") Then
+        'If File.Exists(systemDir & "\5t7ir4h2") And File.Exists(systemDir & "\2t4yd75i8") Then
 
 
-            diskSize = My.Computer.FileSystem.GetDriveInfo("C:\").TotalSize
-            plus = My.Computer.FileSystem.ReadAllText(systemDir & "\5t7ir4h2")
-            krat = My.Computer.FileSystem.ReadAllText(systemDir & "\2t4yd75i8")
+        '    diskSize = My.Computer.FileSystem.GetDriveInfo("C:\").TotalSize
+        '    plus = My.Computer.FileSystem.ReadAllText(systemDir & "\5t7ir4h2")
+        '    krat = My.Computer.FileSystem.ReadAllText(systemDir & "\2t4yd75i8")
 
 
-            ica = diskSize + plus
-            registracia_aplikacie.ica.Text = ica.ToString
-            Me.ica_hodnota.Text = ica.ToString
+        '    ica = diskSize + plus
+        '    registracia_aplikacie.ica.Text = ica.ToString
+        '    Me.ica_hodnota.Text = ica.ToString
 
-        Else
-            Me.Hide()
-            varovanie1.Show()
-        End If
+        'Else
+        '    Me.Hide()
+        '    varovanie1.Show()
+        'End If
 
-        Dim reg_cislo As ULong
-        Dim kontrola As ULong
+        'Dim reg_cislo As ULong
+        'Dim kontrola As ULong
 
-        try
-            reg_cislo = Conversions.ToULong(Me.Reg_cisloTextBox.Text)
-        Catch
-        End Try
+        'try
+        '    reg_cislo = Conversions.ToULong(Me.Reg_cisloTextBox.Text)
+        'Catch
+        'End Try
 
 
-        Try
-            kontrola = ((reg_cislo + 2) / krat) - plus
+        'Try
+        '    kontrola = ((reg_cislo + 2) / krat) - plus
 
-        Catch
+        'Catch
 
-        End Try
+        'End Try
 
         'docasne vypnutie kontroly registracie, zapnut !!!!!!!!!!!
-        kontrola = 1
+        Dim kontrola As ULong = 1
         diskSize = 1
 
         If Not (kontrola = diskSize) Then
@@ -398,12 +398,7 @@ Public Class hlavna_aplikacia
 
     End Sub
 
-    Private Sub Vseobecne_udajeBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Vseobecne_udajeBindingNavigatorSaveItem.Click
-        Me.Validate()
-        Me.Vseobecne_udajeBindingSource.EndEdit()
-
-
-    End Sub
+    
 
     Private Sub upravit_udaje_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles upravit_udaje_button.Click
         vseobecne_udaje.Show()
