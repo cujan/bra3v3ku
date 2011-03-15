@@ -25,10 +25,9 @@ Partial Class registracia_aplikacie
         Me.components = New System.ComponentModel.Container
         Dim Reg_cisloLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(registracia_aplikacie))
-        Me.Spz_vseobecne_udaje = New e_autoskola.spz_vseobecne_udaje
+
         Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Vseobecne_udajeTableAdapter = New e_autoskola.spz_vseobecne_udajeTableAdapters.vseobecne_udajeTableAdapter
-        Me.TableAdapterManager = New e_autoskola.spz_vseobecne_udajeTableAdapters.TableAdapterManager
+        
         Me.Vseobecne_udajeBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
@@ -50,7 +49,7 @@ Partial Class registracia_aplikacie
         Me.ica = New System.Windows.Forms.TextBox
         Me.kontakt = New System.Windows.Forms.Button
         Reg_cisloLabel = New System.Windows.Forms.Label
-        CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).BeginInit()
+
         CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Vseobecne_udajeBindingNavigator.SuspendLayout()
@@ -68,23 +67,12 @@ Partial Class registracia_aplikacie
         '
         'Spz_vseobecne_udaje
         '
-        Me.Spz_vseobecne_udaje.DataSetName = "spz_vseobecne_udaje"
-        Me.Spz_vseobecne_udaje.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+      
         '
         'Vseobecne_udajeBindingSource
         '
         Me.Vseobecne_udajeBindingSource.DataMember = "vseobecne_udaje"
-        Me.Vseobecne_udajeBindingSource.DataSource = Me.Spz_vseobecne_udaje
-        '
-        'Vseobecne_udajeTableAdapter
-        '
-        Me.Vseobecne_udajeTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = e_autoskola.spz_vseobecne_udajeTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.vseobecne_udajeTableAdapter = Me.Vseobecne_udajeTableAdapter
+        
         '
         'Vseobecne_udajeBindingNavigator
         '
@@ -287,7 +275,7 @@ Partial Class registracia_aplikacie
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "registracia_aplikacie"
         Me.Text = "registracia_aplikacie"
-        CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).EndInit()
+
         CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Vseobecne_udajeBindingNavigator.ResumeLayout(False)
@@ -296,10 +284,9 @@ Partial Class registracia_aplikacie
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Spz_vseobecne_udaje As e_autoskola.spz_vseobecne_udaje
+
     Friend WithEvents Vseobecne_udajeBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Vseobecne_udajeTableAdapter As e_autoskola.spz_vseobecne_udajeTableAdapters.vseobecne_udajeTableAdapter
-    Friend WithEvents TableAdapterManager As e_autoskola.spz_vseobecne_udajeTableAdapters.TableAdapterManager
+    
     Friend WithEvents Vseobecne_udajeBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel

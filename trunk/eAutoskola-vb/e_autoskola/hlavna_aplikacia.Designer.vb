@@ -126,7 +126,7 @@ Partial Class hlavna_aplikacia
         Me.ica_cislo = New System.Windows.Forms.Label
         Me.Reg_cisloTextBox = New System.Windows.Forms.TextBox
         Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Spz_vseobecne_udaje = New e_autoskola.spz_vseobecne_udaje
+
         Me.poznamky = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
@@ -145,8 +145,7 @@ Partial Class hlavna_aplikacia
         Me.Nazov_organizacieTextBox = New System.Windows.Forms.TextBox
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
-        Me.Vseobecne_udajeTableAdapter = New e_autoskola.spz_vseobecne_udajeTableAdapters.vseobecne_udajeTableAdapter
-        Me.TableAdapterManager = New e_autoskola.spz_vseobecne_udajeTableAdapters.TableAdapterManager
+      
         Me.Vseobecne_udajeBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
@@ -186,7 +185,7 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.Panel2.SuspendLayout()
         Me.sprava_clenov_splitter.SuspendLayout()
         CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).BeginInit()
+
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Vseobecne_udajeBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
@@ -1190,12 +1189,11 @@ Partial Class hlavna_aplikacia
         'Vseobecne_udajeBindingSource
         '
         Me.Vseobecne_udajeBindingSource.DataMember = "vseobecne_udaje"
-        Me.Vseobecne_udajeBindingSource.DataSource = Me.Spz_vseobecne_udaje
+
         '
         'Spz_vseobecne_udaje
         '
-        Me.Spz_vseobecne_udaje.DataSetName = "spz_vseobecne_udaje"
-        Me.Spz_vseobecne_udaje.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+       
         '
         'poznamky
         '
@@ -1396,13 +1394,11 @@ Partial Class hlavna_aplikacia
         '
         'Vseobecne_udajeTableAdapter
         '
-        Me.Vseobecne_udajeTableAdapter.ClearBeforeFill = True
+
         '
         'TableAdapterManager
         '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = e_autoskola.spz_vseobecne_udajeTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.vseobecne_udajeTableAdapter = Me.Vseobecne_udajeTableAdapter
+        
         '
         'Vseobecne_udajeBindingNavigator
         '
@@ -1555,7 +1551,7 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.Panel2.ResumeLayout(False)
         Me.sprava_clenov_splitter.ResumeLayout(False)
         CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).EndInit()
+
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Vseobecne_udajeBindingNavigator.ResumeLayout(False)
         Me.Vseobecne_udajeBindingNavigator.PerformLayout()
@@ -1632,10 +1628,9 @@ Partial Class hlavna_aplikacia
     Friend WithEvents nastavenia_button As System.Windows.Forms.Button
     Friend WithEvents nastavenia_label As System.Windows.Forms.Label
     Friend WithEvents nastavenia_ciselniky_button As System.Windows.Forms.Button
-    Friend WithEvents Spz_vseobecne_udaje As e_autoskola.spz_vseobecne_udaje
+
     Friend WithEvents Vseobecne_udajeBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Vseobecne_udajeTableAdapter As e_autoskola.spz_vseobecne_udajeTableAdapters.vseobecne_udajeTableAdapter
-    Friend WithEvents TableAdapterManager As e_autoskola.spz_vseobecne_udajeTableAdapters.TableAdapterManager
+   
     Friend WithEvents Vseobecne_udajeBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
