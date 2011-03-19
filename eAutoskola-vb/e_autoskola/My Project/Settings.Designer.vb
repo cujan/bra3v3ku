@@ -74,6 +74,16 @@ Namespace My
                 Return CType(Me("spz_evidenciaConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\eAutoskolaDB.accdb")>  _
+        Public ReadOnly Property eAutoskolaDBConnectionString() As String
+            Get
+                Return CType(Me("eAutoskolaDBConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
