@@ -22,18 +22,18 @@ Partial Class o_aplikacii
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.uvod = New System.Windows.Forms.Label
-        Me.tvorca = New System.Windows.Forms.Label
-        Me.tvorca_detail = New System.Windows.Forms.Label
-        Me.kontakt = New System.Windows.Forms.Label
-        Me.tel = New System.Windows.Forms.Label
-        Me.email = New System.Windows.Forms.Label
-        Me.tel_hodnota = New System.Windows.Forms.Label
-        Me.email_hodnota = New System.Windows.Forms.Label
-        Me.zavriet = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.verzia_text = New System.Windows.Forms.Label
-        Me.verzia = New System.Windows.Forms.Label
+        Me.uvod = New System.Windows.Forms.Label()
+        Me.tvorca = New System.Windows.Forms.Label()
+        Me.tvorca_detail = New System.Windows.Forms.Label()
+        Me.kontakt = New System.Windows.Forms.Label()
+        Me.tel = New System.Windows.Forms.Label()
+        Me.email = New System.Windows.Forms.Label()
+        Me.tel_hodnota = New System.Windows.Forms.Label()
+        Me.email_hodnota = New System.Windows.Forms.Label()
+        Me.zavriet = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.verzia_text = New System.Windows.Forms.Label()
+        Me.verzia = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'uvod
@@ -42,8 +42,7 @@ Partial Class o_aplikacii
         Me.uvod.Name = "uvod"
         Me.uvod.Size = New System.Drawing.Size(322, 63)
         Me.uvod.TabIndex = 0
-        Me.uvod.Text = "Aplikácia ""Administrácia SPZ"" je určená pre správu agendy poľovníckych združení z" & _
-            "astrešovaných pod Slovenským poľovníckym zväzom."
+        Me.uvod.Text = "Aplikácia bla la bla"
         Me.uvod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'tvorca

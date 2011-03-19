@@ -229,6 +229,8 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub hlavna_aplikacia_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'VseobecneUdajeDataset.vseobecneUdaje' table. You can move, or remove it, as needed.
+        Me.VseobecneUdajeTableAdapter.Fill(Me.VseobecneUdajeDataset.vseobecneUdaje)
         'TODO: This line of code loads data into the 'Spz_vseobecne_udaje.vseobecne_udaje' table. You can move, or remove it, as needed.
 
         Try
@@ -540,6 +542,13 @@ Public Class hlavna_aplikacia
     Private Sub zalohuj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zalohuj.Click
         zaloha_databazy.Show()
         zaloha_databazy.BringToFront()
+
+    End Sub
+
+    Private Sub VseobecneUdajeBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Validate()
+        Me.VseobecneUdajeBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.VseobecneUdajeDataset)
 
     End Sub
 End Class

@@ -142,6 +142,10 @@ Partial Class hlavna_aplikacia
         Me.Nazov_organizacieTextBox = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.VseobecneUdajeDataset = New e_autoskola.vseobecneUdajeDataset()
+        Me.VseobecneUdajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VseobecneUdajeTableAdapter = New e_autoskola.vseobecneUdajeDatasetTableAdapters.vseobecneUdajeTableAdapter()
+        Me.TableAdapterManager = New e_autoskola.vseobecneUdajeDatasetTableAdapters.TableAdapterManager()
         TelefonLabel = New System.Windows.Forms.Label()
         FaxLabel = New System.Windows.Forms.Label()
         EmailLabel = New System.Windows.Forms.Label()
@@ -172,6 +176,8 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.Panel1.SuspendLayout()
         Me.sprava_clenov_splitter.Panel2.SuspendLayout()
         Me.sprava_clenov_splitter.SuspendLayout()
+        CType(Me.VseobecneUdajeDataset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VseobecneUdajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TelefonLabel
@@ -1180,6 +1186,8 @@ Partial Class hlavna_aplikacia
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.VseobecneUdajeBindingSource, "www", True))
+        Me.Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "www", True))
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Label1.Location = New System.Drawing.Point(505, 224)
         Me.Label1.Name = "Label1"
@@ -1212,6 +1220,8 @@ Partial Class hlavna_aplikacia
         '
         Me.DicTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.DicTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.VseobecneUdajeBindingSource, "dic", True))
+        Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "dic", True))
         Me.DicTextBox.Location = New System.Drawing.Point(439, 60)
         Me.DicTextBox.Name = "DicTextBox"
         Me.DicTextBox.ReadOnly = True
@@ -1222,6 +1232,8 @@ Partial Class hlavna_aplikacia
         '
         Me.IcoTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.IcoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.VseobecneUdajeBindingSource, "ico", True))
+        Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "ico", True))
         Me.IcoTextBox.Location = New System.Drawing.Point(335, 60)
         Me.IcoTextBox.Name = "IcoTextBox"
         Me.IcoTextBox.ReadOnly = True
@@ -1232,6 +1244,8 @@ Partial Class hlavna_aplikacia
         '
         Me.EmailTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.VseobecneUdajeBindingSource, "email", True))
+        Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "email", True))
         Me.EmailTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EmailTextBox.Location = New System.Drawing.Point(503, 209)
         Me.EmailTextBox.Name = "EmailTextBox"
@@ -1254,6 +1268,8 @@ Partial Class hlavna_aplikacia
         '
         Me.TelefonTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.TelefonTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.VseobecneUdajeBindingSource, "telefon", True))
+        Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "telefon", True))
         Me.TelefonTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TelefonTextBox.Location = New System.Drawing.Point(503, 178)
         Me.TelefonTextBox.Name = "TelefonTextBox"
@@ -1275,6 +1291,8 @@ Partial Class hlavna_aplikacia
         '
         Me.PscTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.PscTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.VseobecneUdajeBindingSource, "psc", True))
+        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "psc", True))
         Me.PscTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PscTextBox.Location = New System.Drawing.Point(313, 191)
         Me.PscTextBox.Name = "PscTextBox"
@@ -1286,6 +1304,8 @@ Partial Class hlavna_aplikacia
         '
         Me.MestoTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.MestoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.VseobecneUdajeBindingSource, "mesto", True))
+        Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "mesto", True))
         Me.MestoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MestoTextBox.Location = New System.Drawing.Point(235, 191)
         Me.MestoTextBox.Name = "MestoTextBox"
@@ -1297,6 +1317,8 @@ Partial Class hlavna_aplikacia
         '
         Me.UlicaTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.UlicaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.VseobecneUdajeBindingSource, "ulica", True))
+        Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "ulica", True))
         Me.UlicaTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UlicaTextBox.Location = New System.Drawing.Point(235, 173)
         Me.UlicaTextBox.Name = "UlicaTextBox"
@@ -1318,12 +1340,15 @@ Partial Class hlavna_aplikacia
         '
         Me.Nazov_organizacieTextBox.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Nazov_organizacieTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Nazov_organizacieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.VseobecneUdajeBindingSource, "nazovOrganizacie", True))
+        Me.Nazov_organizacieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "nazovOrganizacie", True))
         Me.Nazov_organizacieTextBox.Font = New System.Drawing.Font("Candara", 22.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Nazov_organizacieTextBox.Location = New System.Drawing.Point(130, 20)
         Me.Nazov_organizacieTextBox.Name = "Nazov_organizacieTextBox"
         Me.Nazov_organizacieTextBox.ReadOnly = True
         Me.Nazov_organizacieTextBox.Size = New System.Drawing.Size(604, 36)
         Me.Nazov_organizacieTextBox.TabIndex = 1
+        Me.Nazov_organizacieTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'ShapeContainer1
         '
@@ -1343,6 +1368,26 @@ Partial Class hlavna_aplikacia
         Me.LineShape1.X2 = 667
         Me.LineShape1.Y1 = 325
         Me.LineShape1.Y2 = 325
+        '
+        'VseobecneUdajeDataset
+        '
+        Me.VseobecneUdajeDataset.DataSetName = "vseobecneUdajeDataset"
+        Me.VseobecneUdajeDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VseobecneUdajeBindingSource
+        '
+        Me.VseobecneUdajeBindingSource.DataMember = "vseobecneUdaje"
+        Me.VseobecneUdajeBindingSource.DataSource = Me.VseobecneUdajeDataset
+        '
+        'VseobecneUdajeTableAdapter
+        '
+        Me.VseobecneUdajeTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.UpdateOrder = e_autoskola.vseobecneUdajeDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vseobecneUdajeTableAdapter = Me.VseobecneUdajeTableAdapter
         '
         'hlavna_aplikacia
         '
@@ -1386,6 +1431,8 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.Panel2.ResumeLayout(False)
         CType(Me.sprava_clenov_splitter, System.ComponentModel.ISupportInitialize).EndInit()
         Me.sprava_clenov_splitter.ResumeLayout(False)
+        CType(Me.VseobecneUdajeDataset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VseobecneUdajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1502,5 +1549,9 @@ Partial Class hlavna_aplikacia
     Friend WithEvents versionLabel As System.Windows.Forms.Label
     Friend WithEvents copyrightLabel As System.Windows.Forms.Label
     Friend WithEvents verzia_text As System.Windows.Forms.Label
+    Friend WithEvents VseobecneUdajeDataset As e_autoskola.vseobecneUdajeDataset
+    Friend WithEvents VseobecneUdajeBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents VseobecneUdajeTableAdapter As e_autoskola.vseobecneUdajeDatasetTableAdapters.vseobecneUdajeTableAdapter
+    Friend WithEvents TableAdapterManager As e_autoskola.vseobecneUdajeDatasetTableAdapters.TableAdapterManager
 
 End Class

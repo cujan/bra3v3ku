@@ -163,6 +163,11 @@
     <Compile Include="varovanie2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vseobecneUdajeDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vseobecneUdajeDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="vseobecne_udaje.Designer.vb">
       <DependentUpon>vseobecne_udaje.vb</DependentUpon>
     </Compile>
@@ -231,6 +236,17 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="vseobecneUdajeDataset.xsc">
+      <DependentUpon>vseobecneUdajeDataset.xsd</DependentUpon>
+    </None>
+    <None Include="vseobecneUdajeDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vseobecneUdajeDataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vseobecneUdajeDataset.xss">
+      <DependentUpon>vseobecneUdajeDataset.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -276,6 +292,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="eAutoskolaDB.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
