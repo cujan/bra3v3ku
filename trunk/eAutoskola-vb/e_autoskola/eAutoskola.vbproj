@@ -229,6 +229,7 @@
     <EmbeddedResource Include="kurzPrehlad.resx">
       <DependentUpon>kurzPrehlad.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="prihlaskaReport.rdlc" />
     <EmbeddedResource Include="studentDetail.resx">
       <DependentUpon>studentDetail.vb</DependentUpon>
     </EmbeddedResource>
