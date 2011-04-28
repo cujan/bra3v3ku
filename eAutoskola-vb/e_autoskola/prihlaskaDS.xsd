@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="eAutoskolaDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="eAutoskolaDBConnectionString (MySettings)" PropertyReference="ApplicationSettings.e_autoskola.My.MySettings.GlobalReference.Default.eAutoskolaDBConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables />
+        <Sources>
+          <DbSource ConnectionRef="eAutoskolaDBConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="prihlaskaStudentQuery" MethodsParameterType="CLR" Modifier="Public" Name="prihlaskaStudentQuery" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="prihlaskaStudentQuery">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>SELECT     osoba.meno, osoba.priezvisko, osoba.datumNarodenia, osoba.miestoNarodenia, osoba.ulica AS Expr1, osoba.ulicaCislo AS Expr2, 
+                      osoba.mesto AS Expr3, osoba.psc AS Expr4, osoba.cisloOp, osoba.cisloVp, studentSkupinaVlastnik.idCiselnikSkupina AS skupina_vlastnik, 
+                      studentSkupinaUchadzac.idCislenikSkupina AS skupina_uchadzac, kurz.id AS id_kurz, kurz.zaciatokDatum, platba.platbaZaKurz, vseobecneUdaje.id, 
+                      vseobecneUdaje.nazovOrganizacie, vseobecneUdaje.ulica, vseobecneUdaje.ulicaCislo, vseobecneUdaje.mesto, vseobecneUdaje.psc, 
+                      vseobecneUdaje.ico, vseobecneUdaje.dic, vseobecneUdaje.telefon, vseobecneUdaje.mobil, vseobecneUdaje.email, vseobecneUdaje.www
+FROM         vseobecneUdaje, ((((((osoba LEFT OUTER JOIN
+                      student ON osoba.id = student.id) LEFT OUTER JOIN
+                      clenKurzu ON clenKurzu.idStudent = student.id) LEFT OUTER JOIN
+                      kurz ON kurz.id = clenKurzu.idKurz) LEFT OUTER JOIN
+                      platba ON platba.idStudent = student.id) LEFT OUTER JOIN
+                      studentSkupinaUchadzac ON studentSkupinaUchadzac.idStudent = student.id) LEFT OUTER JOIN
+                      studentSkupinaVlastnik ON studentSkupinaVlastnik.idStudent = student.id)</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
