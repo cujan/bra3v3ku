@@ -96,6 +96,7 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
+    <Import Include="System.Data.OleDb" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Drawing.Printing" />
@@ -110,6 +111,36 @@
       <DependentUpon>ciselniky.vb</DependentUpon>
     </Compile>
     <Compile Include="ciselniky.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eAutoskolaDBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eAutoskolaDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kniznica.vb" />
+    <Compile Include="kurzNovy.Designer.vb">
+      <DependentUpon>kurzNovy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kurzNovy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kurzPrehlad.Designer.vb">
+      <DependentUpon>kurzPrehlad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kurzPrehlad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentDetail.Designer.vb">
+      <DependentUpon>studentDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="studentDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentNovy.Designer.vb">
+      <DependentUpon>studentNovy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="studentNovy.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="o_aplikacii.Designer.vb">
@@ -151,6 +182,12 @@
     <Compile Include="registracia_aplikacie.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="studentPrehlad.Designer.vb">
+      <DependentUpon>studentPrehlad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="studentPrehlad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="varovanie1.Designer.vb">
       <DependentUpon>varovanie1.vb</DependentUpon>
     </Compile>
@@ -186,6 +223,18 @@
       <DependentUpon>ciselniky.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="kurzNovy.resx">
+      <DependentUpon>kurzNovy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kurzPrehlad.resx">
+      <DependentUpon>kurzPrehlad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentDetail.resx">
+      <DependentUpon>studentDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentNovy.resx">
+      <DependentUpon>studentNovy.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="o_aplikacii.resx">
       <DependentUpon>o_aplikacii.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -208,6 +257,9 @@
       <DependentUpon>registracia_aplikacie.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="studentPrehlad.resx">
+      <DependentUpon>studentPrehlad.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="varovanie1.resx">
       <DependentUpon>varovanie1.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -227,6 +279,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="eAutoskolaDBDataSet.xsc">
+      <DependentUpon>eAutoskolaDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eAutoskolaDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>eAutoskolaDBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eAutoskolaDBDataSet.xss">
+      <DependentUpon>eAutoskolaDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

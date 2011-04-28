@@ -117,6 +117,9 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label = New System.Windows.Forms.Label()
         Me.prehlad_clenov_button = New System.Windows.Forms.Button()
         Me.novy_clen_button = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.verzia_text = New System.Windows.Forms.Label()
         Me.versionLabel = New System.Windows.Forms.Label()
         Me.copyrightLabel = New System.Windows.Forms.Label()
@@ -127,6 +130,8 @@ Partial Class hlavna_aplikacia
         Me.poznamky = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.VseobecneUdajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VseobecneUdajeDataset = New e_autoskola.vseobecneUdajeDataset()
         Me.upravit_udaje_button = New System.Windows.Forms.Button()
         Me.lomene_label = New System.Windows.Forms.Label()
         Me.DicTextBox = New System.Windows.Forms.TextBox()
@@ -142,10 +147,9 @@ Partial Class hlavna_aplikacia
         Me.Nazov_organizacieTextBox = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.VseobecneUdajeDataset = New e_autoskola.vseobecneUdajeDataset()
-        Me.VseobecneUdajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VseobecneUdajeTableAdapter = New e_autoskola.vseobecneUdajeDatasetTableAdapters.vseobecneUdajeTableAdapter()
         Me.TableAdapterManager = New e_autoskola.vseobecneUdajeDatasetTableAdapters.TableAdapterManager()
+        Me.Button4 = New System.Windows.Forms.Button()
         TelefonLabel = New System.Windows.Forms.Label()
         FaxLabel = New System.Windows.Forms.Label()
         EmailLabel = New System.Windows.Forms.Label()
@@ -176,8 +180,8 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.Panel1.SuspendLayout()
         Me.sprava_clenov_splitter.Panel2.SuspendLayout()
         Me.sprava_clenov_splitter.SuspendLayout()
-        CType(Me.VseobecneUdajeDataset, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VseobecneUdajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VseobecneUdajeDataset, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TelefonLabel
@@ -682,6 +686,10 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel2.AutoScroll = True
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button4)
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button3)
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button2)
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button1)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.verzia_text)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.versionLabel)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.copyrightLabel)
@@ -1067,7 +1075,7 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label.Name = "sprava_clenov_label"
         Me.sprava_clenov_label.Size = New System.Drawing.Size(138, 26)
         Me.sprava_clenov_label.TabIndex = 0
-        Me.sprava_clenov_label.Text = "Správa účastníkov"
+        Me.sprava_clenov_label.Text = "Správa študentov"
         Me.sprava_clenov_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'prehlad_clenov_button
@@ -1091,6 +1099,33 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.TabIndex = 0
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(49, 505)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 38
+        Me.Button3.Text = "kurz novy"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(49, 475)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(134, 23)
+        Me.Button2.TabIndex = 37
+        Me.Button2.Text = "Student prehlad"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(49, 445)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(134, 23)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Novy student"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'verzia_text
         '
@@ -1194,6 +1229,16 @@ Partial Class hlavna_aplikacia
         Me.Label1.Size = New System.Drawing.Size(45, 13)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Label1"
+        '
+        'VseobecneUdajeBindingSource
+        '
+        Me.VseobecneUdajeBindingSource.DataMember = "vseobecneUdaje"
+        Me.VseobecneUdajeBindingSource.DataSource = Me.VseobecneUdajeDataset
+        '
+        'VseobecneUdajeDataset
+        '
+        Me.VseobecneUdajeDataset.DataSetName = "vseobecneUdajeDataset"
+        Me.VseobecneUdajeDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'upravit_udaje_button
         '
@@ -1369,16 +1414,6 @@ Partial Class hlavna_aplikacia
         Me.LineShape1.Y1 = 325
         Me.LineShape1.Y2 = 325
         '
-        'VseobecneUdajeDataset
-        '
-        Me.VseobecneUdajeDataset.DataSetName = "vseobecneUdajeDataset"
-        Me.VseobecneUdajeDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VseobecneUdajeBindingSource
-        '
-        Me.VseobecneUdajeBindingSource.DataMember = "vseobecneUdaje"
-        Me.VseobecneUdajeBindingSource.DataSource = Me.VseobecneUdajeDataset
-        '
         'VseobecneUdajeTableAdapter
         '
         Me.VseobecneUdajeTableAdapter.ClearBeforeFill = True
@@ -1388,6 +1423,15 @@ Partial Class hlavna_aplikacia
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.UpdateOrder = e_autoskola.vseobecneUdajeDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.vseobecneUdajeTableAdapter = Me.VseobecneUdajeTableAdapter
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(141, 504)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 39
+        Me.Button4.Text = "kurz prehlad"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'hlavna_aplikacia
         '
@@ -1431,8 +1475,8 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.Panel2.ResumeLayout(False)
         CType(Me.sprava_clenov_splitter, System.ComponentModel.ISupportInitialize).EndInit()
         Me.sprava_clenov_splitter.ResumeLayout(False)
-        CType(Me.VseobecneUdajeDataset, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VseobecneUdajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VseobecneUdajeDataset, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1553,5 +1597,9 @@ Partial Class hlavna_aplikacia
     Friend WithEvents VseobecneUdajeBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents VseobecneUdajeTableAdapter As e_autoskola.vseobecneUdajeDatasetTableAdapters.vseobecneUdajeTableAdapter
     Friend WithEvents TableAdapterManager As e_autoskola.vseobecneUdajeDatasetTableAdapters.TableAdapterManager
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 
 End Class
