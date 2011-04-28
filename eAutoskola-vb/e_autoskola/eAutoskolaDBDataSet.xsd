@@ -966,6 +966,45 @@ WHERE     (osoba.id = ?)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="prihlaskaTableAdapter" GeneratorDataComponentClassName="prihlaskaTableAdapter" Name="prihlaska" UserDataComponentName="prihlaskaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="eAutoskolaDBConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     student.id, osoba.titulPred, osoba.priezvisko, osoba.rodnePriezvisko, osoba.meno, osoba.titulZa, osoba.datumNarodenia, osoba.rodneCislo, 
+                      osoba.miestoNarodenia, osoba.ulica, osoba.ulicaCislo, osoba.mesto, osoba.psc, osoba.cisloOp, osoba.cisloVp, kurz.zaciatokDatum, 
+                      platba.platbaZaKurz
+FROM         ((((student LEFT OUTER JOIN
+                      osoba ON osoba.id = student.id) LEFT OUTER JOIN
+                      clenKurzu ON clenKurzu.idStudent = student.id) LEFT OUTER JOIN
+                      kurz ON clenKurzu.idKurz = kurz.id) LEFT OUTER JOIN
+                      platba ON platba.idStudent = student.id)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="titulPred" DataSetColumn="titulPred" />
+              <Mapping SourceColumn="priezvisko" DataSetColumn="priezvisko" />
+              <Mapping SourceColumn="rodnePriezvisko" DataSetColumn="rodnePriezvisko" />
+              <Mapping SourceColumn="meno" DataSetColumn="meno" />
+              <Mapping SourceColumn="titulZa" DataSetColumn="titulZa" />
+              <Mapping SourceColumn="datumNarodenia" DataSetColumn="datumNarodenia" />
+              <Mapping SourceColumn="rodneCislo" DataSetColumn="rodneCislo" />
+              <Mapping SourceColumn="miestoNarodenia" DataSetColumn="miestoNarodenia" />
+              <Mapping SourceColumn="ulica" DataSetColumn="ulica" />
+              <Mapping SourceColumn="ulicaCislo" DataSetColumn="ulicaCislo" />
+              <Mapping SourceColumn="mesto" DataSetColumn="mesto" />
+              <Mapping SourceColumn="psc" DataSetColumn="psc" />
+              <Mapping SourceColumn="cisloOp" DataSetColumn="cisloOp" />
+              <Mapping SourceColumn="cisloVp" DataSetColumn="cisloVp" />
+              <Mapping SourceColumn="zaciatokDatum" DataSetColumn="zaciatokDatum" />
+              <Mapping SourceColumn="platbaZaKurz" DataSetColumn="platbaZaKurz" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1471,6 +1510,119 @@ WHERE     (osoba.id = ?)</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="cisloVp" msprop:Generator_ColumnVarNameInTable="columncisloVp" msprop:Generator_ColumnPropNameInRow="cisloVp" msprop:Generator_ColumnPropNameInTable="cisloVpColumn" msprop:Generator_UserColumnName="cisloVp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="prihlaska" msprop:Generator_TableClassName="prihlaskaDataTable" msprop:Generator_TableVarName="tableprihlaska" msprop:Generator_TablePropName="prihlaska" msprop:Generator_RowDeletingName="prihlaskaRowDeleting" msprop:Generator_UserTableName="prihlaska" msprop:Generator_RowChangingName="prihlaskaRowChanging" msprop:Generator_RowEvHandlerName="prihlaskaRowChangeEventHandler" msprop:Generator_RowDeletedName="prihlaskaRowDeleted" msprop:Generator_RowEvArgName="prihlaskaRowChangeEvent" msprop:Generator_RowChangedName="prihlaskaRowChanged" msprop:Generator_RowClassName="prihlaskaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="titulPred" msprop:Generator_ColumnVarNameInTable="columntitulPred" msprop:Generator_ColumnPropNameInRow="titulPred" msprop:Generator_ColumnPropNameInTable="titulPredColumn" msprop:Generator_UserColumnName="titulPred" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="priezvisko" msprop:Generator_ColumnVarNameInTable="columnpriezvisko" msprop:Generator_ColumnPropNameInRow="priezvisko" msprop:Generator_ColumnPropNameInTable="priezviskoColumn" msprop:Generator_UserColumnName="priezvisko" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rodnePriezvisko" msprop:Generator_ColumnVarNameInTable="columnrodnePriezvisko" msprop:Generator_ColumnPropNameInRow="rodnePriezvisko" msprop:Generator_ColumnPropNameInTable="rodnePriezviskoColumn" msprop:Generator_UserColumnName="rodnePriezvisko" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="meno" msprop:Generator_ColumnVarNameInTable="columnmeno" msprop:Generator_ColumnPropNameInRow="meno" msprop:Generator_ColumnPropNameInTable="menoColumn" msprop:Generator_UserColumnName="meno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="titulZa" msprop:Generator_ColumnVarNameInTable="columntitulZa" msprop:Generator_ColumnPropNameInRow="titulZa" msprop:Generator_ColumnPropNameInTable="titulZaColumn" msprop:Generator_UserColumnName="titulZa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datumNarodenia" msprop:Generator_ColumnVarNameInTable="columndatumNarodenia" msprop:Generator_ColumnPropNameInRow="datumNarodenia" msprop:Generator_ColumnPropNameInTable="datumNarodeniaColumn" msprop:Generator_UserColumnName="datumNarodenia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rodneCislo" msprop:Generator_ColumnVarNameInTable="columnrodneCislo" msprop:Generator_ColumnPropNameInRow="rodneCislo" msprop:Generator_ColumnPropNameInTable="rodneCisloColumn" msprop:Generator_UserColumnName="rodneCislo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="miestoNarodenia" msprop:Generator_ColumnVarNameInTable="columnmiestoNarodenia" msprop:Generator_ColumnPropNameInRow="miestoNarodenia" msprop:Generator_ColumnPropNameInTable="miestoNarodeniaColumn" msprop:Generator_UserColumnName="miestoNarodenia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ulica" msprop:Generator_ColumnVarNameInTable="columnulica" msprop:Generator_ColumnPropNameInRow="ulica" msprop:Generator_ColumnPropNameInTable="ulicaColumn" msprop:Generator_UserColumnName="ulica" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ulicaCislo" msprop:Generator_ColumnVarNameInTable="columnulicaCislo" msprop:Generator_ColumnPropNameInRow="ulicaCislo" msprop:Generator_ColumnPropNameInTable="ulicaCisloColumn" msprop:Generator_UserColumnName="ulicaCislo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mesto" msprop:Generator_ColumnVarNameInTable="columnmesto" msprop:Generator_ColumnPropNameInRow="mesto" msprop:Generator_ColumnPropNameInTable="mestoColumn" msprop:Generator_UserColumnName="mesto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="psc" msprop:Generator_ColumnVarNameInTable="columnpsc" msprop:Generator_ColumnPropNameInRow="psc" msprop:Generator_ColumnPropNameInTable="pscColumn" msprop:Generator_UserColumnName="psc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cisloOp" msprop:Generator_ColumnVarNameInTable="columncisloOp" msprop:Generator_ColumnPropNameInRow="cisloOp" msprop:Generator_ColumnPropNameInTable="cisloOpColumn" msprop:Generator_UserColumnName="cisloOp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cisloVp" msprop:Generator_ColumnVarNameInTable="columncisloVp" msprop:Generator_ColumnPropNameInRow="cisloVp" msprop:Generator_ColumnPropNameInTable="cisloVpColumn" msprop:Generator_UserColumnName="cisloVp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="zaciatokDatum" msprop:Generator_ColumnVarNameInTable="columnzaciatokDatum" msprop:Generator_ColumnPropNameInRow="zaciatokDatum" msprop:Generator_ColumnPropNameInTable="zaciatokDatumColumn" msprop:Generator_UserColumnName="zaciatokDatum" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="platbaZaKurz" msprop:Generator_ColumnVarNameInTable="columnplatbaZaKurz" msprop:Generator_ColumnPropNameInRow="platbaZaKurz" msprop:Generator_ColumnPropNameInTable="platbaZaKurzColumn" msprop:Generator_UserColumnName="platbaZaKurz" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
