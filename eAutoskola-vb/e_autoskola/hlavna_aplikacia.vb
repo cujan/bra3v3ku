@@ -551,4 +551,24 @@ Public Class hlavna_aplikacia
         Me.TableAdapterManager.UpdateAll(Me.VseobecneUdajeDataset)
 
     End Sub
+
+    Private Sub sprava_clenov_label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprava_clenov_label.Click
+
+    End Sub
+
+    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        studentNovy.Show()
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        studentPrehlad.Show()
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        kurzNovy.Show()
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        kurzPrehlad.Show()
+    End Sub
 End Class
