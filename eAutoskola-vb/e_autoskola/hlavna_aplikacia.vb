@@ -571,4 +571,9 @@ Public Class hlavna_aplikacia
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         kurzPrehlad.Show()
     End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        PrihlaskaReportForm.Show()
+
+    End Sub
 End Class
