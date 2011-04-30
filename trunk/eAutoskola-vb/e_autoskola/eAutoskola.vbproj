@@ -63,10 +63,12 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.VsPackage">
+      <HintPath>C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Microsoft.VisualBasic.PowerPacks.VsPackage.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -117,6 +119,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>eAutoskolaDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="prihlaskaReportForm.Designer.vb">
+      <DependentUpon>prihlaskaReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prihlaskaReportForm.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="kniznica.vb" />
     <Compile Include="kurzNovy.Designer.vb">
@@ -222,6 +230,9 @@
     <EmbeddedResource Include="ciselniky.resx">
       <DependentUpon>ciselniky.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prihlaskaReportForm.resx">
+      <DependentUpon>prihlaskaReportForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kurzNovy.resx">
       <DependentUpon>kurzNovy.vb</DependentUpon>
