@@ -3,10 +3,10 @@
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.student' table. You can move, or remove it, as needed.
         Me.StudentTableAdapter.Fill(Me.EAutoskolaDBDataSet.student)
-        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.osoba' table. You can move, or remove it, as needed.
-        Me.OsobaTableAdapter.Fill(Me.EAutoskolaDBDataSet.osoba)
-        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.osoba' table. You can move, or remove it, as needed.
+        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.vseobecneUdaje' table. You can move, or remove it, as needed.
+        Me.VseobecneUdajeTableAdapter.Fill(Me.EAutoskolaDBDataSet.vseobecneUdaje)
 
+      
 
     End Sub
 
@@ -73,9 +73,16 @@
         Me.StudentTableAdapter.Fill(Me.EAutoskolaDBDataSet.student)
     End Sub
 
-    Private Sub OsobaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OsobaBindingNavigatorSaveItem.Click
+    Private Sub OsobaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.OsobaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.EAutoskolaDBDataSet)
+
+    End Sub
+
+    Private Sub VseobecneUdajeBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VseobecneUdajeBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.VseobecneUdajeBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.EAutoskolaDBDataSet)
 
     End Sub
