@@ -576,4 +576,8 @@ Public Class hlavna_aplikacia
         PrihlaskaReportForm.Show()
 
     End Sub
+
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        vseobecne_udaje.Show()
+    End Sub
 End Class
