@@ -41,6 +41,17 @@ Partial Class studentNovy
         Dim CisloOpLabel As System.Windows.Forms.Label
         Dim CisloVpLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentNovy))
+        Dim ALabel As System.Windows.Forms.Label
+        Dim A1Label As System.Windows.Forms.Label
+        Dim BLabel As System.Windows.Forms.Label
+        Dim B1Label As System.Windows.Forms.Label
+        Dim CLabel As System.Windows.Forms.Label
+        Dim DLabel As System.Windows.Forms.Label
+        Dim BELabel As System.Windows.Forms.Label
+        Dim CELabel As System.Windows.Forms.Label
+        Dim DELabel As System.Windows.Forms.Label
+        Dim AMLabel As System.Windows.Forms.Label
+        Dim TLabel As System.Windows.Forms.Label
         Me.TitulPredTextBox = New System.Windows.Forms.TextBox()
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox()
         Me.RodnePriezviskoTextBox = New System.Windows.Forms.TextBox()
@@ -59,11 +70,14 @@ Partial Class studentNovy
         Me.CisloOpTextBox = New System.Windows.Forms.TextBox()
         Me.CisloVpTextBox = New System.Windows.Forms.TextBox()
         Me.vlozStudenta = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.EAutoskolaDBDataSet = New e_autoskola.eAutoskolaDBDataSet()
-        Me.OsobaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OsobaTableAdapter = New e_autoskola.eAutoskolaDBDataSetTableAdapters.osobaTableAdapter()
+        Me.VseobecneUdajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VseobecneUdajeTableAdapter = New e_autoskola.eAutoskolaDBDataSetTableAdapters.vseobecneUdajeTableAdapter()
         Me.TableAdapterManager = New e_autoskola.eAutoskolaDBDataSetTableAdapters.TableAdapterManager()
-        Me.OsobaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.VseobecneUdajeBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
@@ -75,32 +89,42 @@ Partial Class studentNovy
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.OsobaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.OsobaDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.VseobecneUdajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ATextBox = New System.Windows.Forms.TextBox()
+        Me.A1TextBox = New System.Windows.Forms.TextBox()
+        Me.BTextBox = New System.Windows.Forms.TextBox()
+        Me.B1TextBox = New System.Windows.Forms.TextBox()
+        Me.CTextBox = New System.Windows.Forms.TextBox()
+        Me.DTextBox = New System.Windows.Forms.TextBox()
+        Me.BETextBox = New System.Windows.Forms.TextBox()
+        Me.CETextBox = New System.Windows.Forms.TextBox()
+        Me.DETextBox = New System.Windows.Forms.TextBox()
+        Me.AMTextBox = New System.Windows.Forms.TextBox()
+        Me.TTextBox = New System.Windows.Forms.TextBox()
         Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StudentTableAdapter = New e_autoskola.eAutoskolaDBDataSetTableAdapters.studentTableAdapter()
-        Me.StudentDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox13 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox15 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox16 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox17 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox18 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox19 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox20 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox21 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox22 = New System.Windows.Forms.CheckBox()
         TitulPredLabel = New System.Windows.Forms.Label()
         PriezviskoLabel = New System.Windows.Forms.Label()
         RodnePriezviskoLabel = New System.Windows.Forms.Label()
@@ -118,13 +142,22 @@ Partial Class studentNovy
         EmailLabel = New System.Windows.Forms.Label()
         CisloOpLabel = New System.Windows.Forms.Label()
         CisloVpLabel = New System.Windows.Forms.Label()
+        ALabel = New System.Windows.Forms.Label()
+        A1Label = New System.Windows.Forms.Label()
+        BLabel = New System.Windows.Forms.Label()
+        B1Label = New System.Windows.Forms.Label()
+        CLabel = New System.Windows.Forms.Label()
+        DLabel = New System.Windows.Forms.Label()
+        BELabel = New System.Windows.Forms.Label()
+        CELabel = New System.Windows.Forms.Label()
+        DELabel = New System.Windows.Forms.Label()
+        AMLabel = New System.Windows.Forms.Label()
+        TLabel = New System.Windows.Forms.Label()
         CType(Me.EAutoskolaDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OsobaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.OsobaBindingNavigator.SuspendLayout()
-        CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VseobecneUdajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VseobecneUdajeBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.VseobecneUdajeBindingNavigator.SuspendLayout()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TitulPredLabel
@@ -408,19 +441,46 @@ Partial Class studentNovy
         Me.vlozStudenta.Text = "Vlož nového študenta"
         Me.vlozStudenta.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 485)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.TabIndex = 38
+        Me.Label1.Text = "vlastnik"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(23, 611)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(54, 13)
+        Me.Label2.TabIndex = 39
+        Me.Label2.Text = "uchadzac"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(27, 781)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(53, 13)
+        Me.Label3.TabIndex = 40
+        Me.Label3.Text = "autoskola"
+        '
         'EAutoskolaDBDataSet
         '
         Me.EAutoskolaDBDataSet.DataSetName = "eAutoskolaDBDataSet"
         Me.EAutoskolaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'OsobaBindingSource
+        'VseobecneUdajeBindingSource
         '
-        Me.OsobaBindingSource.DataMember = "osoba"
-        Me.OsobaBindingSource.DataSource = Me.EAutoskolaDBDataSet
+        Me.VseobecneUdajeBindingSource.DataMember = "vseobecneUdaje"
+        Me.VseobecneUdajeBindingSource.DataSource = Me.EAutoskolaDBDataSet
         '
-        'OsobaTableAdapter
+        'VseobecneUdajeTableAdapter
         '
-        Me.OsobaTableAdapter.ClearBeforeFill = True
+        Me.VseobecneUdajeTableAdapter.ClearBeforeFill = True
         '
         'TableAdapterManager
         '
@@ -431,31 +491,31 @@ Partial Class studentNovy
         Me.TableAdapterManager.dodanePotvrdeniaTableAdapter = Nothing
         Me.TableAdapterManager.instruktorTableAdapter = Nothing
         Me.TableAdapterManager.kurzTableAdapter = Nothing
-        Me.TableAdapterManager.osobaTableAdapter = Me.OsobaTableAdapter
+        Me.TableAdapterManager.osobaTableAdapter = Nothing
         Me.TableAdapterManager.platbaTableAdapter = Nothing
         Me.TableAdapterManager.studentSkupinaUchadzacTableAdapter = Nothing
         Me.TableAdapterManager.studentSkupinaVlastnikTableAdapter = Nothing
         Me.TableAdapterManager.studentTableAdapter = Me.StudentTableAdapter
         Me.TableAdapterManager.UpdateOrder = e_autoskola.eAutoskolaDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.vseobecneUdajeTableAdapter = Nothing
+        Me.TableAdapterManager.vseobecneUdajeTableAdapter = Me.VseobecneUdajeTableAdapter
         '
-        'OsobaBindingNavigator
+        'VseobecneUdajeBindingNavigator
         '
-        Me.OsobaBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.OsobaBindingNavigator.BindingSource = Me.OsobaBindingSource
-        Me.OsobaBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.OsobaBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.OsobaBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.OsobaBindingNavigatorSaveItem})
-        Me.OsobaBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.OsobaBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.OsobaBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.OsobaBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.OsobaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.OsobaBindingNavigator.Name = "OsobaBindingNavigator"
-        Me.OsobaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.OsobaBindingNavigator.Size = New System.Drawing.Size(728, 25)
-        Me.OsobaBindingNavigator.TabIndex = 38
-        Me.OsobaBindingNavigator.Text = "BindingNavigator1"
+        Me.VseobecneUdajeBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.VseobecneUdajeBindingNavigator.BindingSource = Me.VseobecneUdajeBindingSource
+        Me.VseobecneUdajeBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.VseobecneUdajeBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.VseobecneUdajeBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.VseobecneUdajeBindingNavigatorSaveItem})
+        Me.VseobecneUdajeBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.VseobecneUdajeBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.VseobecneUdajeBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.VseobecneUdajeBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.VseobecneUdajeBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.VseobecneUdajeBindingNavigator.Name = "VseobecneUdajeBindingNavigator"
+        Me.VseobecneUdajeBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.VseobecneUdajeBindingNavigator.Size = New System.Drawing.Size(961, 25)
+        Me.VseobecneUdajeBindingNavigator.TabIndex = 41
+        Me.VseobecneUdajeBindingNavigator.Text = "BindingNavigator1"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -542,141 +602,200 @@ Partial Class studentNovy
         Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
-        'OsobaBindingNavigatorSaveItem
+        'VseobecneUdajeBindingNavigatorSaveItem
         '
-        Me.OsobaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OsobaBindingNavigatorSaveItem.Image = CType(resources.GetObject("OsobaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.OsobaBindingNavigatorSaveItem.Name = "OsobaBindingNavigatorSaveItem"
-        Me.OsobaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
-        Me.OsobaBindingNavigatorSaveItem.Text = "Save Data"
+        Me.VseobecneUdajeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.VseobecneUdajeBindingNavigatorSaveItem.Image = CType(resources.GetObject("VseobecneUdajeBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.VseobecneUdajeBindingNavigatorSaveItem.Name = "VseobecneUdajeBindingNavigatorSaveItem"
+        Me.VseobecneUdajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.VseobecneUdajeBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'OsobaDataGridView
+        'ALabel
         '
-        Me.OsobaDataGridView.AutoGenerateColumns = False
-        Me.OsobaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.OsobaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
-        Me.OsobaDataGridView.DataSource = Me.OsobaBindingSource
-        Me.OsobaDataGridView.Location = New System.Drawing.Point(12, 501)
-        Me.OsobaDataGridView.Name = "OsobaDataGridView"
-        Me.OsobaDataGridView.Size = New System.Drawing.Size(670, 170)
-        Me.OsobaDataGridView.TabIndex = 38
+        ALabel.AutoSize = True
+        ALabel.Location = New System.Drawing.Point(3, 823)
+        ALabel.Name = "ALabel"
+        ALabel.Size = New System.Drawing.Size(17, 13)
+        ALabel.TabIndex = 41
+        ALabel.Text = "A:"
         '
-        'DataGridViewTextBoxColumn1
+        'ATextBox
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "id"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.ATextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "A", True))
+        Me.ATextBox.Location = New System.Drawing.Point(26, 820)
+        Me.ATextBox.Name = "ATextBox"
+        Me.ATextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ATextBox.TabIndex = 42
         '
-        'DataGridViewTextBoxColumn2
+        'A1Label
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "titulPred"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "titulPred"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        A1Label.AutoSize = True
+        A1Label.Location = New System.Drawing.Point(156, 830)
+        A1Label.Name = "A1Label"
+        A1Label.Size = New System.Drawing.Size(23, 13)
+        A1Label.TabIndex = 42
+        A1Label.Text = "A1:"
         '
-        'DataGridViewTextBoxColumn3
+        'A1TextBox
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "priezvisko"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "priezvisko"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.A1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "A1", True))
+        Me.A1TextBox.Location = New System.Drawing.Point(185, 827)
+        Me.A1TextBox.Name = "A1TextBox"
+        Me.A1TextBox.Size = New System.Drawing.Size(100, 20)
+        Me.A1TextBox.TabIndex = 43
         '
-        'DataGridViewTextBoxColumn4
+        'BLabel
         '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "rodnePriezvisko"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "rodnePriezvisko"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        BLabel.AutoSize = True
+        BLabel.Location = New System.Drawing.Point(309, 830)
+        BLabel.Name = "BLabel"
+        BLabel.Size = New System.Drawing.Size(17, 13)
+        BLabel.TabIndex = 43
+        BLabel.Text = "B:"
         '
-        'DataGridViewTextBoxColumn5
+        'BTextBox
         '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "meno"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "meno"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.BTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "B", True))
+        Me.BTextBox.Location = New System.Drawing.Point(332, 827)
+        Me.BTextBox.Name = "BTextBox"
+        Me.BTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.BTextBox.TabIndex = 44
         '
-        'DataGridViewTextBoxColumn6
+        'B1Label
         '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "titulZa"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "titulZa"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        B1Label.AutoSize = True
+        B1Label.Location = New System.Drawing.Point(451, 832)
+        B1Label.Name = "B1Label"
+        B1Label.Size = New System.Drawing.Size(23, 13)
+        B1Label.TabIndex = 45
+        B1Label.Text = "B1:"
         '
-        'DataGridViewTextBoxColumn7
+        'B1TextBox
         '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "datumNarodenia"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "datumNarodenia"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.B1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "B1", True))
+        Me.B1TextBox.Location = New System.Drawing.Point(480, 829)
+        Me.B1TextBox.Name = "B1TextBox"
+        Me.B1TextBox.Size = New System.Drawing.Size(100, 20)
+        Me.B1TextBox.TabIndex = 46
         '
-        'DataGridViewTextBoxColumn8
+        'CLabel
         '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "rodneCislo"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "rodneCislo"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        CLabel.AutoSize = True
+        CLabel.Location = New System.Drawing.Point(620, 840)
+        CLabel.Name = "CLabel"
+        CLabel.Size = New System.Drawing.Size(17, 13)
+        CLabel.TabIndex = 47
+        CLabel.Text = "C:"
         '
-        'DataGridViewTextBoxColumn9
+        'CTextBox
         '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "miestoNarodenia"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "miestoNarodenia"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.CTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "C", True))
+        Me.CTextBox.Location = New System.Drawing.Point(643, 837)
+        Me.CTextBox.Name = "CTextBox"
+        Me.CTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.CTextBox.TabIndex = 48
         '
-        'DataGridViewTextBoxColumn10
+        'DLabel
         '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "ulica"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "ulica"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        DLabel.AutoSize = True
+        DLabel.Location = New System.Drawing.Point(20, 872)
+        DLabel.Name = "DLabel"
+        DLabel.Size = New System.Drawing.Size(18, 13)
+        DLabel.TabIndex = 49
+        DLabel.Text = "D:"
         '
-        'DataGridViewTextBoxColumn11
+        'DTextBox
         '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "ulicaCislo"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "ulicaCislo"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "D", True))
+        Me.DTextBox.Location = New System.Drawing.Point(44, 869)
+        Me.DTextBox.Name = "DTextBox"
+        Me.DTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.DTextBox.TabIndex = 50
         '
-        'DataGridViewTextBoxColumn12
+        'BELabel
         '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "mesto"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "mesto"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        BELabel.AutoSize = True
+        BELabel.Location = New System.Drawing.Point(181, 879)
+        BELabel.Name = "BELabel"
+        BELabel.Size = New System.Drawing.Size(24, 13)
+        BELabel.TabIndex = 51
+        BELabel.Text = "BE:"
         '
-        'DataGridViewTextBoxColumn13
+        'BETextBox
         '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "psc"
-        Me.DataGridViewTextBoxColumn13.HeaderText = "psc"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.BETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "BE", True))
+        Me.BETextBox.Location = New System.Drawing.Point(211, 876)
+        Me.BETextBox.Name = "BETextBox"
+        Me.BETextBox.Size = New System.Drawing.Size(100, 20)
+        Me.BETextBox.TabIndex = 52
         '
-        'DataGridViewTextBoxColumn14
+        'CELabel
         '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "telefon"
-        Me.DataGridViewTextBoxColumn14.HeaderText = "telefon"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        CELabel.AutoSize = True
+        CELabel.Location = New System.Drawing.Point(332, 886)
+        CELabel.Name = "CELabel"
+        CELabel.Size = New System.Drawing.Size(24, 13)
+        CELabel.TabIndex = 53
+        CELabel.Text = "CE:"
         '
-        'DataGridViewTextBoxColumn15
+        'CETextBox
         '
-        Me.DataGridViewTextBoxColumn15.DataPropertyName = "mobil"
-        Me.DataGridViewTextBoxColumn15.HeaderText = "mobil"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.CETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "CE", True))
+        Me.CETextBox.Location = New System.Drawing.Point(362, 883)
+        Me.CETextBox.Name = "CETextBox"
+        Me.CETextBox.Size = New System.Drawing.Size(100, 20)
+        Me.CETextBox.TabIndex = 54
         '
-        'DataGridViewTextBoxColumn16
+        'DELabel
         '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "email"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "email"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        DELabel.AutoSize = True
+        DELabel.Location = New System.Drawing.Point(486, 896)
+        DELabel.Name = "DELabel"
+        DELabel.Size = New System.Drawing.Size(25, 13)
+        DELabel.TabIndex = 55
+        DELabel.Text = "DE:"
         '
-        'DataGridViewTextBoxColumn17
+        'DETextBox
         '
-        Me.DataGridViewTextBoxColumn17.DataPropertyName = "cisloOp"
-        Me.DataGridViewTextBoxColumn17.HeaderText = "cisloOp"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "DE", True))
+        Me.DETextBox.Location = New System.Drawing.Point(517, 893)
+        Me.DETextBox.Name = "DETextBox"
+        Me.DETextBox.Size = New System.Drawing.Size(100, 20)
+        Me.DETextBox.TabIndex = 56
         '
-        'DataGridViewTextBoxColumn18
+        'AMLabel
         '
-        Me.DataGridViewTextBoxColumn18.DataPropertyName = "cisloVp"
-        Me.DataGridViewTextBoxColumn18.HeaderText = "cisloVp"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        AMLabel.AutoSize = True
+        AMLabel.Location = New System.Drawing.Point(649, 902)
+        AMLabel.Name = "AMLabel"
+        AMLabel.Size = New System.Drawing.Size(26, 13)
+        AMLabel.TabIndex = 57
+        AMLabel.Text = "AM:"
         '
-        'Label1
+        'AMTextBox
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(36, 482)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 13)
-        Me.Label1.TabIndex = 39
-        Me.Label1.Text = "Tabulka osoba"
+        Me.AMTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "AM", True))
+        Me.AMTextBox.Location = New System.Drawing.Point(681, 899)
+        Me.AMTextBox.Name = "AMTextBox"
+        Me.AMTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.AMTextBox.TabIndex = 58
+        '
+        'TLabel
+        '
+        TLabel.AutoSize = True
+        TLabel.Location = New System.Drawing.Point(52, 919)
+        TLabel.Name = "TLabel"
+        TLabel.Size = New System.Drawing.Size(17, 13)
+        TLabel.TabIndex = 59
+        TLabel.Text = "T:"
+        '
+        'TTextBox
+        '
+        Me.TTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneUdajeBindingSource, "T", True))
+        Me.TTextBox.Location = New System.Drawing.Point(75, 916)
+        Me.TTextBox.Name = "TTextBox"
+        Me.TTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TTextBox.TabIndex = 60
         '
         'StudentBindingSource
         '
@@ -687,42 +806,279 @@ Partial Class studentNovy
         '
         Me.StudentTableAdapter.ClearBeforeFill = True
         '
-        'StudentDataGridView
+        'CheckBox1
         '
-        Me.StudentDataGridView.AutoGenerateColumns = False
-        Me.StudentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.StudentDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn19})
-        Me.StudentDataGridView.DataSource = Me.StudentBindingSource
-        Me.StudentDataGridView.Location = New System.Drawing.Point(26, 691)
-        Me.StudentDataGridView.Name = "StudentDataGridView"
-        Me.StudentDataGridView.Size = New System.Drawing.Size(656, 220)
-        Me.StudentDataGridView.TabIndex = 39
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(15, 511)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(33, 17)
+        Me.CheckBox1.TabIndex = 61
+        Me.CheckBox1.Text = "A"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'DataGridViewTextBoxColumn19
+        'CheckBox2
         '
-        Me.DataGridViewTextBoxColumn19.DataPropertyName = "id"
-        Me.DataGridViewTextBoxColumn19.HeaderText = "id"
-        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(94, 511)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox2.TabIndex = 62
+        Me.CheckBox2.Text = "CheckBox2"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
-        'Label2
+        'CheckBox3
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(76, 672)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 13)
-        Me.Label2.TabIndex = 40
-        Me.Label2.Text = "Tabulka student"
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(211, 511)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox3.TabIndex = 63
+        Me.CheckBox3.Text = "CheckBox3"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Location = New System.Drawing.Point(322, 511)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox4.TabIndex = 64
+        Me.CheckBox4.Text = "CheckBox4"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(425, 511)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox5.TabIndex = 65
+        Me.CheckBox5.Text = "CheckBox5"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(536, 511)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox6.TabIndex = 66
+        Me.CheckBox6.Text = "CheckBox6"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Location = New System.Drawing.Point(624, 511)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox7.TabIndex = 67
+        Me.CheckBox7.Text = "CheckBox7"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.Location = New System.Drawing.Point(15, 549)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox8.TabIndex = 68
+        Me.CheckBox8.Text = "CheckBox8"
+        Me.CheckBox8.UseVisualStyleBackColor = True
+        '
+        'CheckBox9
+        '
+        Me.CheckBox9.AutoSize = True
+        Me.CheckBox9.Location = New System.Drawing.Point(103, 549)
+        Me.CheckBox9.Name = "CheckBox9"
+        Me.CheckBox9.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox9.TabIndex = 69
+        Me.CheckBox9.Text = "CheckBox9"
+        Me.CheckBox9.UseVisualStyleBackColor = True
+        '
+        'CheckBox10
+        '
+        Me.CheckBox10.AutoSize = True
+        Me.CheckBox10.Location = New System.Drawing.Point(211, 549)
+        Me.CheckBox10.Name = "CheckBox10"
+        Me.CheckBox10.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox10.TabIndex = 70
+        Me.CheckBox10.Text = "CheckBox10"
+        Me.CheckBox10.UseVisualStyleBackColor = True
+        '
+        'CheckBox11
+        '
+        Me.CheckBox11.AutoSize = True
+        Me.CheckBox11.Location = New System.Drawing.Point(322, 549)
+        Me.CheckBox11.Name = "CheckBox11"
+        Me.CheckBox11.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox11.TabIndex = 71
+        Me.CheckBox11.Text = "CheckBox11"
+        Me.CheckBox11.UseVisualStyleBackColor = True
+        '
+        'CheckBox12
+        '
+        Me.CheckBox12.AutoSize = True
+        Me.CheckBox12.Location = New System.Drawing.Point(15, 639)
+        Me.CheckBox12.Name = "CheckBox12"
+        Me.CheckBox12.Size = New System.Drawing.Size(80, 17)
+        Me.CheckBox12.TabIndex = 72
+        Me.CheckBox12.Text = "Auchadzac"
+        Me.CheckBox12.UseVisualStyleBackColor = True
+        '
+        'CheckBox13
+        '
+        Me.CheckBox13.AutoSize = True
+        Me.CheckBox13.Location = New System.Drawing.Point(103, 639)
+        Me.CheckBox13.Name = "CheckBox13"
+        Me.CheckBox13.Size = New System.Drawing.Size(86, 17)
+        Me.CheckBox13.TabIndex = 73
+        Me.CheckBox13.Text = "A1uchadzac"
+        Me.CheckBox13.UseVisualStyleBackColor = True
+        '
+        'CheckBox14
+        '
+        Me.CheckBox14.AutoSize = True
+        Me.CheckBox14.Location = New System.Drawing.Point(224, 639)
+        Me.CheckBox14.Name = "CheckBox14"
+        Me.CheckBox14.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox14.TabIndex = 74
+        Me.CheckBox14.Text = "CheckBox14"
+        Me.CheckBox14.UseVisualStyleBackColor = True
+        '
+        'CheckBox15
+        '
+        Me.CheckBox15.AutoSize = True
+        Me.CheckBox15.Location = New System.Drawing.Point(318, 639)
+        Me.CheckBox15.Name = "CheckBox15"
+        Me.CheckBox15.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox15.TabIndex = 75
+        Me.CheckBox15.Text = "CheckBox15"
+        Me.CheckBox15.UseVisualStyleBackColor = True
+        '
+        'CheckBox16
+        '
+        Me.CheckBox16.AutoSize = True
+        Me.CheckBox16.Location = New System.Drawing.Point(425, 639)
+        Me.CheckBox16.Name = "CheckBox16"
+        Me.CheckBox16.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox16.TabIndex = 76
+        Me.CheckBox16.Text = "CheckBox16"
+        Me.CheckBox16.UseVisualStyleBackColor = True
+        '
+        'CheckBox17
+        '
+        Me.CheckBox17.AutoSize = True
+        Me.CheckBox17.Location = New System.Drawing.Point(519, 639)
+        Me.CheckBox17.Name = "CheckBox17"
+        Me.CheckBox17.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox17.TabIndex = 77
+        Me.CheckBox17.Text = "CheckBox17"
+        Me.CheckBox17.UseVisualStyleBackColor = True
+        '
+        'CheckBox18
+        '
+        Me.CheckBox18.AutoSize = True
+        Me.CheckBox18.Location = New System.Drawing.Point(623, 639)
+        Me.CheckBox18.Name = "CheckBox18"
+        Me.CheckBox18.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox18.TabIndex = 78
+        Me.CheckBox18.Text = "CheckBox18"
+        Me.CheckBox18.UseVisualStyleBackColor = True
+        '
+        'CheckBox19
+        '
+        Me.CheckBox19.AutoSize = True
+        Me.CheckBox19.Location = New System.Drawing.Point(26, 674)
+        Me.CheckBox19.Name = "CheckBox19"
+        Me.CheckBox19.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox19.TabIndex = 79
+        Me.CheckBox19.Text = "CheckBox19"
+        Me.CheckBox19.UseVisualStyleBackColor = True
+        '
+        'CheckBox20
+        '
+        Me.CheckBox20.AutoSize = True
+        Me.CheckBox20.Location = New System.Drawing.Point(118, 674)
+        Me.CheckBox20.Name = "CheckBox20"
+        Me.CheckBox20.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox20.TabIndex = 80
+        Me.CheckBox20.Text = "CheckBox20"
+        Me.CheckBox20.UseVisualStyleBackColor = True
+        '
+        'CheckBox21
+        '
+        Me.CheckBox21.AutoSize = True
+        Me.CheckBox21.Location = New System.Drawing.Point(224, 674)
+        Me.CheckBox21.Name = "CheckBox21"
+        Me.CheckBox21.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox21.TabIndex = 81
+        Me.CheckBox21.Text = "CheckBox21"
+        Me.CheckBox21.UseVisualStyleBackColor = True
+        '
+        'CheckBox22
+        '
+        Me.CheckBox22.AutoSize = True
+        Me.CheckBox22.Location = New System.Drawing.Point(322, 674)
+        Me.CheckBox22.Name = "CheckBox22"
+        Me.CheckBox22.Size = New System.Drawing.Size(80, 17)
+        Me.CheckBox22.TabIndex = 82
+        Me.CheckBox22.Text = "Auchadzac"
+        Me.CheckBox22.UseVisualStyleBackColor = True
         '
         'studentNovy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(728, 948)
+        Me.ClientSize = New System.Drawing.Size(961, 956)
+        Me.Controls.Add(Me.CheckBox22)
+        Me.Controls.Add(Me.CheckBox21)
+        Me.Controls.Add(Me.CheckBox20)
+        Me.Controls.Add(Me.CheckBox19)
+        Me.Controls.Add(Me.CheckBox18)
+        Me.Controls.Add(Me.CheckBox17)
+        Me.Controls.Add(Me.CheckBox16)
+        Me.Controls.Add(Me.CheckBox15)
+        Me.Controls.Add(Me.CheckBox14)
+        Me.Controls.Add(Me.CheckBox13)
+        Me.Controls.Add(Me.CheckBox12)
+        Me.Controls.Add(Me.CheckBox11)
+        Me.Controls.Add(Me.CheckBox10)
+        Me.Controls.Add(Me.CheckBox9)
+        Me.Controls.Add(Me.CheckBox8)
+        Me.Controls.Add(Me.CheckBox7)
+        Me.Controls.Add(Me.CheckBox6)
+        Me.Controls.Add(Me.CheckBox5)
+        Me.Controls.Add(Me.CheckBox4)
+        Me.Controls.Add(Me.CheckBox3)
+        Me.Controls.Add(Me.CheckBox2)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(TLabel)
+        Me.Controls.Add(Me.TTextBox)
+        Me.Controls.Add(AMLabel)
+        Me.Controls.Add(Me.AMTextBox)
+        Me.Controls.Add(DELabel)
+        Me.Controls.Add(Me.DETextBox)
+        Me.Controls.Add(CELabel)
+        Me.Controls.Add(Me.CETextBox)
+        Me.Controls.Add(BELabel)
+        Me.Controls.Add(Me.BETextBox)
+        Me.Controls.Add(DLabel)
+        Me.Controls.Add(Me.DTextBox)
+        Me.Controls.Add(CLabel)
+        Me.Controls.Add(Me.CTextBox)
+        Me.Controls.Add(B1Label)
+        Me.Controls.Add(Me.B1TextBox)
+        Me.Controls.Add(BLabel)
+        Me.Controls.Add(Me.BTextBox)
+        Me.Controls.Add(A1Label)
+        Me.Controls.Add(Me.A1TextBox)
+        Me.Controls.Add(ALabel)
+        Me.Controls.Add(Me.ATextBox)
+        Me.Controls.Add(Me.VseobecneUdajeBindingNavigator)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.StudentDataGridView)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.OsobaDataGridView)
-        Me.Controls.Add(Me.OsobaBindingNavigator)
         Me.Controls.Add(Me.vlozStudenta)
         Me.Controls.Add(TitulPredLabel)
         Me.Controls.Add(Me.TitulPredTextBox)
@@ -759,15 +1115,13 @@ Partial Class studentNovy
         Me.Controls.Add(CisloVpLabel)
         Me.Controls.Add(Me.CisloVpTextBox)
         Me.Name = "studentNovy"
-        Me.Text = "Študent - nový"
+        Me.Text = "L"
         CType(Me.EAutoskolaDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OsobaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.OsobaBindingNavigator.ResumeLayout(False)
-        Me.OsobaBindingNavigator.PerformLayout()
-        CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VseobecneUdajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VseobecneUdajeBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.VseobecneUdajeBindingNavigator.ResumeLayout(False)
+        Me.VseobecneUdajeBindingNavigator.PerformLayout()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -790,11 +1144,14 @@ Partial Class studentNovy
     Friend WithEvents CisloOpTextBox As System.Windows.Forms.TextBox
     Friend WithEvents CisloVpTextBox As System.Windows.Forms.TextBox
     Friend WithEvents vlozStudenta As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents EAutoskolaDBDataSet As e_autoskola.eAutoskolaDBDataSet
-    Friend WithEvents OsobaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents OsobaTableAdapter As e_autoskola.eAutoskolaDBDataSetTableAdapters.osobaTableAdapter
+    Friend WithEvents VseobecneUdajeBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents VseobecneUdajeTableAdapter As e_autoskola.eAutoskolaDBDataSetTableAdapters.vseobecneUdajeTableAdapter
     Friend WithEvents TableAdapterManager As e_autoskola.eAutoskolaDBDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents OsobaBindingNavigator As System.Windows.Forms.BindingNavigator
+    Friend WithEvents VseobecneUdajeBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
     Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
@@ -806,30 +1163,40 @@ Partial Class studentNovy
     Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents OsobaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents OsobaDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn18 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents VseobecneUdajeBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents StudentTableAdapter As e_autoskola.eAutoskolaDBDataSetTableAdapters.studentTableAdapter
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ATextBox As System.Windows.Forms.TextBox
+    Friend WithEvents A1TextBox As System.Windows.Forms.TextBox
+    Friend WithEvents BTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents B1TextBox As System.Windows.Forms.TextBox
+    Friend WithEvents CTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents DTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents BETextBox As System.Windows.Forms.TextBox
+    Friend WithEvents CETextBox As System.Windows.Forms.TextBox
+    Friend WithEvents DETextBox As System.Windows.Forms.TextBox
+    Friend WithEvents AMTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents TTextBox As System.Windows.Forms.TextBox
     Friend WithEvents StudentBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents StudentDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn19 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox7 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox8 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox9 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox10 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox11 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox12 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox13 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox14 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox15 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox16 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox17 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox18 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox19 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox20 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox21 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox22 As System.Windows.Forms.CheckBox
 End Class
