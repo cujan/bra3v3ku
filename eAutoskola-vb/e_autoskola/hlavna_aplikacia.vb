@@ -580,4 +580,8 @@ Public Class hlavna_aplikacia
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         vseobecne_udaje.Show()
     End Sub
+
+    Private Sub Button6_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        ciselnikSkupina.Show()
+    End Sub
 End Class

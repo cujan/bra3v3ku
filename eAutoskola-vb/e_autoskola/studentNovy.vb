@@ -2,12 +2,9 @@
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.student' table. You can move, or remove it, as needed.
-        Me.StudentTableAdapter.Fill(Me.EAutoskolaDBDataSet.student)
-        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.vseobecneUdaje' table. You can move, or remove it, as needed.
-        Me.VseobecneUdajeTableAdapter.Fill(Me.EAutoskolaDBDataSet.vseobecneUdaje)
-
       
 
+        
     End Sub
 
     Private Sub OsobaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -59,31 +56,44 @@
         con.Close()
 
         MsgBox(idcko)
-        'vlozenie id do tabulky student
+        'vlozenie id UDAJOV do tabulky student
 
-        Dim com2 As New OleDbCommand("INSERT INTO student (id) VALUES (@idcko)", con)
-        com2.Parameters.AddWithValue("idcko", idcko)
+        Dim com2 As New OleDbCommand("INSERT INTO student (id, A1U, A1V, AMU, AMV, Ado25U, Ado25V, Anad25U, Anad25V, B1U, B1V, BEU, BEV, BU, BV, C1EU, C1EV, C1U, C1V, CEU, CEV, CU, CV, D1EU, D1EV, D1U, D1V, DEU, DEV, DU, DV, TU, TV) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", con)
+        With com2.Parameters
+            .AddWithValue("idcko", idcko)
+            .AddWithValue("A1U", A1UCheckBox.CheckState)
+        End With
         con.Open()
         com2.ExecuteNonQuery()
         con.Close()
 
         'refresh tabulku osob
-        Me.OsobaTableAdapter.Fill(Me.EAutoskolaDBDataSet.osoba)
+
         'refresh tabulka student
-        Me.StudentTableAdapter.Fill(Me.EAutoskolaDBDataSet.student)
+
     End Sub
 
     Private Sub OsobaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Validate()
-        Me.OsobaBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.EAutoskolaDBDataSet)
+       
 
     End Sub
 
-    Private Sub VseobecneUdajeBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VseobecneUdajeBindingNavigatorSaveItem.Click
-        Me.Validate()
-        Me.VseobecneUdajeBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.EAutoskolaDBDataSet)
+    Private Sub VseobecneUdajeBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+       
 
+    End Sub
+
+    Private Sub StudentBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+       
+
+    End Sub
+
+    Private Sub StudentBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+       
+
+    End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        MsgBox(A1UCheckBox.CheckState)
     End Sub
 End Class

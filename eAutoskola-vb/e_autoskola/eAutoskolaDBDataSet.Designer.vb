@@ -1103,6 +1103,8 @@ Partial Public Class eAutoskolaDBDataSet
         
         Private columnpopis As Global.System.Data.DataColumn
         
+        Private columnvlastnikAutoskola As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -1163,6 +1165,14 @@ Partial Public Class eAutoskolaDBDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property vlastnikAutoskolaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnvlastnikAutoskola
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1199,9 +1209,9 @@ Partial Public Class eAutoskolaDBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddcislenikSkupinaRow(ByVal skupina As String, ByVal popis As String) As cislenikSkupinaRow
+        Public Overloads Function AddcislenikSkupinaRow(ByVal skupina As String, ByVal popis As String, ByVal vlastnikAutoskola As Boolean) As cislenikSkupinaRow
             Dim rowcislenikSkupinaRow As cislenikSkupinaRow = CType(Me.NewRow,cislenikSkupinaRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, skupina, popis}
+            Dim columnValuesArray() As Object = New Object() {Nothing, skupina, popis, vlastnikAutoskola}
             rowcislenikSkupinaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowcislenikSkupinaRow)
             Return rowcislenikSkupinaRow
@@ -1233,6 +1243,7 @@ Partial Public Class eAutoskolaDBDataSet
             Me.columnid = MyBase.Columns("id")
             Me.columnskupina = MyBase.Columns("skupina")
             Me.columnpopis = MyBase.Columns("popis")
+            Me.columnvlastnikAutoskola = MyBase.Columns("vlastnikAutoskola")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1244,6 +1255,8 @@ Partial Public Class eAutoskolaDBDataSet
             MyBase.Columns.Add(Me.columnskupina)
             Me.columnpopis = New Global.System.Data.DataColumn("popis", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpopis)
+            Me.columnvlastnikAutoskola = New Global.System.Data.DataColumn("vlastnikAutoskola", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnvlastnikAutoskola)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
@@ -3505,49 +3518,69 @@ Partial Public Class eAutoskolaDBDataSet
         
         Private columnid As Global.System.Data.DataColumn
         
-        Private columnAuchadzac As Global.System.Data.DataColumn
+        Private columnA1V As Global.System.Data.DataColumn
         
-        Private columnA1uchadzac As Global.System.Data.DataColumn
+        Private columnAdo25V As Global.System.Data.DataColumn
         
-        Private columnBuchadzac As Global.System.Data.DataColumn
+        Private columnAnad25V As Global.System.Data.DataColumn
         
-        Private columnB1uchadzac As Global.System.Data.DataColumn
+        Private columnB1V As Global.System.Data.DataColumn
         
-        Private columnCuchadzac As Global.System.Data.DataColumn
+        Private columnBV As Global.System.Data.DataColumn
         
-        Private columnDuchadzac As Global.System.Data.DataColumn
+        Private columnC1V As Global.System.Data.DataColumn
         
-        Private columnBEuchadzac As Global.System.Data.DataColumn
+        Private columnCV As Global.System.Data.DataColumn
         
-        Private columnCEuchadzac As Global.System.Data.DataColumn
+        Private columnD1V As Global.System.Data.DataColumn
         
-        Private columnDEuchadzac As Global.System.Data.DataColumn
+        Private columnDV As Global.System.Data.DataColumn
         
-        Private columnAMuchadzac As Global.System.Data.DataColumn
+        Private columnBEV As Global.System.Data.DataColumn
         
-        Private columnTuchadzac As Global.System.Data.DataColumn
+        Private columnC1EV As Global.System.Data.DataColumn
         
-        Private columnAvlastnik As Global.System.Data.DataColumn
+        Private columnCEV As Global.System.Data.DataColumn
         
-        Private columnA1vlastnik As Global.System.Data.DataColumn
+        Private columnD1EV As Global.System.Data.DataColumn
         
-        Private columnBvlastnik As Global.System.Data.DataColumn
+        Private columnDEV As Global.System.Data.DataColumn
         
-        Private columnB1vlastnik As Global.System.Data.DataColumn
+        Private columnAMV As Global.System.Data.DataColumn
         
-        Private columnCvlastnik As Global.System.Data.DataColumn
+        Private columnTV As Global.System.Data.DataColumn
         
-        Private columnDvlastnik As Global.System.Data.DataColumn
+        Private columnA1U As Global.System.Data.DataColumn
         
-        Private columnBEvlastnik As Global.System.Data.DataColumn
+        Private columnAdo25U As Global.System.Data.DataColumn
         
-        Private columnCEvlastnik As Global.System.Data.DataColumn
+        Private columnAnad25U As Global.System.Data.DataColumn
         
-        Private columnDEvlastnik As Global.System.Data.DataColumn
+        Private columnB1U As Global.System.Data.DataColumn
         
-        Private columnAMvlastnik As Global.System.Data.DataColumn
+        Private columnBU As Global.System.Data.DataColumn
         
-        Private columnTvlastnik As Global.System.Data.DataColumn
+        Private columnC1U As Global.System.Data.DataColumn
+        
+        Private columnCU As Global.System.Data.DataColumn
+        
+        Private columnD1U As Global.System.Data.DataColumn
+        
+        Private columnDU As Global.System.Data.DataColumn
+        
+        Private columnBEU As Global.System.Data.DataColumn
+        
+        Private columnC1EU As Global.System.Data.DataColumn
+        
+        Private columnCEU As Global.System.Data.DataColumn
+        
+        Private columnD1EU As Global.System.Data.DataColumn
+        
+        Private columnDEU As Global.System.Data.DataColumn
+        
+        Private columnAMU As Global.System.Data.DataColumn
+        
+        Private columnTU As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -3594,177 +3627,257 @@ Partial Public Class eAutoskolaDBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property AuchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property A1VColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnAuchadzac
+                Return Me.columnA1V
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property A1uchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Ado25VColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnA1uchadzac
+                Return Me.columnAdo25V
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property BuchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Anad25VColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnBuchadzac
+                Return Me.columnAnad25V
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property B1uchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property B1VColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnB1uchadzac
+                Return Me.columnB1V
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property CuchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property BVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCuchadzac
+                Return Me.columnBV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property DuchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property C1VColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDuchadzac
+                Return Me.columnC1V
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property BEuchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property CVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnBEuchadzac
+                Return Me.columnCV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property CEuchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property D1VColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCEuchadzac
+                Return Me.columnD1V
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property DEuchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property DVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDEuchadzac
+                Return Me.columnDV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property AMuchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property BEVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnAMuchadzac
+                Return Me.columnBEV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property TuchadzacColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property C1EVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnTuchadzac
+                Return Me.columnC1EV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property AvlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property CEVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnAvlastnik
+                Return Me.columnCEV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property A1vlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property D1EVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnA1vlastnik
+                Return Me.columnD1EV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property BvlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property DEVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnBvlastnik
+                Return Me.columnDEV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property B1vlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property AMVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnB1vlastnik
+                Return Me.columnAMV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property CvlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property TVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCvlastnik
+                Return Me.columnTV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property DvlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property A1UColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDvlastnik
+                Return Me.columnA1U
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property BEvlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Ado25UColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnBEvlastnik
+                Return Me.columnAdo25U
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property CEvlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Anad25UColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCEvlastnik
+                Return Me.columnAnad25U
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property DEvlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property B1UColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDEvlastnik
+                Return Me.columnB1U
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property AMvlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property BUColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnAMvlastnik
+                Return Me.columnBU
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property TvlastnikColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property C1UColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnTvlastnik
+                Return Me.columnC1U
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CUColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCU
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property D1UColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnD1U
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DUColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDU
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property BEUColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBEU
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property C1EUColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnC1EU
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CEUColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCEU
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property D1EUColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnD1EU
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DEUColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDEU
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property AMUColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAMU
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TUColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTU
             End Get
         End Property
         
@@ -3807,30 +3920,40 @@ Partial Public Class eAutoskolaDBDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overloads Function AddstudentRow( _
                     ByVal id As Integer,  _
-                    ByVal Auchadzac As Integer,  _
-                    ByVal A1uchadzac As Integer,  _
-                    ByVal Buchadzac As Integer,  _
-                    ByVal B1uchadzac As Integer,  _
-                    ByVal Cuchadzac As Integer,  _
-                    ByVal Duchadzac As Integer,  _
-                    ByVal BEuchadzac As Integer,  _
-                    ByVal CEuchadzac As Integer,  _
-                    ByVal DEuchadzac As Integer,  _
-                    ByVal AMuchadzac As Integer,  _
-                    ByVal Tuchadzac As Integer,  _
-                    ByVal Avlastnik As Integer,  _
-                    ByVal A1vlastnik As Integer,  _
-                    ByVal Bvlastnik As Integer,  _
-                    ByVal B1vlastnik As Integer,  _
-                    ByVal Cvlastnik As Integer,  _
-                    ByVal Dvlastnik As Integer,  _
-                    ByVal BEvlastnik As Integer,  _
-                    ByVal CEvlastnik As Integer,  _
-                    ByVal DEvlastnik As Integer,  _
-                    ByVal AMvlastnik As Integer,  _
-                    ByVal Tvlastnik As Integer) As studentRow
+                    ByVal A1V As Boolean,  _
+                    ByVal Ado25V As Boolean,  _
+                    ByVal Anad25V As Boolean,  _
+                    ByVal B1V As Boolean,  _
+                    ByVal BV As Boolean,  _
+                    ByVal C1V As Boolean,  _
+                    ByVal CV As Boolean,  _
+                    ByVal D1V As Boolean,  _
+                    ByVal DV As Boolean,  _
+                    ByVal BEV As Boolean,  _
+                    ByVal C1EV As Boolean,  _
+                    ByVal CEV As Boolean,  _
+                    ByVal D1EV As Boolean,  _
+                    ByVal DEV As Boolean,  _
+                    ByVal AMV As Boolean,  _
+                    ByVal TV As Boolean,  _
+                    ByVal A1U As Boolean,  _
+                    ByVal Ado25U As Boolean,  _
+                    ByVal Anad25U As Boolean,  _
+                    ByVal B1U As Boolean,  _
+                    ByVal BU As Boolean,  _
+                    ByVal C1U As Boolean,  _
+                    ByVal CU As Boolean,  _
+                    ByVal D1U As Boolean,  _
+                    ByVal DU As Boolean,  _
+                    ByVal BEU As Boolean,  _
+                    ByVal C1EU As Boolean,  _
+                    ByVal CEU As Boolean,  _
+                    ByVal D1EU As Boolean,  _
+                    ByVal DEU As Boolean,  _
+                    ByVal AMU As Boolean,  _
+                    ByVal TU As Boolean) As studentRow
             Dim rowstudentRow As studentRow = CType(Me.NewRow,studentRow)
-            Dim columnValuesArray() As Object = New Object() {id, Auchadzac, A1uchadzac, Buchadzac, B1uchadzac, Cuchadzac, Duchadzac, BEuchadzac, CEuchadzac, DEuchadzac, AMuchadzac, Tuchadzac, Avlastnik, A1vlastnik, Bvlastnik, B1vlastnik, Cvlastnik, Dvlastnik, BEvlastnik, CEvlastnik, DEvlastnik, AMvlastnik, Tvlastnik}
+            Dim columnValuesArray() As Object = New Object() {id, A1V, Ado25V, Anad25V, B1V, BV, C1V, CV, D1V, DV, BEV, C1EV, CEV, D1EV, DEV, AMV, TV, A1U, Ado25U, Anad25U, B1U, BU, C1U, CU, D1U, DU, BEU, C1EU, CEU, D1EU, DEU, AMU, TU}
             rowstudentRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowstudentRow)
             Return rowstudentRow
@@ -3860,28 +3983,38 @@ Partial Public Class eAutoskolaDBDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnid = MyBase.Columns("id")
-            Me.columnAuchadzac = MyBase.Columns("Auchadzac")
-            Me.columnA1uchadzac = MyBase.Columns("A1uchadzac")
-            Me.columnBuchadzac = MyBase.Columns("Buchadzac")
-            Me.columnB1uchadzac = MyBase.Columns("B1uchadzac")
-            Me.columnCuchadzac = MyBase.Columns("Cuchadzac")
-            Me.columnDuchadzac = MyBase.Columns("Duchadzac")
-            Me.columnBEuchadzac = MyBase.Columns("BEuchadzac")
-            Me.columnCEuchadzac = MyBase.Columns("CEuchadzac")
-            Me.columnDEuchadzac = MyBase.Columns("DEuchadzac")
-            Me.columnAMuchadzac = MyBase.Columns("AMuchadzac")
-            Me.columnTuchadzac = MyBase.Columns("Tuchadzac")
-            Me.columnAvlastnik = MyBase.Columns("Avlastnik")
-            Me.columnA1vlastnik = MyBase.Columns("A1vlastnik")
-            Me.columnBvlastnik = MyBase.Columns("Bvlastnik")
-            Me.columnB1vlastnik = MyBase.Columns("B1vlastnik")
-            Me.columnCvlastnik = MyBase.Columns("Cvlastnik")
-            Me.columnDvlastnik = MyBase.Columns("Dvlastnik")
-            Me.columnBEvlastnik = MyBase.Columns("BEvlastnik")
-            Me.columnCEvlastnik = MyBase.Columns("CEvlastnik")
-            Me.columnDEvlastnik = MyBase.Columns("DEvlastnik")
-            Me.columnAMvlastnik = MyBase.Columns("AMvlastnik")
-            Me.columnTvlastnik = MyBase.Columns("Tvlastnik")
+            Me.columnA1V = MyBase.Columns("A1V")
+            Me.columnAdo25V = MyBase.Columns("Ado25V")
+            Me.columnAnad25V = MyBase.Columns("Anad25V")
+            Me.columnB1V = MyBase.Columns("B1V")
+            Me.columnBV = MyBase.Columns("BV")
+            Me.columnC1V = MyBase.Columns("C1V")
+            Me.columnCV = MyBase.Columns("CV")
+            Me.columnD1V = MyBase.Columns("D1V")
+            Me.columnDV = MyBase.Columns("DV")
+            Me.columnBEV = MyBase.Columns("BEV")
+            Me.columnC1EV = MyBase.Columns("C1EV")
+            Me.columnCEV = MyBase.Columns("CEV")
+            Me.columnD1EV = MyBase.Columns("D1EV")
+            Me.columnDEV = MyBase.Columns("DEV")
+            Me.columnAMV = MyBase.Columns("AMV")
+            Me.columnTV = MyBase.Columns("TV")
+            Me.columnA1U = MyBase.Columns("A1U")
+            Me.columnAdo25U = MyBase.Columns("Ado25U")
+            Me.columnAnad25U = MyBase.Columns("Anad25U")
+            Me.columnB1U = MyBase.Columns("B1U")
+            Me.columnBU = MyBase.Columns("BU")
+            Me.columnC1U = MyBase.Columns("C1U")
+            Me.columnCU = MyBase.Columns("CU")
+            Me.columnD1U = MyBase.Columns("D1U")
+            Me.columnDU = MyBase.Columns("DU")
+            Me.columnBEU = MyBase.Columns("BEU")
+            Me.columnC1EU = MyBase.Columns("C1EU")
+            Me.columnCEU = MyBase.Columns("CEU")
+            Me.columnD1EU = MyBase.Columns("D1EU")
+            Me.columnDEU = MyBase.Columns("DEU")
+            Me.columnAMU = MyBase.Columns("AMU")
+            Me.columnTU = MyBase.Columns("TU")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3889,50 +4022,70 @@ Partial Public Class eAutoskolaDBDataSet
         Private Sub InitClass()
             Me.columnid = New Global.System.Data.DataColumn("id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid)
-            Me.columnAuchadzac = New Global.System.Data.DataColumn("Auchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnAuchadzac)
-            Me.columnA1uchadzac = New Global.System.Data.DataColumn("A1uchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnA1uchadzac)
-            Me.columnBuchadzac = New Global.System.Data.DataColumn("Buchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBuchadzac)
-            Me.columnB1uchadzac = New Global.System.Data.DataColumn("B1uchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnB1uchadzac)
-            Me.columnCuchadzac = New Global.System.Data.DataColumn("Cuchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCuchadzac)
-            Me.columnDuchadzac = New Global.System.Data.DataColumn("Duchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDuchadzac)
-            Me.columnBEuchadzac = New Global.System.Data.DataColumn("BEuchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBEuchadzac)
-            Me.columnCEuchadzac = New Global.System.Data.DataColumn("CEuchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCEuchadzac)
-            Me.columnDEuchadzac = New Global.System.Data.DataColumn("DEuchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDEuchadzac)
-            Me.columnAMuchadzac = New Global.System.Data.DataColumn("AMuchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnAMuchadzac)
-            Me.columnTuchadzac = New Global.System.Data.DataColumn("Tuchadzac", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTuchadzac)
-            Me.columnAvlastnik = New Global.System.Data.DataColumn("Avlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnAvlastnik)
-            Me.columnA1vlastnik = New Global.System.Data.DataColumn("A1vlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnA1vlastnik)
-            Me.columnBvlastnik = New Global.System.Data.DataColumn("Bvlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBvlastnik)
-            Me.columnB1vlastnik = New Global.System.Data.DataColumn("B1vlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnB1vlastnik)
-            Me.columnCvlastnik = New Global.System.Data.DataColumn("Cvlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCvlastnik)
-            Me.columnDvlastnik = New Global.System.Data.DataColumn("Dvlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDvlastnik)
-            Me.columnBEvlastnik = New Global.System.Data.DataColumn("BEvlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnBEvlastnik)
-            Me.columnCEvlastnik = New Global.System.Data.DataColumn("CEvlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCEvlastnik)
-            Me.columnDEvlastnik = New Global.System.Data.DataColumn("DEvlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDEvlastnik)
-            Me.columnAMvlastnik = New Global.System.Data.DataColumn("AMvlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnAMvlastnik)
-            Me.columnTvlastnik = New Global.System.Data.DataColumn("Tvlastnik", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTvlastnik)
+            Me.columnA1V = New Global.System.Data.DataColumn("A1V", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnA1V)
+            Me.columnAdo25V = New Global.System.Data.DataColumn("Ado25V", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdo25V)
+            Me.columnAnad25V = New Global.System.Data.DataColumn("Anad25V", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAnad25V)
+            Me.columnB1V = New Global.System.Data.DataColumn("B1V", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnB1V)
+            Me.columnBV = New Global.System.Data.DataColumn("BV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBV)
+            Me.columnC1V = New Global.System.Data.DataColumn("C1V", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnC1V)
+            Me.columnCV = New Global.System.Data.DataColumn("CV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCV)
+            Me.columnD1V = New Global.System.Data.DataColumn("D1V", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnD1V)
+            Me.columnDV = New Global.System.Data.DataColumn("DV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDV)
+            Me.columnBEV = New Global.System.Data.DataColumn("BEV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBEV)
+            Me.columnC1EV = New Global.System.Data.DataColumn("C1EV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnC1EV)
+            Me.columnCEV = New Global.System.Data.DataColumn("CEV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCEV)
+            Me.columnD1EV = New Global.System.Data.DataColumn("D1EV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnD1EV)
+            Me.columnDEV = New Global.System.Data.DataColumn("DEV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDEV)
+            Me.columnAMV = New Global.System.Data.DataColumn("AMV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAMV)
+            Me.columnTV = New Global.System.Data.DataColumn("TV", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTV)
+            Me.columnA1U = New Global.System.Data.DataColumn("A1U", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnA1U)
+            Me.columnAdo25U = New Global.System.Data.DataColumn("Ado25U", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdo25U)
+            Me.columnAnad25U = New Global.System.Data.DataColumn("Anad25U", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAnad25U)
+            Me.columnB1U = New Global.System.Data.DataColumn("B1U", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnB1U)
+            Me.columnBU = New Global.System.Data.DataColumn("BU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBU)
+            Me.columnC1U = New Global.System.Data.DataColumn("C1U", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnC1U)
+            Me.columnCU = New Global.System.Data.DataColumn("CU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCU)
+            Me.columnD1U = New Global.System.Data.DataColumn("D1U", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnD1U)
+            Me.columnDU = New Global.System.Data.DataColumn("DU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDU)
+            Me.columnBEU = New Global.System.Data.DataColumn("BEU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBEU)
+            Me.columnC1EU = New Global.System.Data.DataColumn("C1EU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnC1EU)
+            Me.columnCEU = New Global.System.Data.DataColumn("CEU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCEU)
+            Me.columnD1EU = New Global.System.Data.DataColumn("D1EU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnD1EU)
+            Me.columnDEU = New Global.System.Data.DataColumn("DEU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDEU)
+            Me.columnAMU = New Global.System.Data.DataColumn("AMU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAMU)
+            Me.columnTU = New Global.System.Data.DataColumn("TU", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTU)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AllowDBNull = false
             Me.columnid.Unique = true
@@ -6511,6 +6664,21 @@ Partial Public Class eAutoskolaDBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property vlastnikAutoskola() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablecislenikSkupina.vlastnikAutoskolaColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'vlastnikAutoskola' in table 'cislenikSkupina' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablecislenikSkupina.vlastnikAutoskolaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsskupinaNull() As Boolean
             Return Me.IsNull(Me.tablecislenikSkupina.skupinaColumn)
         End Function
@@ -6531,6 +6699,18 @@ Partial Public Class eAutoskolaDBDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetpopisNull()
             Me(Me.tablecislenikSkupina.popisColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsvlastnikAutoskolaNull() As Boolean
+            Return Me.IsNull(Me.tablecislenikSkupina.vlastnikAutoskolaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetvlastnikAutoskolaNull()
+            Me(Me.tablecislenikSkupina.vlastnikAutoskolaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -7736,596 +7916,866 @@ Partial Public Class eAutoskolaDBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Auchadzac() As Integer
+        Public Property A1V() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.AuchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.A1VColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Auchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'A1V' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.AuchadzacColumn) = value
+                Me(Me.tablestudent.A1VColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property A1uchadzac() As Integer
+        Public Property Ado25V() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.A1uchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.Ado25VColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'A1uchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ado25V' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.A1uchadzacColumn) = value
+                Me(Me.tablestudent.Ado25VColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Buchadzac() As Integer
+        Public Property Anad25V() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.BuchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.Anad25VColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Buchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Anad25V' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.BuchadzacColumn) = value
+                Me(Me.tablestudent.Anad25VColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property B1uchadzac() As Integer
+        Public Property B1V() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.B1uchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.B1VColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'B1uchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'B1V' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.B1uchadzacColumn) = value
+                Me(Me.tablestudent.B1VColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Cuchadzac() As Integer
+        Public Property BV() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.CuchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.BVColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Cuchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BV' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.CuchadzacColumn) = value
+                Me(Me.tablestudent.BVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Duchadzac() As Integer
+        Public Property C1V() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.DuchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.C1VColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Duchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'C1V' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.DuchadzacColumn) = value
+                Me(Me.tablestudent.C1VColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property BEuchadzac() As Integer
+        Public Property CV() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.BEuchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.CVColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'BEuchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CV' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.BEuchadzacColumn) = value
+                Me(Me.tablestudent.CVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property CEuchadzac() As Integer
+        Public Property D1V() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.CEuchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.D1VColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CEuchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'D1V' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.CEuchadzacColumn) = value
+                Me(Me.tablestudent.D1VColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property DEuchadzac() As Integer
+        Public Property DV() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.DEuchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.DVColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DEuchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DV' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.DEuchadzacColumn) = value
+                Me(Me.tablestudent.DVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property AMuchadzac() As Integer
+        Public Property BEV() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.AMuchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.BEVColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'AMuchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BEV' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.AMuchadzacColumn) = value
+                Me(Me.tablestudent.BEVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Tuchadzac() As Integer
+        Public Property C1EV() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.TuchadzacColumn),Integer)
+                    Return CType(Me(Me.tablestudent.C1EVColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Tuchadzac' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'C1EV' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.TuchadzacColumn) = value
+                Me(Me.tablestudent.C1EVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Avlastnik() As Integer
+        Public Property CEV() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.AvlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.CEVColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Avlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CEV' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.AvlastnikColumn) = value
+                Me(Me.tablestudent.CEVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property A1vlastnik() As Integer
+        Public Property D1EV() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.A1vlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.D1EVColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'A1vlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'D1EV' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.A1vlastnikColumn) = value
+                Me(Me.tablestudent.D1EVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Bvlastnik() As Integer
+        Public Property DEV() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.BvlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.DEVColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Bvlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DEV' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.BvlastnikColumn) = value
+                Me(Me.tablestudent.DEVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property B1vlastnik() As Integer
+        Public Property AMV() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.B1vlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.AMVColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'B1vlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'AMV' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.B1vlastnikColumn) = value
+                Me(Me.tablestudent.AMVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Cvlastnik() As Integer
+        Public Property TV() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.CvlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.TVColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Cvlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TV' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.CvlastnikColumn) = value
+                Me(Me.tablestudent.TVColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Dvlastnik() As Integer
+        Public Property A1U() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.DvlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.A1UColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Dvlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'A1U' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.DvlastnikColumn) = value
+                Me(Me.tablestudent.A1UColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property BEvlastnik() As Integer
+        Public Property Ado25U() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.BEvlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.Ado25UColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'BEvlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ado25U' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.BEvlastnikColumn) = value
+                Me(Me.tablestudent.Ado25UColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property CEvlastnik() As Integer
+        Public Property Anad25U() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.CEvlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.Anad25UColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'CEvlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Anad25U' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.CEvlastnikColumn) = value
+                Me(Me.tablestudent.Anad25UColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property DEvlastnik() As Integer
+        Public Property B1U() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.DEvlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.B1UColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DEvlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'B1U' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.DEvlastnikColumn) = value
+                Me(Me.tablestudent.B1UColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property AMvlastnik() As Integer
+        Public Property BU() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.AMvlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.BUColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'AMvlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BU' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.AMvlastnikColumn) = value
+                Me(Me.tablestudent.BUColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Tvlastnik() As Integer
+        Public Property C1U() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.tablestudent.TvlastnikColumn),Integer)
+                    Return CType(Me(Me.tablestudent.C1UColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Tvlastnik' in table 'student' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'C1U' in table 'student' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablestudent.TvlastnikColumn) = value
+                Me(Me.tablestudent.C1UColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsAuchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.AuchadzacColumn)
+        Public Property CU() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.CUColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CU' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.CUColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property D1U() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.D1UColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'D1U' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.D1UColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DU() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.DUColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DU' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.DUColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property BEU() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.BEUColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BEU' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.BEUColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property C1EU() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.C1EUColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'C1EU' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.C1EUColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CEU() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.CEUColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CEU' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.CEUColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property D1EU() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.D1EUColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'D1EU' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.D1EUColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DEU() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.DEUColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DEU' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.DEUColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AMU() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.AMUColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'AMU' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.AMUColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property TU() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.TUColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'TU' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.TUColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsA1VNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.A1VColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetAuchadzacNull()
-            Me(Me.tablestudent.AuchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetA1VNull()
+            Me(Me.tablestudent.A1VColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsA1uchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.A1uchadzacColumn)
+        Public Function IsAdo25VNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.Ado25VColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetA1uchadzacNull()
-            Me(Me.tablestudent.A1uchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetAdo25VNull()
+            Me(Me.tablestudent.Ado25VColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsBuchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.BuchadzacColumn)
+        Public Function IsAnad25VNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.Anad25VColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetBuchadzacNull()
-            Me(Me.tablestudent.BuchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetAnad25VNull()
+            Me(Me.tablestudent.Anad25VColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsB1uchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.B1uchadzacColumn)
+        Public Function IsB1VNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.B1VColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetB1uchadzacNull()
-            Me(Me.tablestudent.B1uchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetB1VNull()
+            Me(Me.tablestudent.B1VColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsCuchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.CuchadzacColumn)
+        Public Function IsBVNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.BVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetCuchadzacNull()
-            Me(Me.tablestudent.CuchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetBVNull()
+            Me(Me.tablestudent.BVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsDuchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.DuchadzacColumn)
+        Public Function IsC1VNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.C1VColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetDuchadzacNull()
-            Me(Me.tablestudent.DuchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetC1VNull()
+            Me(Me.tablestudent.C1VColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsBEuchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.BEuchadzacColumn)
+        Public Function IsCVNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.CVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetBEuchadzacNull()
-            Me(Me.tablestudent.BEuchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetCVNull()
+            Me(Me.tablestudent.CVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsCEuchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.CEuchadzacColumn)
+        Public Function IsD1VNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.D1VColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetCEuchadzacNull()
-            Me(Me.tablestudent.CEuchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetD1VNull()
+            Me(Me.tablestudent.D1VColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsDEuchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.DEuchadzacColumn)
+        Public Function IsDVNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.DVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetDEuchadzacNull()
-            Me(Me.tablestudent.DEuchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetDVNull()
+            Me(Me.tablestudent.DVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsAMuchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.AMuchadzacColumn)
+        Public Function IsBEVNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.BEVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetAMuchadzacNull()
-            Me(Me.tablestudent.AMuchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetBEVNull()
+            Me(Me.tablestudent.BEVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsTuchadzacNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.TuchadzacColumn)
+        Public Function IsC1EVNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.C1EVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetTuchadzacNull()
-            Me(Me.tablestudent.TuchadzacColumn) = Global.System.Convert.DBNull
+        Public Sub SetC1EVNull()
+            Me(Me.tablestudent.C1EVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsAvlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.AvlastnikColumn)
+        Public Function IsCEVNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.CEVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetAvlastnikNull()
-            Me(Me.tablestudent.AvlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetCEVNull()
+            Me(Me.tablestudent.CEVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsA1vlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.A1vlastnikColumn)
+        Public Function IsD1EVNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.D1EVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetA1vlastnikNull()
-            Me(Me.tablestudent.A1vlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetD1EVNull()
+            Me(Me.tablestudent.D1EVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsBvlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.BvlastnikColumn)
+        Public Function IsDEVNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.DEVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetBvlastnikNull()
-            Me(Me.tablestudent.BvlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetDEVNull()
+            Me(Me.tablestudent.DEVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsB1vlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.B1vlastnikColumn)
+        Public Function IsAMVNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.AMVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetB1vlastnikNull()
-            Me(Me.tablestudent.B1vlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetAMVNull()
+            Me(Me.tablestudent.AMVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsCvlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.CvlastnikColumn)
+        Public Function IsTVNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.TVColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetCvlastnikNull()
-            Me(Me.tablestudent.CvlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetTVNull()
+            Me(Me.tablestudent.TVColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsDvlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.DvlastnikColumn)
+        Public Function IsA1UNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.A1UColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetDvlastnikNull()
-            Me(Me.tablestudent.DvlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetA1UNull()
+            Me(Me.tablestudent.A1UColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsBEvlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.BEvlastnikColumn)
+        Public Function IsAdo25UNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.Ado25UColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetBEvlastnikNull()
-            Me(Me.tablestudent.BEvlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetAdo25UNull()
+            Me(Me.tablestudent.Ado25UColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsCEvlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.CEvlastnikColumn)
+        Public Function IsAnad25UNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.Anad25UColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetCEvlastnikNull()
-            Me(Me.tablestudent.CEvlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetAnad25UNull()
+            Me(Me.tablestudent.Anad25UColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsDEvlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.DEvlastnikColumn)
+        Public Function IsB1UNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.B1UColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetDEvlastnikNull()
-            Me(Me.tablestudent.DEvlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetB1UNull()
+            Me(Me.tablestudent.B1UColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsAMvlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.AMvlastnikColumn)
+        Public Function IsBUNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.BUColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetAMvlastnikNull()
-            Me(Me.tablestudent.AMvlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetBUNull()
+            Me(Me.tablestudent.BUColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsTvlastnikNull() As Boolean
-            Return Me.IsNull(Me.tablestudent.TvlastnikColumn)
+        Public Function IsC1UNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.C1UColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetTvlastnikNull()
-            Me(Me.tablestudent.TvlastnikColumn) = Global.System.Convert.DBNull
+        Public Sub SetC1UNull()
+            Me(Me.tablestudent.C1UColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCUNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.CUColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCUNull()
+            Me(Me.tablestudent.CUColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsD1UNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.D1UColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetD1UNull()
+            Me(Me.tablestudent.D1UColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDUNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.DUColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDUNull()
+            Me(Me.tablestudent.DUColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsBEUNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.BEUColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetBEUNull()
+            Me(Me.tablestudent.BEUColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsC1EUNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.C1EUColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetC1EUNull()
+            Me(Me.tablestudent.C1EUColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCEUNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.CEUColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCEUNull()
+            Me(Me.tablestudent.CEUColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsD1EUNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.D1EUColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetD1EUNull()
+            Me(Me.tablestudent.D1EUColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDEUNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.DEUColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDEUNull()
+            Me(Me.tablestudent.DEUColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAMUNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.AMUColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAMUNull()
+            Me(Me.tablestudent.AMUColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTUNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.TUColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTUNull()
+            Me(Me.tablestudent.TUColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -11203,36 +11653,46 @@ Namespace eAutoskolaDBDataSetTableAdapters
             tableMapping.ColumnMappings.Add("id", "id")
             tableMapping.ColumnMappings.Add("skupina", "skupina")
             tableMapping.ColumnMappings.Add("popis", "popis")
+            tableMapping.ColumnMappings.Add("vlastnikAutoskola", "vlastnikAutoskola")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `cislenikSkupina` WHERE ((`id` = ?) AND ((? = 1 AND `skupina` IS NULL"& _ 
-                ") OR (`skupina` = ?)) AND ((? = 1 AND `popis` IS NULL) OR (`popis` = ?)))"
+                ") OR (`skupina` = ?)) AND ((? = 1 AND `popis` IS NULL) OR (`popis` = ?)) AND ((?"& _ 
+                " = 1 AND `vlastnikAutoskola` IS NULL) OR (`vlastnikAutoskola` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_skupina", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skupina", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_skupina", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skupina", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_popis", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "popis", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_popis", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "popis", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_vlastnikAutoskola", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vlastnikAutoskola", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_vlastnikAutoskola", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vlastnikAutoskola", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `cislenikSkupina` (`skupina`, `popis`) VALUES (?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `cislenikSkupina` (`skupina`, `popis`, `vlastnikAutoskola`) VALUES (?"& _ 
+                ", ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("skupina", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skupina", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("popis", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "popis", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("vlastnikAutoskola", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vlastnikAutoskola", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `cislenikSkupina` SET `skupina` = ?, `popis` = ? WHERE ((`id` = ?) AND ((?"& _ 
-                " = 1 AND `skupina` IS NULL) OR (`skupina` = ?)) AND ((? = 1 AND `popis` IS NULL)"& _ 
-                " OR (`popis` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `cislenikSkupina` SET `skupina` = ?, `popis` = ?, `vlastnikAutoskola` = ? "& _ 
+                "WHERE ((`id` = ?) AND ((? = 1 AND `skupina` IS NULL) OR (`skupina` = ?)) AND ((?"& _ 
+                " = 1 AND `popis` IS NULL) OR (`popis` = ?)) AND ((? = 1 AND `vlastnikAutoskola` "& _ 
+                "IS NULL) OR (`vlastnikAutoskola` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("skupina", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skupina", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("popis", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "popis", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("vlastnikAutoskola", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vlastnikAutoskola", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_skupina", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skupina", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_skupina", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skupina", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_popis", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "popis", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_popis", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "popis", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_vlastnikAutoskola", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vlastnikAutoskola", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_vlastnikAutoskola", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vlastnikAutoskola", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11245,11 +11705,16 @@ Namespace eAutoskolaDBDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id, skupina, popis FROM cislenikSkupina"
+            Me._commandCollection(0).CommandText = "SELECT id, skupina, popis, vlastnikAutoskola FROM cislenikSkupina"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT     id, skupina, popis, vlastnikAutoskola"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         cislenikSkupina"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"W"& _ 
+                "HERE     (vlastnikAutoskola = true)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11271,6 +11736,30 @@ Namespace eAutoskolaDBDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As eAutoskolaDBDataSet.cislenikSkupinaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As eAutoskolaDBDataSet.cislenikSkupinaDataTable = New eAutoskolaDBDataSet.cislenikSkupinaDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy_autoskolaVlastnik(ByVal dataTable As eAutoskolaDBDataSet.cislenikSkupinaDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy_autoskolaVlastnik() As eAutoskolaDBDataSet.cislenikSkupinaDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
             Dim dataTable As eAutoskolaDBDataSet.cislenikSkupinaDataTable = New eAutoskolaDBDataSet.cislenikSkupinaDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -11308,7 +11797,7 @@ Namespace eAutoskolaDBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_id As Integer, ByVal Original_skupina As String, ByVal Original_popis As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_id As Integer, ByVal Original_skupina As String, ByVal Original_popis As String, ByVal Original_vlastnikAutoskola As Boolean) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id,Integer)
             If (Original_skupina Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -11324,6 +11813,8 @@ Namespace eAutoskolaDBDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_popis,String)
             End If
+            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_vlastnikAutoskola,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -11343,7 +11834,7 @@ Namespace eAutoskolaDBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal skupina As String, ByVal popis As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal skupina As String, ByVal popis As String, ByVal vlastnikAutoskola As Boolean) As Integer
             If (skupina Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -11354,6 +11845,7 @@ Namespace eAutoskolaDBDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(popis,String)
             End If
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(vlastnikAutoskola,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -11373,7 +11865,7 @@ Namespace eAutoskolaDBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal skupina As String, ByVal popis As String, ByVal Original_id As Integer, ByVal Original_skupina As String, ByVal Original_popis As String) As Integer
+        Public Overloads Overridable Function Update(ByVal skupina As String, ByVal popis As String, ByVal vlastnikAutoskola As Boolean, ByVal Original_id As Integer, ByVal Original_skupina As String, ByVal Original_popis As String, ByVal Original_vlastnikAutoskola As Boolean) As Integer
             If (skupina Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -11384,21 +11876,24 @@ Namespace eAutoskolaDBDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(popis,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Original_id,Integer)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(vlastnikAutoskola,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_id,Integer)
             If (Original_skupina Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_skupina,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_skupina,String)
             End If
             If (Original_popis Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_popis,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_popis,String)
             End If
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_vlastnikAutoskola,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -14508,220 +15003,294 @@ Namespace eAutoskolaDBDataSetTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "student"
             tableMapping.ColumnMappings.Add("id", "id")
-            tableMapping.ColumnMappings.Add("Auchadzac", "Auchadzac")
-            tableMapping.ColumnMappings.Add("A1uchadzac", "A1uchadzac")
-            tableMapping.ColumnMappings.Add("Buchadzac", "Buchadzac")
-            tableMapping.ColumnMappings.Add("B1uchadzac", "B1uchadzac")
-            tableMapping.ColumnMappings.Add("Cuchadzac", "Cuchadzac")
-            tableMapping.ColumnMappings.Add("Duchadzac", "Duchadzac")
-            tableMapping.ColumnMappings.Add("BEuchadzac", "BEuchadzac")
-            tableMapping.ColumnMappings.Add("CEuchadzac", "CEuchadzac")
-            tableMapping.ColumnMappings.Add("DEuchadzac", "DEuchadzac")
-            tableMapping.ColumnMappings.Add("AMuchadzac", "AMuchadzac")
-            tableMapping.ColumnMappings.Add("Tuchadzac", "Tuchadzac")
-            tableMapping.ColumnMappings.Add("Avlastnik", "Avlastnik")
-            tableMapping.ColumnMappings.Add("A1vlastnik", "A1vlastnik")
-            tableMapping.ColumnMappings.Add("Bvlastnik", "Bvlastnik")
-            tableMapping.ColumnMappings.Add("B1vlastnik", "B1vlastnik")
-            tableMapping.ColumnMappings.Add("Cvlastnik", "Cvlastnik")
-            tableMapping.ColumnMappings.Add("Dvlastnik", "Dvlastnik")
-            tableMapping.ColumnMappings.Add("BEvlastnik", "BEvlastnik")
-            tableMapping.ColumnMappings.Add("CEvlastnik", "CEvlastnik")
-            tableMapping.ColumnMappings.Add("DEvlastnik", "DEvlastnik")
-            tableMapping.ColumnMappings.Add("AMvlastnik", "AMvlastnik")
-            tableMapping.ColumnMappings.Add("Tvlastnik", "Tvlastnik")
+            tableMapping.ColumnMappings.Add("A1V", "A1V")
+            tableMapping.ColumnMappings.Add("Ado25V", "Ado25V")
+            tableMapping.ColumnMappings.Add("Anad25V", "Anad25V")
+            tableMapping.ColumnMappings.Add("B1V", "B1V")
+            tableMapping.ColumnMappings.Add("BV", "BV")
+            tableMapping.ColumnMappings.Add("C1V", "C1V")
+            tableMapping.ColumnMappings.Add("CV", "CV")
+            tableMapping.ColumnMappings.Add("D1V", "D1V")
+            tableMapping.ColumnMappings.Add("DV", "DV")
+            tableMapping.ColumnMappings.Add("BEV", "BEV")
+            tableMapping.ColumnMappings.Add("C1EV", "C1EV")
+            tableMapping.ColumnMappings.Add("CEV", "CEV")
+            tableMapping.ColumnMappings.Add("D1EV", "D1EV")
+            tableMapping.ColumnMappings.Add("DEV", "DEV")
+            tableMapping.ColumnMappings.Add("AMV", "AMV")
+            tableMapping.ColumnMappings.Add("TV", "TV")
+            tableMapping.ColumnMappings.Add("A1U", "A1U")
+            tableMapping.ColumnMappings.Add("Ado25U", "Ado25U")
+            tableMapping.ColumnMappings.Add("Anad25U", "Anad25U")
+            tableMapping.ColumnMappings.Add("B1U", "B1U")
+            tableMapping.ColumnMappings.Add("BU", "BU")
+            tableMapping.ColumnMappings.Add("C1U", "C1U")
+            tableMapping.ColumnMappings.Add("CU", "CU")
+            tableMapping.ColumnMappings.Add("D1U", "D1U")
+            tableMapping.ColumnMappings.Add("DU", "DU")
+            tableMapping.ColumnMappings.Add("BEU", "BEU")
+            tableMapping.ColumnMappings.Add("C1EU", "C1EU")
+            tableMapping.ColumnMappings.Add("CEU", "CEU")
+            tableMapping.ColumnMappings.Add("D1EU", "D1EU")
+            tableMapping.ColumnMappings.Add("DEU", "DEU")
+            tableMapping.ColumnMappings.Add("AMU", "AMU")
+            tableMapping.ColumnMappings.Add("TU", "TU")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `student` WHERE ((`id` = ?) AND ((? = 1 AND `A1uchadzac` IS NULL) OR "& _ 
-                "(`A1uchadzac` = ?)) AND ((? = 1 AND `A1vlastnik` IS NULL) OR (`A1vlastnik` = ?))"& _ 
-                " AND ((? = 1 AND `AMuchadzac` IS NULL) OR (`AMuchadzac` = ?)) AND ((? = 1 AND `A"& _ 
-                "Mvlastnik` IS NULL) OR (`AMvlastnik` = ?)) AND ((? = 1 AND `Auchadzac` IS NULL) "& _ 
-                "OR (`Auchadzac` = ?)) AND ((? = 1 AND `Avlastnik` IS NULL) OR (`Avlastnik` = ?))"& _ 
-                " AND ((? = 1 AND `B1uchadzac` IS NULL) OR (`B1uchadzac` = ?)) AND ((? = 1 AND `B"& _ 
-                "1vlastnik` IS NULL) OR (`B1vlastnik` = ?)) AND ((? = 1 AND `BEuchadzac` IS NULL)"& _ 
-                " OR (`BEuchadzac` = ?)) AND ((? = 1 AND `BEvlastnik` IS NULL) OR (`BEvlastnik` ="& _ 
-                " ?)) AND ((? = 1 AND `Buchadzac` IS NULL) OR (`Buchadzac` = ?)) AND ((? = 1 AND "& _ 
-                "`Bvlastnik` IS NULL) OR (`Bvlastnik` = ?)) AND ((? = 1 AND `CEuchadzac` IS NULL)"& _ 
-                " OR (`CEuchadzac` = ?)) AND ((? = 1 AND `CEvlastnik` IS NULL) OR (`CEvlastnik` ="& _ 
-                " ?)) AND ((? = 1 AND `Cuchadzac` IS NULL) OR (`Cuchadzac` = ?)) AND ((? = 1 AND "& _ 
-                "`Cvlastnik` IS NULL) OR (`Cvlastnik` = ?)) AND ((? = 1 AND `DEuchadzac` IS NULL)"& _ 
-                " OR (`DEuchadzac` = ?)) AND ((? = 1 AND `DEvlastnik` IS NULL) OR (`DEvlastnik` ="& _ 
-                " ?)) AND ((? = 1 AND `Duchadzac` IS NULL) OR (`Duchadzac` = ?)) AND ((? = 1 AND "& _ 
-                "`Dvlastnik` IS NULL) OR (`Dvlastnik` = ?)) AND ((? = 1 AND `Tuchadzac` IS NULL) "& _ 
-                "OR (`Tuchadzac` = ?)) AND ((? = 1 AND `Tvlastnik` IS NULL) OR (`Tvlastnik` = ?))"& _ 
-                ")"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `student` WHERE ((`id` = ?) AND ((? = 1 AND `A1U` IS NULL) OR (`A1U` "& _ 
+                "= ?)) AND ((? = 1 AND `A1V` IS NULL) OR (`A1V` = ?)) AND ((? = 1 AND `AMU` IS NU"& _ 
+                "LL) OR (`AMU` = ?)) AND ((? = 1 AND `AMV` IS NULL) OR (`AMV` = ?)) AND ((? = 1 A"& _ 
+                "ND `Ado25U` IS NULL) OR (`Ado25U` = ?)) AND ((? = 1 AND `Ado25V` IS NULL) OR (`A"& _ 
+                "do25V` = ?)) AND ((? = 1 AND `Anad25U` IS NULL) OR (`Anad25U` = ?)) AND ((? = 1 "& _ 
+                "AND `Anad25V` IS NULL) OR (`Anad25V` = ?)) AND ((? = 1 AND `B1U` IS NULL) OR (`B"& _ 
+                "1U` = ?)) AND ((? = 1 AND `B1V` IS NULL) OR (`B1V` = ?)) AND ((? = 1 AND `BEU` I"& _ 
+                "S NULL) OR (`BEU` = ?)) AND ((? = 1 AND `BEV` IS NULL) OR (`BEV` = ?)) AND ((? ="& _ 
+                " 1 AND `BU` IS NULL) OR (`BU` = ?)) AND ((? = 1 AND `BV` IS NULL) OR (`BV` = ?))"& _ 
+                " AND ((? = 1 AND `C1EU` IS NULL) OR (`C1EU` = ?)) AND ((? = 1 AND `C1EV` IS NULL"& _ 
+                ") OR (`C1EV` = ?)) AND ((? = 1 AND `C1U` IS NULL) OR (`C1U` = ?)) AND ((? = 1 AN"& _ 
+                "D `C1V` IS NULL) OR (`C1V` = ?)) AND ((? = 1 AND `CEU` IS NULL) OR (`CEU` = ?)) "& _ 
+                "AND ((? = 1 AND `CEV` IS NULL) OR (`CEV` = ?)) AND ((? = 1 AND `CU` IS NULL) OR "& _ 
+                "(`CU` = ?)) AND ((? = 1 AND `CV` IS NULL) OR (`CV` = ?)) AND ((? = 1 AND `D1EU` "& _ 
+                "IS NULL) OR (`D1EU` = ?)) AND ((? = 1 AND `D1EV` IS NULL) OR (`D1EV` = ?)) AND ("& _ 
+                "(? = 1 AND `D1U` IS NULL) OR (`D1U` = ?)) AND ((? = 1 AND `D1V` IS NULL) OR (`D1"& _ 
+                "V` = ?)) AND ((? = 1 AND `DEU` IS NULL) OR (`DEU` = ?)) AND ((? = 1 AND `DEV` IS"& _ 
+                " NULL) OR (`DEV` = ?)) AND ((? = 1 AND `DU` IS NULL) OR (`DU` = ?)) AND ((? = 1 "& _ 
+                "AND `DV` IS NULL) OR (`DV` = ?)) AND ((? = 1 AND `TU` IS NULL) OR (`TU` = ?)) AN"& _ 
+                "D ((? = 1 AND `TV` IS NULL) OR (`TV` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_A1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1uchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_A1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1uchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_A1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1vlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_A1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1vlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AMuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AMuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AMvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AMvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Auchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Auchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Auchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Auchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Avlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Avlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Avlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Avlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_B1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1uchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_B1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1uchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_B1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1vlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_B1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1vlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Buchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Buchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Buchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Buchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Bvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Bvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Bvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Bvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Cuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Cuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Cvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Cvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Duchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Duchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Duchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Duchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Dvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Dvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Tuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Tuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Tvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Tvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_A1U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_A1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_A1V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_A1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AMU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AMU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AMV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AMV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Ado25U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Ado25U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Ado25V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Ado25V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Anad25U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Anad25U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Anad25V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Anad25V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_B1U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_B1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_B1V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_B1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BEU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BEV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_C1EU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_C1EU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_C1EV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_C1EV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_C1U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_C1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_C1V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_C1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CEU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CEV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_D1EU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_D1EU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_D1EV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_D1EV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_D1U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_D1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_D1V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_D1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DEU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DEV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TV", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `student` (`id`, `A1uchadzac`, `A1vlastnik`, `AMuchadzac`, `AMvlastni"& _ 
-                "k`, `Auchadzac`, `Avlastnik`, `B1uchadzac`, `B1vlastnik`, `BEuchadzac`, `BEvlast"& _ 
-                "nik`, `Buchadzac`, `Bvlastnik`, `CEuchadzac`, `CEvlastnik`, `Cuchadzac`, `Cvlast"& _ 
-                "nik`, `DEuchadzac`, `DEvlastnik`, `Duchadzac`, `Dvlastnik`, `Tuchadzac`, `Tvlast"& _ 
-                "nik`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
-                "?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `student` (`id`, `A1U`, `A1V`, `AMU`, `AMV`, `Ado25U`, `Ado25V`, `Ana"& _ 
+                "d25U`, `Anad25V`, `B1U`, `B1V`, `BEU`, `BEV`, `BU`, `BV`, `C1EU`, `C1EV`, `C1U`,"& _ 
+                " `C1V`, `CEU`, `CEV`, `CU`, `CV`, `D1EU`, `D1EV`, `D1U`, `D1V`, `DEU`, `DEV`, `D"& _ 
+                "U`, `DV`, `TU`, `TV`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
+                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("A1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1uchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("A1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1vlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AMuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AMvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Auchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Auchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Avlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Avlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("B1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1uchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("B1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1vlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Buchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Buchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Bvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Bvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Cuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Cvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Duchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Duchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Dvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Tuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Tvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("A1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("A1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AMU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AMV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Ado25U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Ado25V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Anad25U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Anad25V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("B1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("B1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("C1EU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("C1EV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("C1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("C1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("D1EU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("D1EV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("D1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("D1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TV", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `student` SET `id` = ?, `A1uchadzac` = ?, `A1vlastnik` = ?, `AMuchadzac` ="& _ 
-                " ?, `AMvlastnik` = ?, `Auchadzac` = ?, `Avlastnik` = ?, `B1uchadzac` = ?, `B1vla"& _ 
-                "stnik` = ?, `BEuchadzac` = ?, `BEvlastnik` = ?, `Buchadzac` = ?, `Bvlastnik` = ?"& _ 
-                ", `CEuchadzac` = ?, `CEvlastnik` = ?, `Cuchadzac` = ?, `Cvlastnik` = ?, `DEuchad"& _ 
-                "zac` = ?, `DEvlastnik` = ?, `Duchadzac` = ?, `Dvlastnik` = ?, `Tuchadzac` = ?, `"& _ 
-                "Tvlastnik` = ? WHERE ((`id` = ?) AND ((? = 1 AND `A1uchadzac` IS NULL) OR (`A1uc"& _ 
-                "hadzac` = ?)) AND ((? = 1 AND `A1vlastnik` IS NULL) OR (`A1vlastnik` = ?)) AND ("& _ 
-                "(? = 1 AND `AMuchadzac` IS NULL) OR (`AMuchadzac` = ?)) AND ((? = 1 AND `AMvlast"& _ 
-                "nik` IS NULL) OR (`AMvlastnik` = ?)) AND ((? = 1 AND `Auchadzac` IS NULL) OR (`A"& _ 
-                "uchadzac` = ?)) AND ((? = 1 AND `Avlastnik` IS NULL) OR (`Avlastnik` = ?)) AND ("& _ 
-                "(? = 1 AND `B1uchadzac` IS NULL) OR (`B1uchadzac` = ?)) AND ((? = 1 AND `B1vlast"& _ 
-                "nik` IS NULL) OR (`B1vlastnik` = ?)) AND ((? = 1 AND `BEuchadzac` IS NULL) OR (`"& _ 
-                "BEuchadzac` = ?)) AND ((? = 1 AND `BEvlastnik` IS NULL) OR (`BEvlastnik` = ?)) A"& _ 
-                "ND ((? = 1 AND `Buchadzac` IS NULL) OR (`Buchadzac` = ?)) AND ((? = 1 AND `Bvlas"& _ 
-                "tnik` IS NULL) OR (`Bvlastnik` = ?)) AND ((? = 1 AND `CEuchadzac` IS NULL) OR (`"& _ 
-                "CEuchadzac` = ?)) AND ((? = 1 AND `CEvlastnik` IS NULL) OR (`CEvlastnik` = ?)) A"& _ 
-                "ND ((? = 1 AND `Cuchadzac` IS NULL) OR (`Cuchadzac` = ?)) AND ((? = 1 AND `Cvlas"& _ 
-                "tnik` IS NULL) OR (`Cvlastnik` = ?)) AND ((? = 1 AND `DEuchadzac` IS NULL) OR (`"& _ 
-                "DEuchadzac` = ?)) AND ((? = 1 AND `DEvlastnik` IS NULL) OR (`DEvlastnik` = ?)) A"& _ 
-                "ND ((? = 1 AND `Duchadzac` IS NULL) OR (`Duchadzac` = ?)) AND ((? = 1 AND `Dvlas"& _ 
-                "tnik` IS NULL) OR (`Dvlastnik` = ?)) AND ((? = 1 AND `Tuchadzac` IS NULL) OR (`T"& _ 
-                "uchadzac` = ?)) AND ((? = 1 AND `Tvlastnik` IS NULL) OR (`Tvlastnik` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `student` SET `id` = ?, `A1U` = ?, `A1V` = ?, `AMU` = ?, `AMV` = ?, `Ado25"& _ 
+                "U` = ?, `Ado25V` = ?, `Anad25U` = ?, `Anad25V` = ?, `B1U` = ?, `B1V` = ?, `BEU` "& _ 
+                "= ?, `BEV` = ?, `BU` = ?, `BV` = ?, `C1EU` = ?, `C1EV` = ?, `C1U` = ?, `C1V` = ?"& _ 
+                ", `CEU` = ?, `CEV` = ?, `CU` = ?, `CV` = ?, `D1EU` = ?, `D1EV` = ?, `D1U` = ?, `"& _ 
+                "D1V` = ?, `DEU` = ?, `DEV` = ?, `DU` = ?, `DV` = ?, `TU` = ?, `TV` = ? WHERE ((`"& _ 
+                "id` = ?) AND ((? = 1 AND `A1U` IS NULL) OR (`A1U` = ?)) AND ((? = 1 AND `A1V` IS"& _ 
+                " NULL) OR (`A1V` = ?)) AND ((? = 1 AND `AMU` IS NULL) OR (`AMU` = ?)) AND ((? = "& _ 
+                "1 AND `AMV` IS NULL) OR (`AMV` = ?)) AND ((? = 1 AND `Ado25U` IS NULL) OR (`Ado2"& _ 
+                "5U` = ?)) AND ((? = 1 AND `Ado25V` IS NULL) OR (`Ado25V` = ?)) AND ((? = 1 AND `"& _ 
+                "Anad25U` IS NULL) OR (`Anad25U` = ?)) AND ((? = 1 AND `Anad25V` IS NULL) OR (`An"& _ 
+                "ad25V` = ?)) AND ((? = 1 AND `B1U` IS NULL) OR (`B1U` = ?)) AND ((? = 1 AND `B1V"& _ 
+                "` IS NULL) OR (`B1V` = ?)) AND ((? = 1 AND `BEU` IS NULL) OR (`BEU` = ?)) AND (("& _ 
+                "? = 1 AND `BEV` IS NULL) OR (`BEV` = ?)) AND ((? = 1 AND `BU` IS NULL) OR (`BU` "& _ 
+                "= ?)) AND ((? = 1 AND `BV` IS NULL) OR (`BV` = ?)) AND ((? = 1 AND `C1EU` IS NUL"& _ 
+                "L) OR (`C1EU` = ?)) AND ((? = 1 AND `C1EV` IS NULL) OR (`C1EV` = ?)) AND ((? = 1"& _ 
+                " AND `C1U` IS NULL) OR (`C1U` = ?)) AND ((? = 1 AND `C1V` IS NULL) OR (`C1V` = ?"& _ 
+                ")) AND ((? = 1 AND `CEU` IS NULL) OR (`CEU` = ?)) AND ((? = 1 AND `CEV` IS NULL)"& _ 
+                " OR (`CEV` = ?)) AND ((? = 1 AND `CU` IS NULL) OR (`CU` = ?)) AND ((? = 1 AND `C"& _ 
+                "V` IS NULL) OR (`CV` = ?)) AND ((? = 1 AND `D1EU` IS NULL) OR (`D1EU` = ?)) AND "& _ 
+                "((? = 1 AND `D1EV` IS NULL) OR (`D1EV` = ?)) AND ((? = 1 AND `D1U` IS NULL) OR ("& _ 
+                "`D1U` = ?)) AND ((? = 1 AND `D1V` IS NULL) OR (`D1V` = ?)) AND ((? = 1 AND `DEU`"& _ 
+                " IS NULL) OR (`DEU` = ?)) AND ((? = 1 AND `DEV` IS NULL) OR (`DEV` = ?)) AND ((?"& _ 
+                " = 1 AND `DU` IS NULL) OR (`DU` = ?)) AND ((? = 1 AND `DV` IS NULL) OR (`DV` = ?"& _ 
+                ")) AND ((? = 1 AND `TU` IS NULL) OR (`TU` = ?)) AND ((? = 1 AND `TV` IS NULL) OR"& _ 
+                " (`TV` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("A1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1uchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("A1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1vlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AMuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AMvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Auchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Auchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Avlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Avlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("B1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1uchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("B1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1vlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Buchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Buchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Bvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Bvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Cuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Cvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Duchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Duchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Dvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Tuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tuchadzac", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Tvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tvlastnik", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("A1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("A1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AMU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("AMV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Ado25U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Ado25V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Anad25U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Anad25V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("B1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("B1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("C1EU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("C1EV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("C1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("C1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("D1EU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("D1EV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("D1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1U", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("D1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1V", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DV", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TU", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TV", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_A1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1uchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_A1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1uchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_A1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1vlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_A1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1vlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AMuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AMuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AMvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AMvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Auchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Auchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Auchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Auchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Avlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Avlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Avlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Avlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_B1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1uchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_B1uchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1uchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_B1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1vlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_B1vlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1vlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Buchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Buchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Buchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Buchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Bvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Bvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Bvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Bvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Cuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Cuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Cvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Cvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Cvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Duchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Duchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Duchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Duchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Dvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Dvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Tuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tuchadzac", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Tuchadzac", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tuchadzac", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Tvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tvlastnik", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Tvlastnik", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Tvlastnik", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_A1U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_A1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_A1V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_A1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "A1V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AMU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AMU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_AMV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_AMV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "AMV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Ado25U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Ado25U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Ado25V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Ado25V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ado25V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Anad25U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Anad25U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Anad25V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Anad25V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Anad25V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_B1U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_B1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_B1V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_B1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "B1V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BEU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BEV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BEV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_BV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_C1EU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_C1EU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_C1EV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_C1EV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1EV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_C1U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_C1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_C1V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_C1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "C1V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CEU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CEV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CEV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_D1EU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_D1EU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_D1EV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_D1EV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1EV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_D1U", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1U", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_D1U", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1U", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_D1V", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1V", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_D1V", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "D1V", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DEU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DEV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DV", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TU", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TU", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TU", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TU", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TV", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TV", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TV", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TV", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14737,10 +15306,9 @@ Namespace eAutoskolaDBDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id, A1uchadzac, A1vlastnik, AMuchadzac, AMvlastnik, Auchadzac, Avlastnik, "& _ 
-                "B1uchadzac, B1vlastnik, BEuchadzac, BEvlastnik, Buchadzac, Bvlastnik, CEuchadzac"& _ 
-                ", CEvlastnik, Cuchadzac, Cvlastnik, DEuchadzac, DEvlastnik, Duchadzac, Dvlastnik"& _ 
-                ", Tuchadzac, Tvlastnik FROM student"
+            Me._commandCollection(0).CommandText = "SELECT id, A1U, A1V, AMU, AMV, Ado25U, Ado25V, Anad25U, Anad25V, B1U, B1V, BEU, B"& _ 
+                "EV, BU, BV, C1EU, C1EV, C1U, C1V, CEU, CEV, CU, CV, D1EU, D1EV, D1U, D1V, DEU, D"& _ 
+                "EV, DU, DV, TU, TV FROM student"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -14802,187 +15370,107 @@ Namespace eAutoskolaDBDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
         Public Overloads Overridable Function Delete( _
                     ByVal Original_id As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_A1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_A1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AMuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AMvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Auchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Avlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_B1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_B1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Buchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Bvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_CEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_CEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Cuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Cvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_DEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_DEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Duchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Dvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Tuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Tvlastnik As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_A1U As Boolean,  _
+                    ByVal Original_A1V As Boolean,  _
+                    ByVal Original_AMU As Boolean,  _
+                    ByVal Original_AMV As Boolean,  _
+                    ByVal Original_Ado25U As Boolean,  _
+                    ByVal Original_Ado25V As Boolean,  _
+                    ByVal Original_Anad25U As Boolean,  _
+                    ByVal Original_Anad25V As Boolean,  _
+                    ByVal Original_B1U As Boolean,  _
+                    ByVal Original_B1V As Boolean,  _
+                    ByVal Original_BEU As Boolean,  _
+                    ByVal Original_BEV As Boolean,  _
+                    ByVal Original_BU As Boolean,  _
+                    ByVal Original_BV As Boolean,  _
+                    ByVal Original_C1EU As Boolean,  _
+                    ByVal Original_C1EV As Boolean,  _
+                    ByVal Original_C1U As Boolean,  _
+                    ByVal Original_C1V As Boolean,  _
+                    ByVal Original_CEU As Boolean,  _
+                    ByVal Original_CEV As Boolean,  _
+                    ByVal Original_CU As Boolean,  _
+                    ByVal Original_CV As Boolean,  _
+                    ByVal Original_D1EU As Boolean,  _
+                    ByVal Original_D1EV As Boolean,  _
+                    ByVal Original_D1U As Boolean,  _
+                    ByVal Original_D1V As Boolean,  _
+                    ByVal Original_DEU As Boolean,  _
+                    ByVal Original_DEV As Boolean,  _
+                    ByVal Original_DU As Boolean,  _
+                    ByVal Original_DV As Boolean,  _
+                    ByVal Original_TU As Boolean,  _
+                    ByVal Original_TV As Boolean) As Integer
             If (Original_id.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (Original_A1uchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_A1uchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (Original_A1vlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_A1vlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Original_AMuchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_AMuchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (Original_AMvlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_AMvlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Auchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Auchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Avlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Avlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (Original_B1uchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_B1uchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (Original_B1vlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_B1vlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BEuchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_BEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BEvlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_BEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Buchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Buchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Bvlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_Bvlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
-            End If
-            If (Original_CEuchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_CEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
-            End If
-            If (Original_CEvlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_CEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(28).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Cuchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_Cuchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Cvlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_Cvlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
-            End If
-            If (Original_DEuchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_DEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(34).Value = Global.System.DBNull.Value
-            End If
-            If (Original_DEvlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_DEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(36).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Duchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_Duchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(38).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Dvlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_Dvlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(40).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Tuchadzac.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_Tuchadzac.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(42).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Tvlastnik.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(Original_Tvlastnik.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(44).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_A1U,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_A1V,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_AMU,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_AMV,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Ado25U,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Ado25V,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Anad25U,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Anad25V,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_B1U,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_B1V,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_BEU,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_BEV,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_BU,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_BV,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_C1EU,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_C1EV,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(33).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_C1U,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_C1V,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(37).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_CEU,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_CEV,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(41).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_CU,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(43).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(44).Value = CType(Original_CV,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(45).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(46).Value = CType(Original_D1EU,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(47).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_D1EV,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(49).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(50).Value = CType(Original_D1U,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(51).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(52).Value = CType(Original_D1V,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(53).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(54).Value = CType(Original_DEU,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(55).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(56).Value = CType(Original_DEV,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(57).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(58).Value = CType(Original_DU,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(59).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(60).Value = CType(Original_DV,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(61).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(62).Value = CType(Original_TU,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(63).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(64).Value = CType(Original_TV,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -15004,143 +15492,75 @@ Namespace eAutoskolaDBDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
         Public Overloads Overridable Function Insert( _
                     ByVal id As Global.System.Nullable(Of Integer),  _
-                    ByVal A1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal A1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal AMuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal AMvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Auchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Avlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal B1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal B1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal BEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal BEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Buchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Bvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal CEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal CEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Cuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Cvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal DEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal DEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Duchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Dvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Tuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Tvlastnik As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal A1U As Boolean,  _
+                    ByVal A1V As Boolean,  _
+                    ByVal AMU As Boolean,  _
+                    ByVal AMV As Boolean,  _
+                    ByVal Ado25U As Boolean,  _
+                    ByVal Ado25V As Boolean,  _
+                    ByVal Anad25U As Boolean,  _
+                    ByVal Anad25V As Boolean,  _
+                    ByVal B1U As Boolean,  _
+                    ByVal B1V As Boolean,  _
+                    ByVal BEU As Boolean,  _
+                    ByVal BEV As Boolean,  _
+                    ByVal BU As Boolean,  _
+                    ByVal BV As Boolean,  _
+                    ByVal C1EU As Boolean,  _
+                    ByVal C1EV As Boolean,  _
+                    ByVal C1U As Boolean,  _
+                    ByVal C1V As Boolean,  _
+                    ByVal CEU As Boolean,  _
+                    ByVal CEV As Boolean,  _
+                    ByVal CU As Boolean,  _
+                    ByVal CV As Boolean,  _
+                    ByVal D1EU As Boolean,  _
+                    ByVal D1EV As Boolean,  _
+                    ByVal D1U As Boolean,  _
+                    ByVal D1V As Boolean,  _
+                    ByVal DEU As Boolean,  _
+                    ByVal DEV As Boolean,  _
+                    ByVal DU As Boolean,  _
+                    ByVal DV As Boolean,  _
+                    ByVal TU As Boolean,  _
+                    ByVal TV As Boolean) As Integer
             If (id.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(id.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (A1uchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(A1uchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            If (A1vlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(A1vlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (AMuchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(AMuchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (AMvlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(AMvlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Auchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Auchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            If (Avlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Avlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (B1uchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(B1uchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (B1vlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(B1vlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (BEuchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(BEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            If (BEvlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(BEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Buchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(11).Value = CType(Buchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
-            End If
-            If (Bvlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(12).Value = CType(Bvlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (CEuchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(13).Value = CType(CEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
-            End If
-            If (CEvlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(14).Value = CType(CEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (Cuchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(15).Value = CType(Cuchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
-            End If
-            If (Cvlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(16).Value = CType(Cvlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (DEuchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(17).Value = CType(DEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
-            End If
-            If (DEvlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(18).Value = CType(DEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
-            End If
-            If (Duchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(19).Value = CType(Duchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
-            End If
-            If (Dvlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(20).Value = CType(Dvlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (Tuchadzac.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(21).Value = CType(Tuchadzac.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
-            End If
-            If (Tvlastnik.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(22).Value = CType(Tvlastnik.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.InsertCommand.Parameters(1).Value = CType(A1U,Boolean)
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(A1V,Boolean)
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(AMU,Boolean)
+            Me.Adapter.InsertCommand.Parameters(4).Value = CType(AMV,Boolean)
+            Me.Adapter.InsertCommand.Parameters(5).Value = CType(Ado25U,Boolean)
+            Me.Adapter.InsertCommand.Parameters(6).Value = CType(Ado25V,Boolean)
+            Me.Adapter.InsertCommand.Parameters(7).Value = CType(Anad25U,Boolean)
+            Me.Adapter.InsertCommand.Parameters(8).Value = CType(Anad25V,Boolean)
+            Me.Adapter.InsertCommand.Parameters(9).Value = CType(B1U,Boolean)
+            Me.Adapter.InsertCommand.Parameters(10).Value = CType(B1V,Boolean)
+            Me.Adapter.InsertCommand.Parameters(11).Value = CType(BEU,Boolean)
+            Me.Adapter.InsertCommand.Parameters(12).Value = CType(BEV,Boolean)
+            Me.Adapter.InsertCommand.Parameters(13).Value = CType(BU,Boolean)
+            Me.Adapter.InsertCommand.Parameters(14).Value = CType(BV,Boolean)
+            Me.Adapter.InsertCommand.Parameters(15).Value = CType(C1EU,Boolean)
+            Me.Adapter.InsertCommand.Parameters(16).Value = CType(C1EV,Boolean)
+            Me.Adapter.InsertCommand.Parameters(17).Value = CType(C1U,Boolean)
+            Me.Adapter.InsertCommand.Parameters(18).Value = CType(C1V,Boolean)
+            Me.Adapter.InsertCommand.Parameters(19).Value = CType(CEU,Boolean)
+            Me.Adapter.InsertCommand.Parameters(20).Value = CType(CEV,Boolean)
+            Me.Adapter.InsertCommand.Parameters(21).Value = CType(CU,Boolean)
+            Me.Adapter.InsertCommand.Parameters(22).Value = CType(CV,Boolean)
+            Me.Adapter.InsertCommand.Parameters(23).Value = CType(D1EU,Boolean)
+            Me.Adapter.InsertCommand.Parameters(24).Value = CType(D1EV,Boolean)
+            Me.Adapter.InsertCommand.Parameters(25).Value = CType(D1U,Boolean)
+            Me.Adapter.InsertCommand.Parameters(26).Value = CType(D1V,Boolean)
+            Me.Adapter.InsertCommand.Parameters(27).Value = CType(DEU,Boolean)
+            Me.Adapter.InsertCommand.Parameters(28).Value = CType(DEV,Boolean)
+            Me.Adapter.InsertCommand.Parameters(29).Value = CType(DU,Boolean)
+            Me.Adapter.InsertCommand.Parameters(30).Value = CType(DV,Boolean)
+            Me.Adapter.InsertCommand.Parameters(31).Value = CType(TU,Boolean)
+            Me.Adapter.InsertCommand.Parameters(32).Value = CType(TV,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -15162,325 +15582,177 @@ Namespace eAutoskolaDBDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
                     ByVal id As Global.System.Nullable(Of Integer),  _
-                    ByVal A1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal A1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal AMuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal AMvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Auchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Avlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal B1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal B1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal BEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal BEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Buchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Bvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal CEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal CEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Cuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Cvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal DEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal DEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Duchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Dvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Tuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Tvlastnik As Global.System.Nullable(Of Integer),  _
+                    ByVal A1U As Boolean,  _
+                    ByVal A1V As Boolean,  _
+                    ByVal AMU As Boolean,  _
+                    ByVal AMV As Boolean,  _
+                    ByVal Ado25U As Boolean,  _
+                    ByVal Ado25V As Boolean,  _
+                    ByVal Anad25U As Boolean,  _
+                    ByVal Anad25V As Boolean,  _
+                    ByVal B1U As Boolean,  _
+                    ByVal B1V As Boolean,  _
+                    ByVal BEU As Boolean,  _
+                    ByVal BEV As Boolean,  _
+                    ByVal BU As Boolean,  _
+                    ByVal BV As Boolean,  _
+                    ByVal C1EU As Boolean,  _
+                    ByVal C1EV As Boolean,  _
+                    ByVal C1U As Boolean,  _
+                    ByVal C1V As Boolean,  _
+                    ByVal CEU As Boolean,  _
+                    ByVal CEV As Boolean,  _
+                    ByVal CU As Boolean,  _
+                    ByVal CV As Boolean,  _
+                    ByVal D1EU As Boolean,  _
+                    ByVal D1EV As Boolean,  _
+                    ByVal D1U As Boolean,  _
+                    ByVal D1V As Boolean,  _
+                    ByVal DEU As Boolean,  _
+                    ByVal DEV As Boolean,  _
+                    ByVal DU As Boolean,  _
+                    ByVal DV As Boolean,  _
+                    ByVal TU As Boolean,  _
+                    ByVal TV As Boolean,  _
                     ByVal Original_id As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_A1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_A1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AMuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AMvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Auchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Avlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_B1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_B1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Buchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Bvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_CEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_CEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Cuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Cvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_DEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_DEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Duchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Dvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Tuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Tvlastnik As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_A1U As Boolean,  _
+                    ByVal Original_A1V As Boolean,  _
+                    ByVal Original_AMU As Boolean,  _
+                    ByVal Original_AMV As Boolean,  _
+                    ByVal Original_Ado25U As Boolean,  _
+                    ByVal Original_Ado25V As Boolean,  _
+                    ByVal Original_Anad25U As Boolean,  _
+                    ByVal Original_Anad25V As Boolean,  _
+                    ByVal Original_B1U As Boolean,  _
+                    ByVal Original_B1V As Boolean,  _
+                    ByVal Original_BEU As Boolean,  _
+                    ByVal Original_BEV As Boolean,  _
+                    ByVal Original_BU As Boolean,  _
+                    ByVal Original_BV As Boolean,  _
+                    ByVal Original_C1EU As Boolean,  _
+                    ByVal Original_C1EV As Boolean,  _
+                    ByVal Original_C1U As Boolean,  _
+                    ByVal Original_C1V As Boolean,  _
+                    ByVal Original_CEU As Boolean,  _
+                    ByVal Original_CEV As Boolean,  _
+                    ByVal Original_CU As Boolean,  _
+                    ByVal Original_CV As Boolean,  _
+                    ByVal Original_D1EU As Boolean,  _
+                    ByVal Original_D1EV As Boolean,  _
+                    ByVal Original_D1U As Boolean,  _
+                    ByVal Original_D1V As Boolean,  _
+                    ByVal Original_DEU As Boolean,  _
+                    ByVal Original_DEV As Boolean,  _
+                    ByVal Original_DU As Boolean,  _
+                    ByVal Original_DV As Boolean,  _
+                    ByVal Original_TU As Boolean,  _
+                    ByVal Original_TV As Boolean) As Integer
             If (id.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(id.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (A1uchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(A1uchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            If (A1vlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(A1vlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (AMuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(AMuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (AMvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(AMvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Auchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Auchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            If (Avlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Avlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (B1uchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(B1uchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (B1vlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(B1vlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (BEuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(BEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            If (BEvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(BEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Buchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Buchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
-            End If
-            If (Bvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Bvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (CEuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(CEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
-            End If
-            If (CEvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(CEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (Cuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Cuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
-            End If
-            If (Cvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Cvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (DEuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(DEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
-            End If
-            If (DEvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(DEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
-            End If
-            If (Duchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Duchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
-            End If
-            If (Dvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Dvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (Tuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Tuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
-            End If
-            If (Tvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Tvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(A1U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(A1V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(AMU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(AMV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Ado25U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Ado25V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Anad25U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Anad25V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(B1U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(B1V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(BEU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(BEV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(BU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(BV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(C1EU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(C1EV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(C1U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(18).Value = CType(C1V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(CEU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(CEV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(CU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(22).Value = CType(CV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(D1EU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(D1EV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(25).Value = CType(D1U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(26).Value = CType(D1V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(27).Value = CType(DEU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(28).Value = CType(DEV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(29).Value = CType(DU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(30).Value = CType(DV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(31).Value = CType(TU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(32).Value = CType(TV,Boolean)
             If (Original_id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_id.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_id.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
-            End If
-            If (Original_A1uchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_A1uchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
-            End If
-            If (Original_A1vlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_A1vlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
-            End If
-            If (Original_AMuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_AMuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
-            End If
-            If (Original_AMvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_AMvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Auchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_Auchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
             End If
-            If (Original_Avlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_Avlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
-            End If
-            If (Original_B1uchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_B1uchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
-            End If
-            If (Original_B1vlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_B1vlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BEuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_BEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BEvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(Original_BEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(43).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Buchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_Buchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(45).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Bvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(Original_Bvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(47).Value = Global.System.DBNull.Value
-            End If
-            If (Original_CEuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(Original_CEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(49).Value = Global.System.DBNull.Value
-            End If
-            If (Original_CEvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(Original_CEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(51).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Cuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(Original_Cuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(53).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Cvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(Original_Cvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(55).Value = Global.System.DBNull.Value
-            End If
-            If (Original_DEuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(Original_DEuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(57).Value = Global.System.DBNull.Value
-            End If
-            If (Original_DEvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(Original_DEvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(59).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Duchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(Original_Duchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(61).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Dvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(Original_Dvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(63).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Tuchadzac.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(Original_Tuchadzac.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(65).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Tvlastnik.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(Original_Tvlastnik.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(67).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_A1U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_A1V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_AMU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(40).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_AMV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(42).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(43).Value = CType(Original_Ado25U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(44).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_Ado25V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(46).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(47).Value = CType(Original_Anad25U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(48).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(49).Value = CType(Original_Anad25V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(50).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(51).Value = CType(Original_B1U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(52).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(53).Value = CType(Original_B1V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(54).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(55).Value = CType(Original_BEU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(56).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(57).Value = CType(Original_BEV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(58).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(59).Value = CType(Original_BU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(60).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(61).Value = CType(Original_BV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(62).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(63).Value = CType(Original_C1EU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(64).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(65).Value = CType(Original_C1EV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(66).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(67).Value = CType(Original_C1U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(68).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(69).Value = CType(Original_C1V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(70).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(71).Value = CType(Original_CEU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(72).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(73).Value = CType(Original_CEV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(74).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(75).Value = CType(Original_CU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(76).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(77).Value = CType(Original_CV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(78).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(79).Value = CType(Original_D1EU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(80).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(81).Value = CType(Original_D1EV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(82).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(83).Value = CType(Original_D1U,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(84).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(85).Value = CType(Original_D1V,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(86).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(87).Value = CType(Original_DEU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(88).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(89).Value = CType(Original_DEV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(90).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(91).Value = CType(Original_DU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(92).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(93).Value = CType(Original_DV,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(94).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(95).Value = CType(Original_TU,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(96).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(97).Value = CType(Original_TV,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -15501,52 +15773,72 @@ Namespace eAutoskolaDBDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal A1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal A1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal AMuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal AMvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Auchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Avlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal B1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal B1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal BEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal BEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Buchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Bvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal CEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal CEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Cuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Cvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal DEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal DEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Duchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Dvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Tuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Tvlastnik As Global.System.Nullable(Of Integer),  _
+                    ByVal A1U As Boolean,  _
+                    ByVal A1V As Boolean,  _
+                    ByVal AMU As Boolean,  _
+                    ByVal AMV As Boolean,  _
+                    ByVal Ado25U As Boolean,  _
+                    ByVal Ado25V As Boolean,  _
+                    ByVal Anad25U As Boolean,  _
+                    ByVal Anad25V As Boolean,  _
+                    ByVal B1U As Boolean,  _
+                    ByVal B1V As Boolean,  _
+                    ByVal BEU As Boolean,  _
+                    ByVal BEV As Boolean,  _
+                    ByVal BU As Boolean,  _
+                    ByVal BV As Boolean,  _
+                    ByVal C1EU As Boolean,  _
+                    ByVal C1EV As Boolean,  _
+                    ByVal C1U As Boolean,  _
+                    ByVal C1V As Boolean,  _
+                    ByVal CEU As Boolean,  _
+                    ByVal CEV As Boolean,  _
+                    ByVal CU As Boolean,  _
+                    ByVal CV As Boolean,  _
+                    ByVal D1EU As Boolean,  _
+                    ByVal D1EV As Boolean,  _
+                    ByVal D1U As Boolean,  _
+                    ByVal D1V As Boolean,  _
+                    ByVal DEU As Boolean,  _
+                    ByVal DEV As Boolean,  _
+                    ByVal DU As Boolean,  _
+                    ByVal DV As Boolean,  _
+                    ByVal TU As Boolean,  _
+                    ByVal TV As Boolean,  _
                     ByVal Original_id As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_A1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_A1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AMuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_AMvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Auchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Avlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_B1uchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_B1vlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Buchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Bvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_CEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_CEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Cuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Cvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_DEuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_DEvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Duchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Dvlastnik As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Tuchadzac As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Tvlastnik As Global.System.Nullable(Of Integer)) As Integer
-            Return Me.Update(Original_id, A1uchadzac, A1vlastnik, AMuchadzac, AMvlastnik, Auchadzac, Avlastnik, B1uchadzac, B1vlastnik, BEuchadzac, BEvlastnik, Buchadzac, Bvlastnik, CEuchadzac, CEvlastnik, Cuchadzac, Cvlastnik, DEuchadzac, DEvlastnik, Duchadzac, Dvlastnik, Tuchadzac, Tvlastnik, Original_id, Original_A1uchadzac, Original_A1vlastnik, Original_AMuchadzac, Original_AMvlastnik, Original_Auchadzac, Original_Avlastnik, Original_B1uchadzac, Original_B1vlastnik, Original_BEuchadzac, Original_BEvlastnik, Original_Buchadzac, Original_Bvlastnik, Original_CEuchadzac, Original_CEvlastnik, Original_Cuchadzac, Original_Cvlastnik, Original_DEuchadzac, Original_DEvlastnik, Original_Duchadzac, Original_Dvlastnik, Original_Tuchadzac, Original_Tvlastnik)
+                    ByVal Original_A1U As Boolean,  _
+                    ByVal Original_A1V As Boolean,  _
+                    ByVal Original_AMU As Boolean,  _
+                    ByVal Original_AMV As Boolean,  _
+                    ByVal Original_Ado25U As Boolean,  _
+                    ByVal Original_Ado25V As Boolean,  _
+                    ByVal Original_Anad25U As Boolean,  _
+                    ByVal Original_Anad25V As Boolean,  _
+                    ByVal Original_B1U As Boolean,  _
+                    ByVal Original_B1V As Boolean,  _
+                    ByVal Original_BEU As Boolean,  _
+                    ByVal Original_BEV As Boolean,  _
+                    ByVal Original_BU As Boolean,  _
+                    ByVal Original_BV As Boolean,  _
+                    ByVal Original_C1EU As Boolean,  _
+                    ByVal Original_C1EV As Boolean,  _
+                    ByVal Original_C1U As Boolean,  _
+                    ByVal Original_C1V As Boolean,  _
+                    ByVal Original_CEU As Boolean,  _
+                    ByVal Original_CEV As Boolean,  _
+                    ByVal Original_CU As Boolean,  _
+                    ByVal Original_CV As Boolean,  _
+                    ByVal Original_D1EU As Boolean,  _
+                    ByVal Original_D1EV As Boolean,  _
+                    ByVal Original_D1U As Boolean,  _
+                    ByVal Original_D1V As Boolean,  _
+                    ByVal Original_DEU As Boolean,  _
+                    ByVal Original_DEV As Boolean,  _
+                    ByVal Original_DU As Boolean,  _
+                    ByVal Original_DV As Boolean,  _
+                    ByVal Original_TU As Boolean,  _
+                    ByVal Original_TV As Boolean) As Integer
+            Return Me.Update(Original_id, A1U, A1V, AMU, AMV, Ado25U, Ado25V, Anad25U, Anad25V, B1U, B1V, BEU, BEV, BU, BV, C1EU, C1EV, C1U, C1V, CEU, CEV, CU, CV, D1EU, D1EV, D1U, D1V, DEU, DEV, DU, DV, TU, TV, Original_id, Original_A1U, Original_A1V, Original_AMU, Original_AMV, Original_Ado25U, Original_Ado25V, Original_Anad25U, Original_Anad25V, Original_B1U, Original_B1V, Original_BEU, Original_BEV, Original_BU, Original_BV, Original_C1EU, Original_C1EV, Original_C1U, Original_C1V, Original_CEU, Original_CEV, Original_CU, Original_CV, Original_D1EU, Original_D1EV, Original_D1U, Original_D1V, Original_DEU, Original_DEV, Original_DU, Original_DV, Original_TU, Original_TV)
         End Function
     End Class
     

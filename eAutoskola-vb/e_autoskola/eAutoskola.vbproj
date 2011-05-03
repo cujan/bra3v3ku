@@ -109,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="ciselnikSkupina.Designer.vb">
+      <DependentUpon>ciselnikSkupina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ciselnikSkupina.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ciselniky.Designer.vb">
       <DependentUpon>ciselniky.vb</DependentUpon>
     </Compile>
@@ -227,6 +233,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ciselnikSkupina.resx">
+      <DependentUpon>ciselnikSkupina.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ciselniky.resx">
       <DependentUpon>ciselniky.vb</DependentUpon>
       <SubType>Designer</SubType>
