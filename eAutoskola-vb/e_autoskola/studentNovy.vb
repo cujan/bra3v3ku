@@ -7,18 +7,32 @@
 
         'nacitanie hceckboxov podla DB
         Dim con As New OleDbConnection(pripojovaci_retazec)
-        Dim com As New OleDbCommand("SELECT * FROM cislenikSkupina", con)
+        Dim com As New OleDbCommand("SELECT * FROM ciselnikSkupina WHERE vlastnikAutoskola = true", con)
+
+        Dim i As Integer
+        Dim x As Integer = 100
+        Dim nazov As String
 
         con.Open()
         Dim dataReader As OleDbDataReader = com.ExecuteReader
         Do While dataReader.Read ' posun na další řádky, dokud jsou k dispozici
-            Console.WriteLine(String.Format("Záznam: {0}", dataReader("id"))) ' zobrazí záznam
+
+            Dim checkBox As CheckBox = New CheckBox
+            i = dataReader("id")
+            nazov = dataReader("skupina")
+            Me.Controls.Add(checkBox)
+            checkBox.Name = "checkBox" & i
+            checkBox.Text = nazov
+            checkBox.Location = New Point(500, x)
+
+            x = x + 50
         Loop
+        dataReader.Close()
         con.Close()
 
-        Dim aaa As CheckBox = New CheckBox
 
-        Me.Controls.Add(aaa)
+
+        'Me.Controls.Add(aaa)
     End Sub
 
     Private Sub OsobaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
