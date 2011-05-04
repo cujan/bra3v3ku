@@ -633,7 +633,7 @@ Partial Class vseobecne_udaje
         '
         Me.TableAdapterManager1.automobilTableAdapter = Nothing
         Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.cislenikSkupinaTableAdapter = Nothing
+
         Me.TableAdapterManager1.clenKurzuTableAdapter = Nothing
         Me.TableAdapterManager1.dodanePotvrdeniaTableAdapter = Nothing
         Me.TableAdapterManager1.instruktorTableAdapter = Nothing

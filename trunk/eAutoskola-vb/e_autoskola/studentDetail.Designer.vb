@@ -119,7 +119,7 @@ Partial Class studentDetail
         '
         Me.TableAdapterManager.automobilTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.cislenikSkupinaTableAdapter = Nothing
+
         Me.TableAdapterManager.clenKurzuTableAdapter = Nothing
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.dodanePotvrdeniaTableAdapter = Nothing
