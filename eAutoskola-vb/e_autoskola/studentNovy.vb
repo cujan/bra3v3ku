@@ -1,10 +1,24 @@
 ﻿Public Class studentNovy
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.student' table. You can move, or remove it, as needed.
-      
+        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.cislenikSkupina' table. You can move, or remove it, as needed.
 
-        
+        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.student' table. You can move, or remove it, as needed.
+
+        'nacitanie hceckboxov podla DB
+        Dim con As New OleDbConnection(pripojovaci_retazec)
+        Dim com As New OleDbCommand("SELECT * FROM cislenikSkupina", con)
+
+        con.Open()
+        Dim dataReader As OleDbDataReader = com.ExecuteReader
+        Do While dataReader.Read ' posun na další řádky, dokud jsou k dispozici
+            Console.WriteLine(String.Format("Záznam: {0}", dataReader("id"))) ' zobrazí záznam
+        Loop
+        con.Close()
+
+        Dim aaa As CheckBox = New CheckBox
+
+        Me.Controls.Add(aaa)
     End Sub
 
     Private Sub OsobaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -56,12 +70,11 @@
         con.Close()
 
         MsgBox(idcko)
-        'vlozenie id UDAJOV do tabulky student
+        'vlozenie id do tabulky student
 
-        Dim com2 As New OleDbCommand("INSERT INTO student (id, A1U, A1V, AMU, AMV, Ado25U, Ado25V, Anad25U, Anad25V, B1U, B1V, BEU, BEV, BU, BV, C1EU, C1EV, C1U, C1V, CEU, CEV, CU, CV, D1EU, D1EV, D1U, D1V, DEU, DEV, DU, DV, TU, TV) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", con)
+        Dim com2 As New OleDbCommand("INSERT INTO student id VALUES @idcko ", con)
         With com2.Parameters
             .AddWithValue("idcko", idcko)
-            .AddWithValue("A1U", A1UCheckBox.CheckState)
         End With
         con.Open()
         com2.ExecuteNonQuery()
@@ -94,6 +107,11 @@
     End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        MsgBox(A1UCheckBox.CheckState)
+
+    End Sub
+
+    Private Sub CislenikSkupinaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+       
+
     End Sub
 End Class

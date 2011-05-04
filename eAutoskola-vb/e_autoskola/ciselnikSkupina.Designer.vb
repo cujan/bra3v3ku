@@ -26,7 +26,7 @@ Partial Class ciselnikSkupina
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ciselnikSkupina))
         Me.EAutoskolaDBDataSet = New e_autoskola.eAutoskolaDBDataSet()
         Me.CislenikSkupinaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CislenikSkupinaTableAdapter = New e_autoskola.eAutoskolaDBDataSetTableAdapters.cislenikSkupinaTableAdapter()
+
         Me.TableAdapterManager = New e_autoskola.eAutoskolaDBDataSetTableAdapters.TableAdapterManager()
         Me.CislenikSkupinaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -65,13 +65,13 @@ Partial Class ciselnikSkupina
         '
         'CislenikSkupinaTableAdapter
         '
-        Me.CislenikSkupinaTableAdapter.ClearBeforeFill = True
+
         '
         'TableAdapterManager
         '
         Me.TableAdapterManager.automobilTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.cislenikSkupinaTableAdapter = Me.CislenikSkupinaTableAdapter
+
         Me.TableAdapterManager.clenKurzuTableAdapter = Nothing
         Me.TableAdapterManager.dodanePotvrdeniaTableAdapter = Nothing
         Me.TableAdapterManager.instruktorTableAdapter = Nothing
@@ -254,7 +254,7 @@ Partial Class ciselnikSkupina
     End Sub
     Friend WithEvents EAutoskolaDBDataSet As e_autoskola.eAutoskolaDBDataSet
     Friend WithEvents CislenikSkupinaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents CislenikSkupinaTableAdapter As e_autoskola.eAutoskolaDBDataSetTableAdapters.cislenikSkupinaTableAdapter
+
     Friend WithEvents TableAdapterManager As e_autoskola.eAutoskolaDBDataSetTableAdapters.TableAdapterManager
     Friend WithEvents CislenikSkupinaBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
