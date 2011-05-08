@@ -34,13 +34,14 @@ Partial Class PrihlaskaReportForm
         '
         'ReportViewer1
         '
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         ReportDataSource1.Name = "prihlaskaReport"
         ReportDataSource1.Value = Me.prihlaskaBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "e_autoskola.prihlaskaReport.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(28, 26)
+        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(713, 430)
+        Me.ReportViewer1.Size = New System.Drawing.Size(772, 526)
         Me.ReportViewer1.TabIndex = 0
         '
         'eAutoskolaDBDataSet
@@ -57,13 +58,13 @@ Partial Class PrihlaskaReportForm
         '
         Me.prihlaskaTableAdapter.ClearBeforeFill = True
         '
-        'Form3
+        'PrihlaskaReportForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(772, 526)
         Me.Controls.Add(Me.ReportViewer1)
-        Me.Name = "Form3"
+        Me.Name = "PrihlaskaReportForm"
         Me.Text = "Report - Prihláška"
         CType(Me.eAutoskolaDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.prihlaskaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

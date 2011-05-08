@@ -1216,7 +1216,7 @@ WHERE     (osoba.id = ?)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="prihlaskaTableAdapter" GeneratorDataComponentClassName="prihlaskaTableAdapter" Name="prihlaska" UserDataComponentName="prihlaskaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="eAutoskolaDBConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="eAutoskolaDBConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT     student.id, osoba.titulPred, osoba.priezvisko, osoba.rodnePriezvisko, osoba.meno, osoba.titulZa, osoba.datumNarodenia, osoba.rodneCislo, 
@@ -1226,7 +1226,8 @@ FROM         ((((student LEFT OUTER JOIN
                       osoba ON osoba.id = student.id) LEFT OUTER JOIN
                       clenKurzu ON clenKurzu.idStudent = student.id) LEFT OUTER JOIN
                       kurz ON clenKurzu.idKurz = kurz.id) LEFT OUTER JOIN
-                      platba ON platba.idStudent = student.id)</CommandText>
+                      platba ON platba.idStudent = student.id)
+WHERE     (osoba.id = 2)</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
