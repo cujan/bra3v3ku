@@ -117,9 +117,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
         <Top>3.95cm</Top>
-        <Left>2.4477cm</Left>
+        <Left>1.4952cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.11937cm</Width>
+        <Width>6.28354cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -137,120 +137,15 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Meno a priezvisko.........................................................................................................................................................</Value>
+                <Value>="Meno a priezvisko:  " &amp; First(Fields!meno.Value, "prihlaskaReport") &amp; " " &amp; First(Fields!priezvisko.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Dátum a miesto narodenia:  " &amp; First(Fields!datumNarodenia.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!miestoNarodenia.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Adresa bydliska:  " &amp; First(Fields!ulica.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!ulicaCislo.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!mesto.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!psc.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Číslo OP (alebo iného preukazu totožnosti):  " &amp; First(Fields!cisloOp.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Evidenčné a sério číslo vodičského preukazu:  " &amp; First(Fields!cisloVp.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Rozsah skupín a podskupín vodičského oprávnenia .................................................................................................*"</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Dátum a miesto narodenia</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>...........................................................................................................................................</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Adresa bydliska</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>.............................................................................................................................................................</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Číslo OP (alebo iného preukazu totožnosti)</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>............................................................................................................</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Evidenčné a sério číslo vodičského preukazu</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>.........................................................................................................</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Rozsah skupín a podskupín vodičského oprávnenia</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>...............................................................................................*</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -259,10 +154,16 @@
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
         <Top>4.88cm</Top>
-        <Left>2.4477cm</Left>
+        <Left>1.4952cm</Left>
         <Height>2.41083cm</Height>
-        <Width>15.57482cm</Width>
+        <Width>17.01271cm</Width>
         <ZIndex>1</ZIndex>
+        <ToolTip>="Meno a priezvisko ..." &amp; First(Fields!meno.Value, "prihlaskaReport") &amp; " " &amp; First(Fields!rodnePriezvisko.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Dátum a miesto narodenia ..." &amp; First(Fields!datumNarodenia.Value, "prihlaskaReport") &amp; " , .... " &amp; First(Fields!miestoNarodenia.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Adresa bydliska ..." &amp; First(Fields!ulica.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!ulicaCislo.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!mesto.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!psc.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Číslo OP (alebo iného preukazu totožnosti) ..." &amp; First(Fields!cisloOp.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Evidenčné a sério číslo vodičského preukazu ..." &amp; First(Fields!cisloVp.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Rozsah skupín a podskupín vodičského oprávnenia .........................................................................................................*"</ToolTip>
         <Style>
           <Border>
             <Style>None</Style>
@@ -288,10 +189,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>7.8cm</Top>
-        <Left>2.4477cm</Left>
+        <Top>7.4825cm</Top>
+        <Left>1.4952cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.41722cm</Width>
+        <Width>5.69058cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -323,7 +224,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
         <Top>2.99297cm</Top>
-        <Left>7.43797cm</Left>
+        <Left>6.48547cm</Left>
         <Height>0.76301cm</Height>
         <Width>5.95722cm</Width>
         <ZIndex>3</ZIndex>
@@ -443,10 +344,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>8.73073cm</Top>
-        <Left>2.4477cm</Left>
+        <Top>8.41323cm</Top>
+        <Left>1.4952cm</Left>
         <Height>1.74653cm</Height>
-        <Width>15.57482cm</Width>
+        <Width>17.01271cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -477,10 +378,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>10.77282cm</Top>
-        <Left>2.4477cm</Left>
+        <Top>10.45532cm</Top>
+        <Left>1.4952cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.41722cm</Width>
+        <Width>5.69058cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -499,55 +400,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Číslo z matričnej knihy</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Číslo kurzu</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Predpokladaný dátum začatia kurzu</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Predpokladaný dátum ukončenia kurzu</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Cena kurzu dohodou .......................................................bola zaplatená</Value>
+                <Value>= "Číslo z matričnej knihy " &amp; vbNewLine &amp;
+"Číslo kurzu " &amp; vbNewLine &amp;
+"Predpokladaný dátum začatia kurzu: " &amp; First(Fields!zaciatokDatum.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"Predpokladaný dátum ukončenia kurzu " &amp; vbNewLine &amp;
+"Cena kurzu dohodou: " &amp; First(Fields!platbaZaKurz.Value, "prihlaskaReport") &amp; " bola zaplatená"</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -558,10 +415,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>11.67871cm</Top>
-        <Left>2.4477cm</Left>
+        <Top>11.36121cm</Top>
+        <Left>1.4952cm</Left>
         <Height>2.27101cm</Height>
-        <Width>11.86215cm</Width>
+        <Width>13.97882cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -592,10 +449,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>14.24768cm</Top>
-        <Left>2.4477cm</Left>
+        <Top>13.93018cm</Top>
+        <Left>1.4952cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.156cm</Width>
+        <Width>5.69058cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -793,10 +650,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>15.02407cm</Top>
-        <Left>2.4477cm</Left>
+        <Top>14.70657cm</Top>
+        <Left>1.4952cm</Left>
         <Height>6.04132cm</Height>
-        <Width>16.00729cm</Width>
+        <Width>17.42252cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -838,10 +695,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
-        <Top>21.1cm</Top>
-        <Left>2.4477cm</Left>
+        <Top>20.7825cm</Top>
+        <Left>1.4952cm</Left>
         <Height>0.90399cm</Height>
-        <Width>16.10285cm</Width>
+        <Width>17.01271cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -871,8 +728,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>22.70301cm</Top>
-        <Left>2.4477cm</Left>
+        <Top>22.06801cm</Top>
+        <Left>1.4952cm</Left>
         <Height>0.6cm</Height>
         <Width>6.71129cm</Width>
         <ZIndex>10</ZIndex>
@@ -904,10 +761,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
-        <Top>24.13617cm</Top>
-        <Left>3.52072cm</Left>
+        <Top>23.17044cm</Top>
+        <Left>2.56822cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.91406cm</Width>
+        <Width>5.63827cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -949,10 +806,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>24.13617cm</Top>
-        <Left>11.811cm</Left>
+        <Top>23.17044cm</Top>
+        <Left>10.8585cm</Left>
         <Height>0.93073cm</Height>
-        <Width>4.21979cm</Width>
+        <Width>6.38937cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -994,10 +851,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox19</rd:DefaultName>
-        <Top>25.1945cm</Top>
-        <Left>2.33746cm</Left>
+        <Top>24.22877cm</Top>
+        <Left>1.38496cm</Left>
         <Height>0.86458cm</Height>
-        <Width>7.10816cm</Width>
+        <Width>9.06608cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -1009,54 +866,33 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox1">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!priezvisko.Value, "prihlaskaReport")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>4.11903cm</Top>
-        <Left>10.38966cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+      <Subreport Name="VseobUdajeSub">
+        <ReportName>vseobecneUdajeSubreport</ReportName>
+        <Top>0.28258cm</Top>
+        <Left>5.97457cm</Left>
+        <Height>2.38771cm</Height>
+        <Width>6.78562cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
-      </Textbox>
+      </Subreport>
     </ReportItems>
-    <Height>10.90278in</Height>
+    <Height>10.125in</Height>
     <Style>
       <Border />
-      <BackgroundImage>
-        <Source>Embedded</Source>
-        <Value>prihlaskaDoKurzu_resized</Value>
-      </BackgroundImage>
     </Style>
   </Body>
   <Width>7.44792in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

@@ -17684,7 +17684,7 @@ Namespace eAutoskolaDBDataSetTableAdapters
                 "        osoba ON osoba.id = student.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      c"& _ 
                 "lenKurzu ON clenKurzu.idStudent = student.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                 "& _ 
                 "     kurz ON clenKurzu.idKurz = kurz.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      "& _ 
-                "platba ON platba.idStudent = student.id)"
+                "platba ON platba.idStudent = student.id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (osoba.id = 2)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
