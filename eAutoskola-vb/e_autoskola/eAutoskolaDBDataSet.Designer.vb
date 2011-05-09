@@ -5635,6 +5635,16 @@ Partial Public Class eAutoskolaDBDataSet
         
         Private columnplatbaZaKurz As Global.System.Data.DataColumn
         
+        Private columnorganizacia As Global.System.Data.DataColumn
+        
+        Private columnulicaOrganizacia As Global.System.Data.DataColumn
+        
+        Private columnulicaCisloOrganizacia As Global.System.Data.DataColumn
+        
+        Private columnpscOrganizacia As Global.System.Data.DataColumn
+        
+        Private columnmestoOrganizacia As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -5807,6 +5817,46 @@ Partial Public Class eAutoskolaDBDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property organizaciaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnorganizacia
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ulicaOrganizaciaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnulicaOrganizacia
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ulicaCisloOrganizaciaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnulicaCisloOrganizacia
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property pscOrganizaciaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnpscOrganizacia
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property mestoOrganizaciaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmestoOrganizacia
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -5860,9 +5910,14 @@ Partial Public Class eAutoskolaDBDataSet
                     ByVal cisloOp As String,  _
                     ByVal cisloVp As String,  _
                     ByVal zaciatokDatum As Date,  _
-                    ByVal platbaZaKurz As String) As prihlaskaRow
+                    ByVal platbaZaKurz As String,  _
+                    ByVal organizacia As String,  _
+                    ByVal ulicaOrganizacia As String,  _
+                    ByVal ulicaCisloOrganizacia As String,  _
+                    ByVal pscOrganizacia As String,  _
+                    ByVal mestoOrganizacia As String) As prihlaskaRow
             Dim rowprihlaskaRow As prihlaskaRow = CType(Me.NewRow,prihlaskaRow)
-            Dim columnValuesArray() As Object = New Object() {id, titulPred, priezvisko, rodnePriezvisko, meno, titulZa, datumNarodenia, rodneCislo, miestoNarodenia, ulica, ulicaCislo, mesto, psc, cisloOp, cisloVp, zaciatokDatum, platbaZaKurz}
+            Dim columnValuesArray() As Object = New Object() {id, titulPred, priezvisko, rodnePriezvisko, meno, titulZa, datumNarodenia, rodneCislo, miestoNarodenia, ulica, ulicaCislo, mesto, psc, cisloOp, cisloVp, zaciatokDatum, platbaZaKurz, organizacia, ulicaOrganizacia, ulicaCisloOrganizacia, pscOrganizacia, mestoOrganizacia}
             rowprihlaskaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowprihlaskaRow)
             Return rowprihlaskaRow
@@ -5902,6 +5957,11 @@ Partial Public Class eAutoskolaDBDataSet
             Me.columncisloVp = MyBase.Columns("cisloVp")
             Me.columnzaciatokDatum = MyBase.Columns("zaciatokDatum")
             Me.columnplatbaZaKurz = MyBase.Columns("platbaZaKurz")
+            Me.columnorganizacia = MyBase.Columns("organizacia")
+            Me.columnulicaOrganizacia = MyBase.Columns("ulicaOrganizacia")
+            Me.columnulicaCisloOrganizacia = MyBase.Columns("ulicaCisloOrganizacia")
+            Me.columnpscOrganizacia = MyBase.Columns("pscOrganizacia")
+            Me.columnmestoOrganizacia = MyBase.Columns("mestoOrganizacia")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5941,6 +6001,16 @@ Partial Public Class eAutoskolaDBDataSet
             MyBase.Columns.Add(Me.columnzaciatokDatum)
             Me.columnplatbaZaKurz = New Global.System.Data.DataColumn("platbaZaKurz", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnplatbaZaKurz)
+            Me.columnorganizacia = New Global.System.Data.DataColumn("organizacia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnorganizacia)
+            Me.columnulicaOrganizacia = New Global.System.Data.DataColumn("ulicaOrganizacia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnulicaOrganizacia)
+            Me.columnulicaCisloOrganizacia = New Global.System.Data.DataColumn("ulicaCisloOrganizacia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnulicaCisloOrganizacia)
+            Me.columnpscOrganizacia = New Global.System.Data.DataColumn("pscOrganizacia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpscOrganizacia)
+            Me.columnmestoOrganizacia = New Global.System.Data.DataColumn("mestoOrganizacia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmestoOrganizacia)
             Me.columntitulPred.MaxLength = 255
             Me.columnpriezvisko.MaxLength = 255
             Me.columnrodnePriezvisko.MaxLength = 255
@@ -10198,6 +10268,81 @@ Partial Public Class eAutoskolaDBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property organizacia() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableprihlaska.organizaciaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'organizacia' in table 'prihlaska' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableprihlaska.organizaciaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ulicaOrganizacia() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableprihlaska.ulicaOrganizaciaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ulicaOrganizacia' in table 'prihlaska' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableprihlaska.ulicaOrganizaciaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ulicaCisloOrganizacia() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableprihlaska.ulicaCisloOrganizaciaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ulicaCisloOrganizacia' in table 'prihlaska' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableprihlaska.ulicaCisloOrganizaciaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property pscOrganizacia() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableprihlaska.pscOrganizaciaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'pscOrganizacia' in table 'prihlaska' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableprihlaska.pscOrganizaciaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property mestoOrganizacia() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableprihlaska.mestoOrganizaciaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'mestoOrganizacia' in table 'prihlaska' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableprihlaska.mestoOrganizaciaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsidNull() As Boolean
             Return Me.IsNull(Me.tableprihlaska.idColumn)
         End Function
@@ -10398,6 +10543,66 @@ Partial Public Class eAutoskolaDBDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetplatbaZaKurzNull()
             Me(Me.tableprihlaska.platbaZaKurzColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsorganizaciaNull() As Boolean
+            Return Me.IsNull(Me.tableprihlaska.organizaciaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetorganizaciaNull()
+            Me(Me.tableprihlaska.organizaciaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsulicaOrganizaciaNull() As Boolean
+            Return Me.IsNull(Me.tableprihlaska.ulicaOrganizaciaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetulicaOrganizaciaNull()
+            Me(Me.tableprihlaska.ulicaOrganizaciaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsulicaCisloOrganizaciaNull() As Boolean
+            Return Me.IsNull(Me.tableprihlaska.ulicaCisloOrganizaciaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetulicaCisloOrganizaciaNull()
+            Me(Me.tableprihlaska.ulicaCisloOrganizaciaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IspscOrganizaciaNull() As Boolean
+            Return Me.IsNull(Me.tableprihlaska.pscOrganizaciaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetpscOrganizaciaNull()
+            Me(Me.tableprihlaska.pscOrganizaciaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsmestoOrganizaciaNull() As Boolean
+            Return Me.IsNull(Me.tableprihlaska.mestoOrganizaciaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetmestoOrganizaciaNull()
+            Me(Me.tableprihlaska.mestoOrganizaciaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -17680,11 +17885,21 @@ Namespace eAutoskolaDBDataSetTableAdapters
                 "osoba.meno, osoba.titulZa, osoba.datumNarodenia, osoba.rodneCislo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
                 "           osoba.miestoNarodenia, osoba.ulica, osoba.ulicaCislo, osoba.mesto, os"& _ 
                 "oba.psc, osoba.cisloOp, osoba.cisloVp, kurz.zaciatokDatum, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
-                "   platba.platbaZaKurz"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         ((((student LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
-                "        osoba ON osoba.id = student.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      c"& _ 
-                "lenKurzu ON clenKurzu.idStudent = student.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                 "& _ 
-                "     kurz ON clenKurzu.idKurz = kurz.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      "& _ 
-                "platba ON platba.idStudent = student.id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (osoba.id = 2)"
+                "   platba.platbaZaKurz,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                          (SELECT     nazovOrganizacie"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            FROM          vseobecneUdaje"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                     "& _ 
+                "       WHERE      id = 1) AS organizacia,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                          (SELECT    "& _ 
+                " ulica"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            FROM          vseobecneUdaje"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
+                "              WHERE      id = 1) AS ulicaOrganizacia,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         "& _ 
+                " (SELECT     ulicaCislo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            FROM          vseobecneUdaj"& _ 
+                "e"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            WHERE      id = 1) AS ulicaCisloOrganizacia,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
+                "                       (SELECT     psc"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            FROM        "& _ 
+                "  vseobecneUdaje"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            WHERE      id = 1) AS pscOrganizac"& _ 
+                "ia,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                          (SELECT     mesto"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            FR"& _ 
+                "OM          vseobecneUdaje"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            WHERE      id = 1) AS me"& _ 
+                "stoOrganizacia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         ((((student LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      "& _ 
+                "osoba ON osoba.id = student.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      clenKurzu"& _ 
+                " ON clenKurzu.idStudent = student.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      kur"& _ 
+                "z ON clenKurzu.idKurz = kurz.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      platba O"& _ 
+                "N platba.idStudent = student.id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (osoba.id = 2)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

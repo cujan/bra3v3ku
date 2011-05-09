@@ -80,6 +80,26 @@
           <DataField>platbaZaKurz</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="organizacia">
+          <DataField>organizacia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ulicaOrganizacia">
+          <DataField>ulicaOrganizacia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ulicaCisloOrganizacia">
+          <DataField>ulicaCisloOrganizacia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="pscOrganizacia">
+          <DataField>pscOrganizacia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="mestoOrganizacia">
+          <DataField>mestoOrganizacia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>eAutoskolaDBDataSet</DataSourceName>
@@ -226,7 +246,7 @@
         <Top>2.99297cm</Top>
         <Left>6.48547cm</Left>
         <Height>0.76301cm</Height>
-        <Width>5.95722cm</Width>
+        <Width>5.69264cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -731,7 +751,7 @@
         <Top>22.06801cm</Top>
         <Left>1.4952cm</Left>
         <Height>0.6cm</Height>
-        <Width>6.71129cm</Width>
+        <Width>10.68291cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -866,19 +886,45 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Subreport Name="VseobUdajeSub">
-        <ReportName>vseobecneUdajeSubreport</ReportName>
-        <Top>0.28258cm</Top>
-        <Left>5.97457cm</Left>
-        <Height>2.38771cm</Height>
-        <Width>6.78562cm</Width>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="A U T O Š K O L A" &amp; vbNewLine &amp;
+First(Fields!organizacia.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+First(Fields!ulicaOrganizacia.Value, "prihlaskaReport") &amp; " " &amp; First(Fields!ulicaCisloOrganizacia.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!psc.Value, "prihlaskaReport") &amp; " " &amp; First(Fields!mestoOrganizacia.Value, "prihlaskaReport")</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>0.84757cm</Top>
+        <Left>6.48547cm</Left>
+        <Height>1.02333cm</Height>
+        <Width>5.29576cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
+            <Width>0.25pt</Width>
           </Border>
+          <VerticalAlign>Top</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
         </Style>
-      </Subreport>
+      </Textbox>
     </ReportItems>
     <Height>10.125in</Height>
     <Style>
