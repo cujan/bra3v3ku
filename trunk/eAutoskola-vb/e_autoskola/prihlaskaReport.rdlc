@@ -100,6 +100,10 @@
           <DataField>mestoOrganizacia</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="skupinyUchadzac">
+          <DataField>skupinyUchadzac</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>eAutoskolaDBDataSet</DataSourceName>
@@ -265,95 +269,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>vodičský kurz na získanie vodičského oprávnenia v rozsahu skupín a podskupín.................................</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>.........*</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>vodičský kurz na získanie /rozšírenie/ vodičského oprávnenia v rozsahu skkupín a podskupín</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>.................*</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>doškoľovací kurz vodičov v rozsahu skupín a podskupín</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>......................................................................................*</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>kurz doplňujúcich jázd držiteľa vodičského oprávnenia v rozsahu skupín a podskupín</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>................................*</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
+                <Value>="vodičský kurz na získanie vodičského oprávnenia v rozsahu skupín a podskupín: " &amp; First(Fields!skupinyUchadzac.Value, "prihlaskaReport") &amp; vbNewLine &amp;
+"vodičský kurz na získanie /rozšírenie/ vodičského oprávnenia v rozsahu skkupín a podskupín " &amp; vbNewLine &amp;
+"doškoľovací kurz vodičov v rozsahu skupín a podskupín " &amp; vbNewLine &amp;
+"kurz doplňujúcich jázd držiteľa vodičského oprávnenia v rozsahu skupín a podskupín "</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -366,9 +285,13 @@
         <rd:DefaultName>Textbox9</rd:DefaultName>
         <Top>8.41323cm</Top>
         <Left>1.4952cm</Left>
-        <Height>1.74653cm</Height>
-        <Width>17.01271cm</Width>
+        <Height>1.90098cm</Height>
+        <Width>17.42252cm</Width>
         <ZIndex>4</ZIndex>
+        <ToolTip>="vodičský kurz na získanie vodičského oprávnenia v rozsahu skupín a podskupín "
+"vodičský kurz na získanie /rozšírenie/ vodičského oprávnenia v rozsahu skkupín a podskupín................."
+"doškoľovací kurz vodičov v rozsahu skupín a podskupín......................................................................................"
+"kurz doplňujúcich jázd držiteľa vodičského oprávnenia v rozsahu skupín a podskupín................................*"</ToolTip>
         <Style>
           <Border>
             <Style>None</Style>
