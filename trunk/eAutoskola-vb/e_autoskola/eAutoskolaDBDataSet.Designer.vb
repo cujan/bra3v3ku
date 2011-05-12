@@ -5647,6 +5647,8 @@ Partial Public Class eAutoskolaDBDataSet
         
         Private columnskupinyUchadzac As Global.System.Data.DataColumn
         
+        Private columnskupinyVlastnik As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -5867,6 +5869,14 @@ Partial Public Class eAutoskolaDBDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property skupinyVlastnikColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnskupinyVlastnik
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -5926,9 +5936,10 @@ Partial Public Class eAutoskolaDBDataSet
                     ByVal ulicaCisloOrganizacia As String,  _
                     ByVal pscOrganizacia As String,  _
                     ByVal mestoOrganizacia As String,  _
-                    ByVal skupinyUchadzac As String) As prihlaskaRow
+                    ByVal skupinyUchadzac As String,  _
+                    ByVal skupinyVlastnik As String) As prihlaskaRow
             Dim rowprihlaskaRow As prihlaskaRow = CType(Me.NewRow,prihlaskaRow)
-            Dim columnValuesArray() As Object = New Object() {id, titulPred, priezvisko, rodnePriezvisko, meno, titulZa, datumNarodenia, rodneCislo, miestoNarodenia, ulica, ulicaCislo, mesto, psc, cisloOp, cisloVp, zaciatokDatum, platbaZaKurz, organizacia, ulicaOrganizacia, ulicaCisloOrganizacia, pscOrganizacia, mestoOrganizacia, skupinyUchadzac}
+            Dim columnValuesArray() As Object = New Object() {id, titulPred, priezvisko, rodnePriezvisko, meno, titulZa, datumNarodenia, rodneCislo, miestoNarodenia, ulica, ulicaCislo, mesto, psc, cisloOp, cisloVp, zaciatokDatum, platbaZaKurz, organizacia, ulicaOrganizacia, ulicaCisloOrganizacia, pscOrganizacia, mestoOrganizacia, skupinyUchadzac, skupinyVlastnik}
             rowprihlaskaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowprihlaskaRow)
             Return rowprihlaskaRow
@@ -5974,6 +5985,7 @@ Partial Public Class eAutoskolaDBDataSet
             Me.columnpscOrganizacia = MyBase.Columns("pscOrganizacia")
             Me.columnmestoOrganizacia = MyBase.Columns("mestoOrganizacia")
             Me.columnskupinyUchadzac = MyBase.Columns("skupinyUchadzac")
+            Me.columnskupinyVlastnik = MyBase.Columns("skupinyVlastnik")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6025,6 +6037,8 @@ Partial Public Class eAutoskolaDBDataSet
             MyBase.Columns.Add(Me.columnmestoOrganizacia)
             Me.columnskupinyUchadzac = New Global.System.Data.DataColumn("skupinyUchadzac", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnskupinyUchadzac)
+            Me.columnskupinyVlastnik = New Global.System.Data.DataColumn("skupinyVlastnik", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnskupinyVlastnik)
             Me.columntitulPred.MaxLength = 255
             Me.columnpriezvisko.MaxLength = 255
             Me.columnrodnePriezvisko.MaxLength = 255
@@ -10372,6 +10386,21 @@ Partial Public Class eAutoskolaDBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property skupinyVlastnik() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableprihlaska.skupinyVlastnikColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'skupinyVlastnik' in table 'prihlaska' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableprihlaska.skupinyVlastnikColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsidNull() As Boolean
             Return Me.IsNull(Me.tableprihlaska.idColumn)
         End Function
@@ -10644,6 +10673,18 @@ Partial Public Class eAutoskolaDBDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetskupinyUchadzacNull()
             Me(Me.tableprihlaska.skupinyUchadzacColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsskupinyVlastnikNull() As Boolean
+            Return Me.IsNull(Me.tableprihlaska.skupinyVlastnikColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetskupinyVlastnikNull()
+            Me(Me.tableprihlaska.skupinyVlastnikColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -17938,11 +17979,14 @@ Namespace eAutoskolaDBDataSetTableAdapters
                 "OM          vseobecneUdaje"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            WHERE      id = 1) AS me"& _ 
                 "stoOrganizacia,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                          (SELECT     skupinyUchadzac"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
                 "                    FROM          studentSkupinaUchadzac_view2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                "& _ 
-                "            WHERE      idOsoba = osoba.id) AS skupinyUchadzac"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         (((("& _ 
-                "student LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      osoba ON osoba.id = student.id) L"& _ 
-                "EFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      clenKurzu ON clenKurzu.idStudent = student"& _ 
-                ".id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      kurz ON clenKurzu.idKurz = kurz.id) "& _ 
-                "LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      platba ON platba.idStudent = student.id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (osoba.id = 2)"
+                "            WHERE      idOsoba = osoba.id) AS skupinyUchadzac,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                "& _ 
+                "          (SELECT     skupinyVlastnik"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            FROM         "& _ 
+                " studentSkupinaVlastnik_view2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            WHERE      idOsoba = "& _ 
+                "osoba.id) AS skupinyVlastnik"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         ((((student LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"      "& _ 
+                "                osoba ON osoba.id = student.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"               "& _ 
+                "       clenKurzu ON clenKurzu.idStudent = student.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"         "& _ 
+                "             kurz ON clenKurzu.idKurz = kurz.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
+                "        platba ON platba.idStudent = student.id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (osoba.id = 2)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

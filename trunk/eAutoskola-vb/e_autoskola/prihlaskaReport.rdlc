@@ -104,6 +104,10 @@
           <DataField>skupinyUchadzac</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="skupinyVlastnik">
+          <DataField>skupinyVlastnik</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>eAutoskolaDBDataSet</DataSourceName>
@@ -166,7 +170,7 @@
 "Adresa bydliska:  " &amp; First(Fields!ulica.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!ulicaCislo.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!mesto.Value, "prihlaskaReport") &amp; ", " &amp; First(Fields!psc.Value, "prihlaskaReport") &amp; vbNewLine &amp;
 "Číslo OP (alebo iného preukazu totožnosti):  " &amp; First(Fields!cisloOp.Value, "prihlaskaReport") &amp; vbNewLine &amp;
 "Evidenčné a sério číslo vodičského preukazu:  " &amp; First(Fields!cisloVp.Value, "prihlaskaReport") &amp; vbNewLine &amp;
-"Rozsah skupín a podskupín vodičského oprávnenia .................................................................................................*"</Value>
+"Rozsah skupín a podskupín vodičského oprávnenia:  " &amp; First(Fields!skupinyVlastnik.Value, "prihlaskaReport")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontWeight>Bold</FontWeight>
