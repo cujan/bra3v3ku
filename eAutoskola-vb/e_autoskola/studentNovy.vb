@@ -1,38 +1,38 @@
 ﻿Public Class studentNovy
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.ciselnikSkupina' table. You can move, or remove it, as needed.
+        Me.CiselnikSkupinaTableAdapter.FillBy_vlastnik(Me.EAutoskolaDBDataSet.ciselnikSkupina)
+
+
+        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.ciselnikSkupina' table. You can move, or remove it, as needed.
+
+        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.ciselnikSkupina' table. You can move, or remove it, as needed.
+
         'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.cislenikSkupina' table. You can move, or remove it, as needed.
 
         'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.student' table. You can move, or remove it, as needed.
 
-        'nacitanie hceckboxov podla DB
-        Dim con As New OleDbConnection(pripojovaci_retazec)
-        Dim com As New OleDbCommand("SELECT * FROM ciselnikSkupina WHERE vlastnikAutoskola = true", con)
-
-        Dim i As Integer
-        Dim x As Integer = 100
-        Dim nazov As String
-
-        con.Open()
-        Dim dataReader As OleDbDataReader = com.ExecuteReader
-        Do While dataReader.Read ' posun na další řádky, dokud jsou k dispozici
-
-            Dim checkBox As CheckBox = New CheckBox
-            i = dataReader("id")
-            nazov = dataReader("skupina")
-            Me.Controls.Add(checkBox)
-            checkBox.Name = "checkBox" & i
-            checkBox.Text = nazov
-            checkBox.Location = New Point(500, x)
-
-            x = x + 50
-        Loop
-        dataReader.Close()
-        con.Close()
 
 
 
         'Me.Controls.Add(aaa)
+
+        'nacitanie udajov o skupinach do uchadzacCheckboxlistu
+        With uchadzacCheckedListBox
+            .DataSource = CiselnikSkupinaBindingSource
+            .DisplayMember = "skupina"
+            .ValueMember = "id"
+        End With
+
+        'nacitanie udajov o skupinach do vlastnikCheckboxlistu
+        With vlastnikCheckedListBox
+            .DataSource = CiselnikSkupinaBindingSource
+            .DisplayMember = "skupina"
+            .ValueMember = "id"
+        End With
+
+
     End Sub
 
     Private Sub OsobaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -126,6 +126,28 @@
 
     Private Sub CislenikSkupinaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
        
+
+    End Sub
+
+    Private Sub CiselnikSkupinaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+       
+    End Sub
+
+    Private Sub CiselnikSkupinaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Validate()
+        Me.CiselnikSkupinaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.EAutoskolaDBDataSet)
+
+    End Sub
+
+    Private Sub CiselnikSkupinaBindingNavigatorSaveItem_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CiselnikSkupinaBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.CiselnikSkupinaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.EAutoskolaDBDataSet)
+
+    End Sub
+
+    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
 
     End Sub
 End Class
