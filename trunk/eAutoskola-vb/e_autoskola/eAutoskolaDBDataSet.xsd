@@ -1335,7 +1335,18 @@ WHERE     (osoba.id = @id)</CommandText>
               <Mapping SourceColumn="popis" DataSetColumn="popis" />
               <Mapping SourceColumn="vlastnikAutoskola" DataSetColumn="vlastnikAutoskola" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="eAutoskolaDBConnectionString (MySettings)" DbObjectName="ciselnikSkupina" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_vlastnik" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy_vlastnik" GeneratorSourceName="FillBy_vlastnik" GetMethodModifier="Public" GetMethodName="GetDataBy_vlastnik" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy_vlastnik" UserSourceName="FillBy_vlastnik">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     id, skupina, popis, vlastnikAutoskola
+FROM         ciselnikSkupina
+WHERE     (vlastnikAutoskola = true)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />

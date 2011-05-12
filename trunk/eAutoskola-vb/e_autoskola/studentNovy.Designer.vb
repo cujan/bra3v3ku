@@ -22,6 +22,7 @@ Partial Class studentNovy
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim TitulPredLabel As System.Windows.Forms.Label
         Dim PriezviskoLabel As System.Windows.Forms.Label
         Dim RodnePriezviskoLabel As System.Windows.Forms.Label
@@ -39,6 +40,7 @@ Partial Class studentNovy
         Dim EmailLabel As System.Windows.Forms.Label
         Dim CisloOpLabel As System.Windows.Forms.Label
         Dim CisloVpLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentNovy))
         Me.TitulPredTextBox = New System.Windows.Forms.TextBox()
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox()
         Me.RodnePriezviskoTextBox = New System.Windows.Forms.TextBox()
@@ -60,6 +62,27 @@ Partial Class studentNovy
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.EAutoskolaDBDataSet = New e_autoskola.eAutoskolaDBDataSet()
+        Me.CiselnikSkupinaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CiselnikSkupinaTableAdapter = New e_autoskola.eAutoskolaDBDataSetTableAdapters.ciselnikSkupinaTableAdapter()
+        Me.TableAdapterManager = New e_autoskola.eAutoskolaDBDataSetTableAdapters.TableAdapterManager()
+        Me.CiselnikSkupinaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CiselnikSkupinaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.uchadzacCheckedListBox = New System.Windows.Forms.CheckedListBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.vlastnikCheckedListBox = New System.Windows.Forms.CheckedListBox()
+        Me.CiselnikSkupinaDataGridView = New System.Windows.Forms.DataGridView()
         TitulPredLabel = New System.Windows.Forms.Label()
         PriezviskoLabel = New System.Windows.Forms.Label()
         RodnePriezviskoLabel = New System.Windows.Forms.Label()
@@ -78,6 +101,11 @@ Partial Class studentNovy
         CisloOpLabel = New System.Windows.Forms.Label()
         CisloVpLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.EAutoskolaDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CiselnikSkupinaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CiselnikSkupinaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CiselnikSkupinaBindingNavigator.SuspendLayout()
+        CType(Me.CiselnikSkupinaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TitulPredLabel
@@ -373,7 +401,7 @@ Partial Class studentNovy
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(23, 480)
+        Me.Label1.Location = New System.Drawing.Point(23, 705)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 69
@@ -396,11 +424,191 @@ Partial Class studentNovy
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Adresa"
         '
+        'EAutoskolaDBDataSet
+        '
+        Me.EAutoskolaDBDataSet.DataSetName = "eAutoskolaDBDataSet"
+        Me.EAutoskolaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CiselnikSkupinaBindingSource
+        '
+        Me.CiselnikSkupinaBindingSource.DataMember = "ciselnikSkupina"
+        Me.CiselnikSkupinaBindingSource.DataSource = Me.EAutoskolaDBDataSet
+        '
+        'CiselnikSkupinaTableAdapter
+        '
+        Me.CiselnikSkupinaTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.automobilTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ciselnikSkupinaTableAdapter = Me.CiselnikSkupinaTableAdapter
+        Me.TableAdapterManager.clenKurzuTableAdapter = Nothing
+        Me.TableAdapterManager.dodanePotvrdeniaTableAdapter = Nothing
+        Me.TableAdapterManager.instruktorTableAdapter = Nothing
+        Me.TableAdapterManager.kurzTableAdapter = Nothing
+        Me.TableAdapterManager.osobaTableAdapter = Nothing
+        Me.TableAdapterManager.platbaTableAdapter = Nothing
+        Me.TableAdapterManager.studentSkupinaUchadzacTableAdapter = Nothing
+        Me.TableAdapterManager.studentSkupinaVlastnikTableAdapter = Nothing
+        Me.TableAdapterManager.studentTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = e_autoskola.eAutoskolaDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vseobecneUdajeTableAdapter = Nothing
+        '
+        'CiselnikSkupinaBindingNavigator
+        '
+        Me.CiselnikSkupinaBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.CiselnikSkupinaBindingNavigator.BindingSource = Me.CiselnikSkupinaBindingSource
+        Me.CiselnikSkupinaBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.CiselnikSkupinaBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.CiselnikSkupinaBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.CiselnikSkupinaBindingNavigatorSaveItem})
+        Me.CiselnikSkupinaBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.CiselnikSkupinaBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.CiselnikSkupinaBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.CiselnikSkupinaBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.CiselnikSkupinaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.CiselnikSkupinaBindingNavigator.Name = "CiselnikSkupinaBindingNavigator"
+        Me.CiselnikSkupinaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.CiselnikSkupinaBindingNavigator.Size = New System.Drawing.Size(1015, 25)
+        Me.CiselnikSkupinaBindingNavigator.TabIndex = 71
+        Me.CiselnikSkupinaBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'CiselnikSkupinaBindingNavigatorSaveItem
+        '
+        Me.CiselnikSkupinaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CiselnikSkupinaBindingNavigatorSaveItem.Image = CType(resources.GetObject("CiselnikSkupinaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.CiselnikSkupinaBindingNavigatorSaveItem.Name = "CiselnikSkupinaBindingNavigatorSaveItem"
+        Me.CiselnikSkupinaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.CiselnikSkupinaBindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'uchadzacCheckedListBox
+        '
+        Me.uchadzacCheckedListBox.FormattingEnabled = True
+        Me.uchadzacCheckedListBox.Location = New System.Drawing.Point(26, 445)
+        Me.uchadzacCheckedListBox.Name = "uchadzacCheckedListBox"
+        Me.uchadzacCheckedListBox.Size = New System.Drawing.Size(120, 229)
+        Me.uchadzacCheckedListBox.TabIndex = 72
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(199, 454)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 73
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'vlastnikCheckedListBox
+        '
+        Me.vlastnikCheckedListBox.FormattingEnabled = True
+        Me.vlastnikCheckedListBox.Location = New System.Drawing.Point(12, 734)
+        Me.vlastnikCheckedListBox.Name = "vlastnikCheckedListBox"
+        Me.vlastnikCheckedListBox.Size = New System.Drawing.Size(565, 79)
+        Me.vlastnikCheckedListBox.TabIndex = 74
+        '
+        'CiselnikSkupinaDataGridView
+        '
+        Me.CiselnikSkupinaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CiselnikSkupinaDataGridView.Location = New System.Drawing.Point(362, 406)
+        Me.CiselnikSkupinaDataGridView.Name = "CiselnikSkupinaDataGridView"
+        Me.CiselnikSkupinaDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.CiselnikSkupinaDataGridView.TabIndex = 74
+        '
         'studentNovy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(962, 956)
+        Me.ClientSize = New System.Drawing.Size(1015, 956)
+        Me.Controls.Add(Me.CiselnikSkupinaDataGridView)
+        Me.Controls.Add(Me.vlastnikCheckedListBox)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.uchadzacCheckedListBox)
+        Me.Controls.Add(Me.CiselnikSkupinaBindingNavigator)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
@@ -435,6 +643,12 @@ Partial Class studentNovy
         Me.Text = "L"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.EAutoskolaDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CiselnikSkupinaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CiselnikSkupinaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CiselnikSkupinaBindingNavigator.ResumeLayout(False)
+        Me.CiselnikSkupinaBindingNavigator.PerformLayout()
+        CType(Me.CiselnikSkupinaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -460,4 +674,25 @@ Partial Class studentNovy
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents EAutoskolaDBDataSet As e_autoskola.eAutoskolaDBDataSet
+    Friend WithEvents CiselnikSkupinaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents CiselnikSkupinaTableAdapter As e_autoskola.eAutoskolaDBDataSetTableAdapters.ciselnikSkupinaTableAdapter
+    Friend WithEvents TableAdapterManager As e_autoskola.eAutoskolaDBDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents CiselnikSkupinaBindingNavigator As System.Windows.Forms.BindingNavigator
+    Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorMoveFirstItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorMovePreviousItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents BindingNavigatorPositionItem As System.Windows.Forms.ToolStripTextBox
+    Friend WithEvents BindingNavigatorSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents CiselnikSkupinaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents uchadzacCheckedListBox As System.Windows.Forms.CheckedListBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents vlastnikCheckedListBox As System.Windows.Forms.CheckedListBox
+    Friend WithEvents CiselnikSkupinaDataGridView As System.Windows.Forms.DataGridView
 End Class
