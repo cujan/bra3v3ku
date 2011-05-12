@@ -1239,7 +1239,11 @@ WHERE     (osoba.id = ?)</CommandText>
                             WHERE      id = 1) AS mestoOrganizacia,
                           (SELECT     skupinyUchadzac
                             FROM          studentSkupinaUchadzac_view2
-                            WHERE      idOsoba = osoba.id) AS skupinyUchadzac
+                            WHERE      idOsoba = osoba.id) AS skupinyUchadzac,
+                          (SELECT     skupinyVlastnik
+                            FROM          studentSkupinaVlastnik_view2
+                            WHERE      idOsoba = osoba.id) AS skupinyVlastnik
+
 FROM         ((((student LEFT OUTER JOIN
                       osoba ON osoba.id = student.id) LEFT OUTER JOIN
                       clenKurzu ON clenKurzu.idStudent = student.id) LEFT OUTER JOIN
@@ -1984,6 +1988,7 @@ WHERE     (osoba.id = 2)</CommandText>
               <xs:element name="pscOrganizacia" msprop:Generator_ColumnVarNameInTable="columnpscOrganizacia" msprop:Generator_ColumnPropNameInRow="pscOrganizacia" msprop:Generator_ColumnPropNameInTable="pscOrganizaciaColumn" msprop:Generator_UserColumnName="pscOrganizacia" type="xs:string" minOccurs="0" />
               <xs:element name="mestoOrganizacia" msprop:Generator_ColumnVarNameInTable="columnmestoOrganizacia" msprop:Generator_ColumnPropNameInRow="mestoOrganizacia" msprop:Generator_ColumnPropNameInTable="mestoOrganizaciaColumn" msprop:Generator_UserColumnName="mestoOrganizacia" type="xs:string" minOccurs="0" />
               <xs:element name="skupinyUchadzac" msprop:Generator_ColumnVarNameInTable="columnskupinyUchadzac" msprop:Generator_ColumnPropNameInRow="skupinyUchadzac" msprop:Generator_ColumnPropNameInTable="skupinyUchadzacColumn" msprop:Generator_UserColumnName="skupinyUchadzac" type="xs:string" minOccurs="0" />
+              <xs:element name="skupinyVlastnik" msprop:Generator_ColumnVarNameInTable="columnskupinyVlastnik" msprop:Generator_ColumnPropNameInRow="skupinyVlastnik" msprop:Generator_ColumnPropNameInTable="skupinyVlastnikColumn" msprop:Generator_UserColumnName="skupinyVlastnik" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
