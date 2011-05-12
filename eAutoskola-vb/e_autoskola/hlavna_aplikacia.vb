@@ -7,7 +7,7 @@ Imports Microsoft.VisualBasic.CompilerServices
 Public Class hlavna_aplikacia
     Private bInstalled As Boolean
 
-
+    Public idStudent As Integer
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
         ' Create a new instance of the child form.
@@ -572,8 +572,8 @@ Public Class hlavna_aplikacia
         kurzPrehlad.Show()
     End Sub
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
-        PrihlaskaReportForm.Show()
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
 
     End Sub
 

@@ -6,4 +6,10 @@
         Me.StudentPrehladTableAdapter.FillBy_id(Me.EAutoskolaDBDataSet.studentPrehlad, id)
 
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        hlavna_aplikacia.idStudent = Val(IdTextBox.Text)
+        PrihlaskaReportForm.Show()
+
+    End Sub
 End Class

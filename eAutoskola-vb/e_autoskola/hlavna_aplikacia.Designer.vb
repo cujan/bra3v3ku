@@ -117,7 +117,7 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label = New System.Windows.Forms.Label()
         Me.prehlad_clenov_button = New System.Windows.Forms.Button()
         Me.novy_clen_button = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -151,7 +151,6 @@ Partial Class hlavna_aplikacia
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.VseobecneUdajeTableAdapter = New e_autoskola.vseobecneUdajeDatasetTableAdapters.vseobecneUdajeTableAdapter()
         Me.TableAdapterManager = New e_autoskola.vseobecneUdajeDatasetTableAdapters.TableAdapterManager()
-        Me.Button6 = New System.Windows.Forms.Button()
         TelefonLabel = New System.Windows.Forms.Label()
         FaxLabel = New System.Windows.Forms.Label()
         EmailLabel = New System.Windows.Forms.Label()
@@ -689,7 +688,6 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel2.AutoScroll = True
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.LightSkyBlue
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Button6)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button5)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Button4)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Button3)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Button2)
@@ -1104,14 +1102,14 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
         '
-        'Button5
+        'Button6
         '
-        Me.Button5.Location = New System.Drawing.Point(49, 228)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 40
-        Me.Button5.Text = "prihlaska"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button6.Location = New System.Drawing.Point(18, 20)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(106, 23)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "ciselnik skupina"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -1446,15 +1444,6 @@ Partial Class hlavna_aplikacia
         Me.TableAdapterManager.UpdateOrder = e_autoskola.vseobecneUdajeDatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.vseobecneUdajeTableAdapter = Me.VseobecneUdajeTableAdapter
         '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(18, 20)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(106, 23)
-        Me.Button6.TabIndex = 11
-        Me.Button6.Text = "ciselnik skupina"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1623,7 +1612,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
 
 End Class
