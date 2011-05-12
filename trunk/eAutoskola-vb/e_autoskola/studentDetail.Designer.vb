@@ -23,7 +23,6 @@ Partial Class studentDetail
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentDetail))
         Dim IdLabel As System.Windows.Forms.Label
         Dim TitulPredLabel As System.Windows.Forms.Label
         Dim PriezviskoLabel As System.Windows.Forms.Label
@@ -42,22 +41,23 @@ Partial Class studentDetail
         Dim EmailLabel As System.Windows.Forms.Label
         Dim CisloOpLabel As System.Windows.Forms.Label
         Dim CisloVpLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentDetail))
         Me.EAutoskolaDBDataSet = New e_autoskola.eAutoskolaDBDataSet()
         Me.StudentPrehladBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StudentPrehladTableAdapter = New e_autoskola.eAutoskolaDBDataSetTableAdapters.studentPrehladTableAdapter()
         Me.TableAdapterManager = New e_autoskola.eAutoskolaDBDataSetTableAdapters.TableAdapterManager()
         Me.StudentPrehladBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.StudentPrehladBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdTextBox = New System.Windows.Forms.TextBox()
         Me.TitulPredTextBox = New System.Windows.Forms.TextBox()
@@ -77,6 +77,7 @@ Partial Class studentDetail
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.CisloOpTextBox = New System.Windows.Forms.TextBox()
         Me.CisloVpTextBox = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         IdLabel = New System.Windows.Forms.Label()
         TitulPredLabel = New System.Windows.Forms.Label()
         PriezviskoLabel = New System.Windows.Forms.Label()
@@ -101,6 +102,168 @@ Partial Class studentDetail
         Me.StudentPrehladBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
         '
+        'IdLabel
+        '
+        IdLabel.AutoSize = True
+        IdLabel.Location = New System.Drawing.Point(148, 62)
+        IdLabel.Name = "IdLabel"
+        IdLabel.Size = New System.Drawing.Size(18, 13)
+        IdLabel.TabIndex = 1
+        IdLabel.Text = "id:"
+        '
+        'TitulPredLabel
+        '
+        TitulPredLabel.AutoSize = True
+        TitulPredLabel.Location = New System.Drawing.Point(148, 88)
+        TitulPredLabel.Name = "TitulPredLabel"
+        TitulPredLabel.Size = New System.Drawing.Size(51, 13)
+        TitulPredLabel.TabIndex = 3
+        TitulPredLabel.Text = "titul Pred:"
+        '
+        'PriezviskoLabel
+        '
+        PriezviskoLabel.AutoSize = True
+        PriezviskoLabel.Location = New System.Drawing.Point(148, 114)
+        PriezviskoLabel.Name = "PriezviskoLabel"
+        PriezviskoLabel.Size = New System.Drawing.Size(57, 13)
+        PriezviskoLabel.TabIndex = 5
+        PriezviskoLabel.Text = "priezvisko:"
+        '
+        'RodnePriezviskoLabel
+        '
+        RodnePriezviskoLabel.AutoSize = True
+        RodnePriezviskoLabel.Location = New System.Drawing.Point(148, 140)
+        RodnePriezviskoLabel.Name = "RodnePriezviskoLabel"
+        RodnePriezviskoLabel.Size = New System.Drawing.Size(88, 13)
+        RodnePriezviskoLabel.TabIndex = 7
+        RodnePriezviskoLabel.Text = "rodne Priezvisko:"
+        '
+        'MenoLabel
+        '
+        MenoLabel.AutoSize = True
+        MenoLabel.Location = New System.Drawing.Point(148, 166)
+        MenoLabel.Name = "MenoLabel"
+        MenoLabel.Size = New System.Drawing.Size(36, 13)
+        MenoLabel.TabIndex = 9
+        MenoLabel.Text = "meno:"
+        '
+        'TitulZaLabel
+        '
+        TitulZaLabel.AutoSize = True
+        TitulZaLabel.Location = New System.Drawing.Point(148, 192)
+        TitulZaLabel.Name = "TitulZaLabel"
+        TitulZaLabel.Size = New System.Drawing.Size(42, 13)
+        TitulZaLabel.TabIndex = 11
+        TitulZaLabel.Text = "titul Za:"
+        '
+        'DatumNarodeniaLabel
+        '
+        DatumNarodeniaLabel.AutoSize = True
+        DatumNarodeniaLabel.Location = New System.Drawing.Point(148, 218)
+        DatumNarodeniaLabel.Name = "DatumNarodeniaLabel"
+        DatumNarodeniaLabel.Size = New System.Drawing.Size(91, 13)
+        DatumNarodeniaLabel.TabIndex = 13
+        DatumNarodeniaLabel.Text = "datum Narodenia:"
+        '
+        'RodneCisloLabel
+        '
+        RodneCisloLabel.AutoSize = True
+        RodneCisloLabel.Location = New System.Drawing.Point(148, 244)
+        RodneCisloLabel.Name = "RodneCisloLabel"
+        RodneCisloLabel.Size = New System.Drawing.Size(62, 13)
+        RodneCisloLabel.TabIndex = 15
+        RodneCisloLabel.Text = "rodne Cislo:"
+        '
+        'MiestoNarodeniaLabel
+        '
+        MiestoNarodeniaLabel.AutoSize = True
+        MiestoNarodeniaLabel.Location = New System.Drawing.Point(148, 270)
+        MiestoNarodeniaLabel.Name = "MiestoNarodeniaLabel"
+        MiestoNarodeniaLabel.Size = New System.Drawing.Size(92, 13)
+        MiestoNarodeniaLabel.TabIndex = 17
+        MiestoNarodeniaLabel.Text = "miesto Narodenia:"
+        '
+        'UlicaLabel
+        '
+        UlicaLabel.AutoSize = True
+        UlicaLabel.Location = New System.Drawing.Point(148, 296)
+        UlicaLabel.Name = "UlicaLabel"
+        UlicaLabel.Size = New System.Drawing.Size(32, 13)
+        UlicaLabel.TabIndex = 19
+        UlicaLabel.Text = "ulica:"
+        '
+        'UlicaCisloLabel
+        '
+        UlicaCisloLabel.AutoSize = True
+        UlicaCisloLabel.Location = New System.Drawing.Point(148, 322)
+        UlicaCisloLabel.Name = "UlicaCisloLabel"
+        UlicaCisloLabel.Size = New System.Drawing.Size(57, 13)
+        UlicaCisloLabel.TabIndex = 21
+        UlicaCisloLabel.Text = "ulica Cislo:"
+        '
+        'MestoLabel
+        '
+        MestoLabel.AutoSize = True
+        MestoLabel.Location = New System.Drawing.Point(148, 348)
+        MestoLabel.Name = "MestoLabel"
+        MestoLabel.Size = New System.Drawing.Size(38, 13)
+        MestoLabel.TabIndex = 23
+        MestoLabel.Text = "mesto:"
+        '
+        'PscLabel
+        '
+        PscLabel.AutoSize = True
+        PscLabel.Location = New System.Drawing.Point(148, 374)
+        PscLabel.Name = "PscLabel"
+        PscLabel.Size = New System.Drawing.Size(27, 13)
+        PscLabel.TabIndex = 25
+        PscLabel.Text = "psc:"
+        '
+        'TelefonLabel
+        '
+        TelefonLabel.AutoSize = True
+        TelefonLabel.Location = New System.Drawing.Point(148, 400)
+        TelefonLabel.Name = "TelefonLabel"
+        TelefonLabel.Size = New System.Drawing.Size(42, 13)
+        TelefonLabel.TabIndex = 27
+        TelefonLabel.Text = "telefon:"
+        '
+        'MobilLabel
+        '
+        MobilLabel.AutoSize = True
+        MobilLabel.Location = New System.Drawing.Point(148, 426)
+        MobilLabel.Name = "MobilLabel"
+        MobilLabel.Size = New System.Drawing.Size(34, 13)
+        MobilLabel.TabIndex = 29
+        MobilLabel.Text = "mobil:"
+        '
+        'EmailLabel
+        '
+        EmailLabel.AutoSize = True
+        EmailLabel.Location = New System.Drawing.Point(148, 452)
+        EmailLabel.Name = "EmailLabel"
+        EmailLabel.Size = New System.Drawing.Size(34, 13)
+        EmailLabel.TabIndex = 31
+        EmailLabel.Text = "email:"
+        '
+        'CisloOpLabel
+        '
+        CisloOpLabel.AutoSize = True
+        CisloOpLabel.Location = New System.Drawing.Point(148, 478)
+        CisloOpLabel.Name = "CisloOpLabel"
+        CisloOpLabel.Size = New System.Drawing.Size(48, 13)
+        CisloOpLabel.TabIndex = 33
+        CisloOpLabel.Text = "cislo Op:"
+        '
+        'CisloVpLabel
+        '
+        CisloVpLabel.AutoSize = True
+        CisloVpLabel.Location = New System.Drawing.Point(148, 504)
+        CisloVpLabel.Name = "CisloVpLabel"
+        CisloVpLabel.Size = New System.Drawing.Size(47, 13)
+        CisloVpLabel.TabIndex = 35
+        CisloVpLabel.Text = "cislo Vp:"
+        '
         'EAutoskolaDBDataSet
         '
         Me.EAutoskolaDBDataSet.DataSetName = "eAutoskolaDBDataSet"
@@ -119,7 +282,7 @@ Partial Class studentDetail
         '
         Me.TableAdapterManager.automobilTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-
+        Me.TableAdapterManager.ciselnikSkupinaTableAdapter = Nothing
         Me.TableAdapterManager.clenKurzuTableAdapter = Nothing
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.dodanePotvrdeniaTableAdapter = Nothing
@@ -150,6 +313,31 @@ Partial Class studentDetail
         Me.StudentPrehladBindingNavigator.Size = New System.Drawing.Size(933, 25)
         Me.StudentPrehladBindingNavigator.TabIndex = 0
         Me.StudentPrehladBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -183,17 +371,10 @@ Partial Class studentDetail
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 13)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -201,7 +382,7 @@ Partial Class studentDetail
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -210,31 +391,13 @@ Partial Class studentDetail
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'StudentPrehladBindingNavigatorSaveItem
         '
@@ -242,17 +405,8 @@ Partial Class studentDetail
         Me.StudentPrehladBindingNavigatorSaveItem.Enabled = False
         Me.StudentPrehladBindingNavigatorSaveItem.Image = CType(resources.GetObject("StudentPrehladBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.StudentPrehladBindingNavigatorSaveItem.Name = "StudentPrehladBindingNavigatorSaveItem"
-        Me.StudentPrehladBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 20)
+        Me.StudentPrehladBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.StudentPrehladBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(148, 62)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 1
-        IdLabel.Text = "id:"
         '
         'IdTextBox
         '
@@ -262,15 +416,6 @@ Partial Class studentDetail
         Me.IdTextBox.Size = New System.Drawing.Size(100, 20)
         Me.IdTextBox.TabIndex = 2
         '
-        'TitulPredLabel
-        '
-        TitulPredLabel.AutoSize = True
-        TitulPredLabel.Location = New System.Drawing.Point(148, 88)
-        TitulPredLabel.Name = "TitulPredLabel"
-        TitulPredLabel.Size = New System.Drawing.Size(51, 13)
-        TitulPredLabel.TabIndex = 3
-        TitulPredLabel.Text = "titul Pred:"
-        '
         'TitulPredTextBox
         '
         Me.TitulPredTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentPrehladBindingSource, "titulPred", True))
@@ -278,15 +423,6 @@ Partial Class studentDetail
         Me.TitulPredTextBox.Name = "TitulPredTextBox"
         Me.TitulPredTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TitulPredTextBox.TabIndex = 4
-        '
-        'PriezviskoLabel
-        '
-        PriezviskoLabel.AutoSize = True
-        PriezviskoLabel.Location = New System.Drawing.Point(148, 114)
-        PriezviskoLabel.Name = "PriezviskoLabel"
-        PriezviskoLabel.Size = New System.Drawing.Size(57, 13)
-        PriezviskoLabel.TabIndex = 5
-        PriezviskoLabel.Text = "priezvisko:"
         '
         'PriezviskoTextBox
         '
@@ -296,15 +432,6 @@ Partial Class studentDetail
         Me.PriezviskoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PriezviskoTextBox.TabIndex = 6
         '
-        'RodnePriezviskoLabel
-        '
-        RodnePriezviskoLabel.AutoSize = True
-        RodnePriezviskoLabel.Location = New System.Drawing.Point(148, 140)
-        RodnePriezviskoLabel.Name = "RodnePriezviskoLabel"
-        RodnePriezviskoLabel.Size = New System.Drawing.Size(88, 13)
-        RodnePriezviskoLabel.TabIndex = 7
-        RodnePriezviskoLabel.Text = "rodne Priezvisko:"
-        '
         'RodnePriezviskoTextBox
         '
         Me.RodnePriezviskoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentPrehladBindingSource, "rodnePriezvisko", True))
@@ -312,15 +439,6 @@ Partial Class studentDetail
         Me.RodnePriezviskoTextBox.Name = "RodnePriezviskoTextBox"
         Me.RodnePriezviskoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.RodnePriezviskoTextBox.TabIndex = 8
-        '
-        'MenoLabel
-        '
-        MenoLabel.AutoSize = True
-        MenoLabel.Location = New System.Drawing.Point(148, 166)
-        MenoLabel.Name = "MenoLabel"
-        MenoLabel.Size = New System.Drawing.Size(36, 13)
-        MenoLabel.TabIndex = 9
-        MenoLabel.Text = "meno:"
         '
         'MenoTextBox
         '
@@ -330,15 +448,6 @@ Partial Class studentDetail
         Me.MenoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.MenoTextBox.TabIndex = 10
         '
-        'TitulZaLabel
-        '
-        TitulZaLabel.AutoSize = True
-        TitulZaLabel.Location = New System.Drawing.Point(148, 192)
-        TitulZaLabel.Name = "TitulZaLabel"
-        TitulZaLabel.Size = New System.Drawing.Size(42, 13)
-        TitulZaLabel.TabIndex = 11
-        TitulZaLabel.Text = "titul Za:"
-        '
         'TitulZaTextBox
         '
         Me.TitulZaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentPrehladBindingSource, "titulZa", True))
@@ -346,15 +455,6 @@ Partial Class studentDetail
         Me.TitulZaTextBox.Name = "TitulZaTextBox"
         Me.TitulZaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TitulZaTextBox.TabIndex = 12
-        '
-        'DatumNarodeniaLabel
-        '
-        DatumNarodeniaLabel.AutoSize = True
-        DatumNarodeniaLabel.Location = New System.Drawing.Point(148, 218)
-        DatumNarodeniaLabel.Name = "DatumNarodeniaLabel"
-        DatumNarodeniaLabel.Size = New System.Drawing.Size(91, 13)
-        DatumNarodeniaLabel.TabIndex = 13
-        DatumNarodeniaLabel.Text = "datum Narodenia:"
         '
         'DatumNarodeniaTextBox
         '
@@ -364,15 +464,6 @@ Partial Class studentDetail
         Me.DatumNarodeniaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DatumNarodeniaTextBox.TabIndex = 14
         '
-        'RodneCisloLabel
-        '
-        RodneCisloLabel.AutoSize = True
-        RodneCisloLabel.Location = New System.Drawing.Point(148, 244)
-        RodneCisloLabel.Name = "RodneCisloLabel"
-        RodneCisloLabel.Size = New System.Drawing.Size(62, 13)
-        RodneCisloLabel.TabIndex = 15
-        RodneCisloLabel.Text = "rodne Cislo:"
-        '
         'RodneCisloTextBox
         '
         Me.RodneCisloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentPrehladBindingSource, "rodneCislo", True))
@@ -380,15 +471,6 @@ Partial Class studentDetail
         Me.RodneCisloTextBox.Name = "RodneCisloTextBox"
         Me.RodneCisloTextBox.Size = New System.Drawing.Size(100, 20)
         Me.RodneCisloTextBox.TabIndex = 16
-        '
-        'MiestoNarodeniaLabel
-        '
-        MiestoNarodeniaLabel.AutoSize = True
-        MiestoNarodeniaLabel.Location = New System.Drawing.Point(148, 270)
-        MiestoNarodeniaLabel.Name = "MiestoNarodeniaLabel"
-        MiestoNarodeniaLabel.Size = New System.Drawing.Size(92, 13)
-        MiestoNarodeniaLabel.TabIndex = 17
-        MiestoNarodeniaLabel.Text = "miesto Narodenia:"
         '
         'MiestoNarodeniaTextBox
         '
@@ -398,15 +480,6 @@ Partial Class studentDetail
         Me.MiestoNarodeniaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.MiestoNarodeniaTextBox.TabIndex = 18
         '
-        'UlicaLabel
-        '
-        UlicaLabel.AutoSize = True
-        UlicaLabel.Location = New System.Drawing.Point(148, 296)
-        UlicaLabel.Name = "UlicaLabel"
-        UlicaLabel.Size = New System.Drawing.Size(32, 13)
-        UlicaLabel.TabIndex = 19
-        UlicaLabel.Text = "ulica:"
-        '
         'UlicaTextBox
         '
         Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentPrehladBindingSource, "ulica", True))
@@ -414,15 +487,6 @@ Partial Class studentDetail
         Me.UlicaTextBox.Name = "UlicaTextBox"
         Me.UlicaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.UlicaTextBox.TabIndex = 20
-        '
-        'UlicaCisloLabel
-        '
-        UlicaCisloLabel.AutoSize = True
-        UlicaCisloLabel.Location = New System.Drawing.Point(148, 322)
-        UlicaCisloLabel.Name = "UlicaCisloLabel"
-        UlicaCisloLabel.Size = New System.Drawing.Size(57, 13)
-        UlicaCisloLabel.TabIndex = 21
-        UlicaCisloLabel.Text = "ulica Cislo:"
         '
         'UlicaCisloTextBox
         '
@@ -432,15 +496,6 @@ Partial Class studentDetail
         Me.UlicaCisloTextBox.Size = New System.Drawing.Size(100, 20)
         Me.UlicaCisloTextBox.TabIndex = 22
         '
-        'MestoLabel
-        '
-        MestoLabel.AutoSize = True
-        MestoLabel.Location = New System.Drawing.Point(148, 348)
-        MestoLabel.Name = "MestoLabel"
-        MestoLabel.Size = New System.Drawing.Size(38, 13)
-        MestoLabel.TabIndex = 23
-        MestoLabel.Text = "mesto:"
-        '
         'MestoTextBox
         '
         Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentPrehladBindingSource, "mesto", True))
@@ -448,15 +503,6 @@ Partial Class studentDetail
         Me.MestoTextBox.Name = "MestoTextBox"
         Me.MestoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.MestoTextBox.TabIndex = 24
-        '
-        'PscLabel
-        '
-        PscLabel.AutoSize = True
-        PscLabel.Location = New System.Drawing.Point(148, 374)
-        PscLabel.Name = "PscLabel"
-        PscLabel.Size = New System.Drawing.Size(27, 13)
-        PscLabel.TabIndex = 25
-        PscLabel.Text = "psc:"
         '
         'PscTextBox
         '
@@ -466,15 +512,6 @@ Partial Class studentDetail
         Me.PscTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PscTextBox.TabIndex = 26
         '
-        'TelefonLabel
-        '
-        TelefonLabel.AutoSize = True
-        TelefonLabel.Location = New System.Drawing.Point(148, 400)
-        TelefonLabel.Name = "TelefonLabel"
-        TelefonLabel.Size = New System.Drawing.Size(42, 13)
-        TelefonLabel.TabIndex = 27
-        TelefonLabel.Text = "telefon:"
-        '
         'TelefonTextBox
         '
         Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentPrehladBindingSource, "telefon", True))
@@ -482,15 +519,6 @@ Partial Class studentDetail
         Me.TelefonTextBox.Name = "TelefonTextBox"
         Me.TelefonTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TelefonTextBox.TabIndex = 28
-        '
-        'MobilLabel
-        '
-        MobilLabel.AutoSize = True
-        MobilLabel.Location = New System.Drawing.Point(148, 426)
-        MobilLabel.Name = "MobilLabel"
-        MobilLabel.Size = New System.Drawing.Size(34, 13)
-        MobilLabel.TabIndex = 29
-        MobilLabel.Text = "mobil:"
         '
         'MobilTextBox
         '
@@ -500,15 +528,6 @@ Partial Class studentDetail
         Me.MobilTextBox.Size = New System.Drawing.Size(100, 20)
         Me.MobilTextBox.TabIndex = 30
         '
-        'EmailLabel
-        '
-        EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(148, 452)
-        EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New System.Drawing.Size(34, 13)
-        EmailLabel.TabIndex = 31
-        EmailLabel.Text = "email:"
-        '
         'EmailTextBox
         '
         Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentPrehladBindingSource, "email", True))
@@ -516,15 +535,6 @@ Partial Class studentDetail
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.Size = New System.Drawing.Size(100, 20)
         Me.EmailTextBox.TabIndex = 32
-        '
-        'CisloOpLabel
-        '
-        CisloOpLabel.AutoSize = True
-        CisloOpLabel.Location = New System.Drawing.Point(148, 478)
-        CisloOpLabel.Name = "CisloOpLabel"
-        CisloOpLabel.Size = New System.Drawing.Size(48, 13)
-        CisloOpLabel.TabIndex = 33
-        CisloOpLabel.Text = "cislo Op:"
         '
         'CisloOpTextBox
         '
@@ -534,15 +544,6 @@ Partial Class studentDetail
         Me.CisloOpTextBox.Size = New System.Drawing.Size(100, 20)
         Me.CisloOpTextBox.TabIndex = 34
         '
-        'CisloVpLabel
-        '
-        CisloVpLabel.AutoSize = True
-        CisloVpLabel.Location = New System.Drawing.Point(148, 504)
-        CisloVpLabel.Name = "CisloVpLabel"
-        CisloVpLabel.Size = New System.Drawing.Size(47, 13)
-        CisloVpLabel.TabIndex = 35
-        CisloVpLabel.Text = "cislo Vp:"
-        '
         'CisloVpTextBox
         '
         Me.CisloVpTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentPrehladBindingSource, "cisloVp", True))
@@ -551,11 +552,21 @@ Partial Class studentDetail
         Me.CisloVpTextBox.Size = New System.Drawing.Size(100, 20)
         Me.CisloVpTextBox.TabIndex = 36
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(468, 83)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 37
+        Me.Button1.Text = "Prihlaska"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'studentDetail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(933, 541)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(IdLabel)
         Me.Controls.Add(Me.IdTextBox)
         Me.Controls.Add(TitulPredLabel)
@@ -639,4 +650,5 @@ Partial Class studentDetail
     Friend WithEvents EmailTextBox As System.Windows.Forms.TextBox
     Friend WithEvents CisloOpTextBox As System.Windows.Forms.TextBox
     Friend WithEvents CisloVpTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
