@@ -231,6 +231,12 @@
     <Compile Include="zaloha_databazy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ziadostOvodicakReportForm.Designer.vb">
+      <DependentUpon>ziadostOvodicakReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ziadostOvodicakReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ciselnikSkupina.resx">
@@ -250,6 +256,7 @@
       <DependentUpon>kurzPrehlad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="prihlaskaReport.rdlc" />
+    <EmbeddedResource Include="ziadostOvodicakReport.rdlc" />
     <EmbeddedResource Include="vseobecneUdajeSubreport.rdlc" />
     <EmbeddedResource Include="studentDetail.resx">
       <DependentUpon>studentDetail.vb</DependentUpon>
@@ -297,6 +304,9 @@
     <EmbeddedResource Include="zaloha_databazy.resx">
       <DependentUpon>zaloha_databazy.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ziadostOvodicakReportForm.resx">
+      <DependentUpon>ziadostOvodicakReportForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

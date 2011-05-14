@@ -78,6 +78,7 @@ Partial Class studentDetail
         Me.CisloOpTextBox = New System.Windows.Forms.TextBox()
         Me.CisloVpTextBox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         IdLabel = New System.Windows.Forms.Label()
         TitulPredLabel = New System.Windows.Forms.Label()
         PriezviskoLabel = New System.Windows.Forms.Label()
@@ -561,11 +562,21 @@ Partial Class studentDetail
         Me.Button1.Text = "Prihlaska"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(480, 148)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(111, 23)
+        Me.Button2.TabIndex = 38
+        Me.Button2.Text = "Ziadost o vodicak"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'studentDetail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(933, 541)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(IdLabel)
         Me.Controls.Add(Me.IdTextBox)
@@ -651,4 +662,5 @@ Partial Class studentDetail
     Friend WithEvents CisloOpTextBox As System.Windows.Forms.TextBox
     Friend WithEvents CisloVpTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
