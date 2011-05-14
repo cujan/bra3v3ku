@@ -12,4 +12,10 @@
         PrihlaskaReportForm.Show()
 
     End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        hlavna_aplikacia.idStudent = Val(IdTextBox.Text)
+        ziadostOvodicakReportForm.Show()
+
+    End Sub
 End Class
