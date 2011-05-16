@@ -6,4 +6,12 @@
 
         Me.ReportViewer1.RefreshReport()
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim file As String
+        '' Cesta k stranam 2 az 4 z ziadosti o vodicak
+        file = CurDir() & "\Report2.pdf"
+        'MsgBox(file)
+        Process.Start(file)
+    End Sub
 End Class
