@@ -125,439 +125,6 @@
   </DataSets>
   <Body>
     <ReportItems>
-      <Rectangle Name="Rectangle1">
-        <ReportItems>
-          <Textbox Name="Textbox4">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>ŽIADOSŤ O UDELENIE VODIČSKÉHO OPRÁVNENIA</Value>
-                    <Style>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>16pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Height>0.82021cm</Height>
-            <Width>14.63146cm</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-        </ReportItems>
-        <KeepTogether>true</KeepTogether>
-        <Top>1.31445cm</Top>
-        <Left>2.37278cm</Left>
-        <Height>0.92604cm</Height>
-        <Width>15.05479cm</Width>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-            <Width>2pt</Width>
-          </Border>
-        </Style>
-      </Rectangle>
-      <Textbox Name="Textbox5">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Meno ............................................. priezvisko ........................................................ rodné priezvisko .............................................
-</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>2.75cm</Top>
-        <Left>1.36737cm</Left>
-        <Height>0.52034cm</Height>
-        <Width>18.37055cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox6">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>dátum narodenia .................................... miesto narodenia ................................................ rodné číslo .........................................</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>3.37618cm</Top>
-        <Left>1.36737cm</Left>
-        <Height>0.47625cm</Height>
-        <Width>18.37055cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox7">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>adresa pobytu ..........................................................................................................................................................................................</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>3.95826cm</Top>
-        <Left>1.36737cm</Left>
-        <Height>0.47625cm</Height>
-        <Width>18.37055cm</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox8">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Žiadam o udelenie vodičského oprávnenia skupiny ................................................ a podskupiny* .............................................</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>4.50506cm</Top>
-        <Left>1.36737cm</Left>
-        <Height>0.47625cm</Height>
-        <Width>18.37055cm</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox9">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Som držiteľom vodičského oprávnenia skupiny ...................................................... a podskupiny* ................................................</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>5.05187cm</Top>
-        <Left>1.36737cm</Left>
-        <Height>0.47625cm</Height>
-        <Width>18.37055cm</Width>
-        <ZIndex>5</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox10">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Som držiteľom vodičského preukazu (</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>uviesť číslo vodičského preukazu a štát vydania</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>)*:</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>5.63395cm</Top>
-        <Left>1.36737cm</Left>
-        <Height>0.47625cm</Height>
-        <Width>18.37055cm</Width>
-        <ZIndex>6</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox11">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>....................................................................................................................................................................................................................</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>6.21604cm</Top>
-        <Left>1.36737cm</Left>
-        <Height>0.47625cm</Height>
-        <Width>18.37055cm</Width>
-        <ZIndex>7</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox12">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>V ...................................................................... dňa .......................................................... podpis žiadateľa .........................................</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>7.05114cm</Top>
-        <Left>1.36737cm</Left>
-        <Height>0.47625cm</Height>
-        <Width>18.37055cm</Width>
-        <ZIndex>8</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox13">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Miesto pre nalepenie kolkových známok</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>7.87135cm</Top>
-        <Left>1.63195cm</Left>
-        <Height>0.47625cm</Height>
-        <Width>6.57013cm</Width>
-        <ZIndex>9</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox14">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Súhlasím s udelením vodičského oprávnenia</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>7.87135cm</Top>
-        <Left>12.33859cm</Left>
-        <Height>0.47625cm</Height>
-        <Width>6.57013cm</Width>
-        <ZIndex>10</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox15">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>................................................................................</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>podpis zakonného zástupcu</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>8.74cm</Top>
-        <Left>12.33859cm</Left>
-        <Height>0.97896cm</Height>
-        <Width>6.57013cm</Width>
-        <ZIndex>11</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Rectangle Name="Rectangle2">
         <ReportItems>
           <Rectangle Name="Rectangle3">
@@ -602,12 +169,12 @@
             <Width>16.11018cm</Width>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
             </Style>
           </Rectangle>
           <Line Name="Line1">
-            <Top>9.99537cm</Top>
+            <Top>9.93cm</Top>
             <Left>0.0294cm</Left>
             <Height>0cm</Height>
             <Width>16.93333cm</Width>
@@ -953,7 +520,7 @@ d) spĺňam podmienky podľa § 77 ods. 1 písm. h) a i), k) až p) zákona č. 
             <rd:DefaultName>Textbox26</rd:DefaultName>
             <Top>10.55393cm</Top>
             <Left>0.58796cm</Left>
-            <Height>1.6169cm</Height>
+            <Height>1.77565cm</Height>
             <Width>16.37477cm</Width>
             <ZIndex>10</ZIndex>
             <Style>
@@ -984,7 +551,7 @@ d) spĺňam podmienky podľa § 77 ods. 1 písm. h) a i), k) až p) zákona č. 
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox5</rd:DefaultName>
-            <Top>12.50597cm</Top>
+            <Top>12.43542cm</Top>
             <Left>0.44097cm</Left>
             <Height>0.47625cm</Height>
             <Width>14.34301cm</Width>
@@ -1032,85 +599,84 @@ d) spĺňam podmienky podľa § 77 ods. 1 písm. h) a i), k) až p) zákona č. 
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox25">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Čestne vyhlasujem, že</Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>10.01cm</Top>
+            <Left>6.95406cm</Left>
+            <Height>0.488cm</Height>
+            <Width>3.61319cm</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox29">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>V .................................................. dňa ....................................................................    podpis žiadateľa</Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>13.67014cm</Top>
+            <Left>0.44097cm</Left>
+            <Height>0.59972cm</Height>
+            <Width>14.34301cm</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>12.10263cm</Top>
         <Left>1.54869cm</Left>
-        <Height>14.37569cm</Height>
+        <Height>14.44624cm</Height>
         <Width>16.96273cm</Width>
-        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
           </Border>
         </Style>
       </Rectangle>
-      <Textbox Name="Textbox25">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Čestne vyhlasujem, že</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>22.098cm</Top>
-        <Left>8.50275cm</Left>
-        <Height>0.46742cm</Height>
-        <Width>3.61319cm</Width>
-        <ZIndex>13</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox29">
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>V .................................................. dňa ....................................................................    podpis žiadateľa</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>25.66693cm</Top>
-        <Left>1.98966cm</Left>
-        <Height>0.47625cm</Height>
-        <Width>14.34301cm</Width>
-        <ZIndex>14</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox30">
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -1129,11 +695,11 @@ d) spĺňam podmienky podľa § 77 ods. 1 písm. h) a i), k) až p) zákona č. 
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>26.5136cm</Top>
+        <Top>26.61943cm</Top>
         <Left>1.63195cm</Left>
         <Height>0.48506cm</Height>
         <Width>4.78912cm</Width>
-        <ZIndex>15</ZIndex>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1144,17 +710,65 @@ d) spĺňam podmienky podľa § 77 ods. 1 písm. h) a i), k) až p) zákona č. 
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="meno">
-        <CanGrow>true</CanGrow>
+      <Rectangle Name="Rectangle1">
+        <ReportItems>
+          <Textbox Name="Textbox4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>ŽIADOSŤ O UDELENIE VODIČSKÉHO OPRÁVNENIA</Value>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox4</rd:DefaultName>
+            <Top>0.10583cm</Top>
+            <Height>0.82021cm</Height>
+            <Width>15.05479cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>1.31445cm</Top>
+        <Left>2.37278cm</Left>
+        <Height>0.92604cm</Height>
+        <Width>15.05479cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+            <Width>2pt</Width>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Textbox Name="Textbox5">
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!meno.Value, "ziadostOvodicak")</Value>
+                <Value>="Meno  " &amp; First(Fields!meno.Value, "ziadostOvodicak") &amp; Space(40-len(First(Fields!meno.Value, "ziadostOvodicak"))) &amp; " priezvisko  " &amp; First(Fields!priezvisko.Value, "ziadostOvodicak") &amp; Space(40-len(First(Fields!priezvisko.Value, "ziadostOvodicak"))) &amp; " rodné priezvisko  " &amp; First(Fields!rodnePriezvisko.Value, "ziadostOvodicak")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1162,12 +776,268 @@ d) spĺňam podmienky podľa § 77 ods. 1 písm. h) a i), k) až p) zákona č. 
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>meno</rd:DefaultName>
-        <Top>0.48634cm</Top>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>2.75cm</Top>
+        <Left>1.36737cm</Left>
+        <Height>0.52034cm</Height>
+        <Width>18.37055cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="dátum narodenia  " &amp; First(Fields!datumNarodenia.Value, "ziadostOvodicak") &amp; Space(30 - len(First(Fields!datumNarodenia.Value, "ziadostOvodicak").ToString)) &amp; " miesto narodenia  " &amp; First(Fields!miestoNarodenia.Value, "ziadostOvodicak") &amp; Space(30 - len(First(Fields!miestoNarodenia.Value, "ziadostOvodicak"))) &amp; " rodné číslo  " &amp; First(Fields!rodneCislo.Value, "ziadostOvodicak")</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>3.37618cm</Top>
+        <Left>1.36737cm</Left>
+        <Height>0.47625cm</Height>
+        <Width>18.37055cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="adresa pobytu  "&amp; First(Fields!ulica.Value, "ziadostOvodicak")  &amp; " " &amp; First(Fields!ulicaCislo.Value, "ziadostOvodicak") &amp; ", " &amp; First(Fields!mesto.Value, "ziadostOvodicak") &amp; " " &amp; First(Fields!psc.Value, "ziadostOvodicak")</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>3.95826cm</Top>
+        <Left>1.36737cm</Left>
+        <Height>0.47625cm</Height>
+        <Width>18.37055cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox8">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Žiadam o udelenie vodičského oprávnenia skupiny  " &amp; First(Fields!skupinyUchadzac.Value, "ziadostOvodicak") &amp; space(50-len(First(Fields!skupinyUchadzac.Value, "ziadostOvodicak"))) &amp; " a podskupiny*  "</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>4.50506cm</Top>
+        <Left>1.36737cm</Left>
+        <Height>0.47625cm</Height>
+        <Width>18.37055cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Som držiteľom vodičského oprávnenia skupiny  " &amp; First(Fields!skupinyVlastnik.Value, "ziadostOvodicak") &amp; space(50-len(First(Fields!skupinyVlastnik.Value, "ziadostOvodicak"))) &amp; " a podskupiny*  "</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>5.05187cm</Top>
+        <Left>1.36737cm</Left>
+        <Height>0.47625cm</Height>
+        <Width>18.37055cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Som držiteľom vodičského preukazu (uviesť číslo vodičského preukazu a štát vydania)*:  " &amp;First(Fields!cisloVp.Value, "ziadostOvodicak")</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>5.63395cm</Top>
+        <Left>1.36737cm</Left>
+        <Height>0.47625cm</Height>
+        <Width>18.37055cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>....................................................................................................................................................................................................................</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>6.21604cm</Top>
+        <Left>1.36737cm</Left>
+        <Height>0.47625cm</Height>
+        <Width>18.37055cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>V ...................................................................... dňa .......................................................... podpis žiadateľa .........................................</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>7.05114cm</Top>
+        <Left>1.36737cm</Left>
+        <Height>0.47625cm</Height>
+        <Width>18.37055cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Miesto pre nalepenie kolkových známok</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>7.87135cm</Top>
         <Left>1.63195cm</Left>
-        <Height>0.4cm</Height>
-        <Width>2.97037cm</Width>
-        <ZIndex>16</ZIndex>
+        <Height>0.47625cm</Height>
+        <Width>6.57013cm</Width>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1178,30 +1048,28 @@ d) spĺňam podmienky podľa § 77 ods. 1 písm. h) a i), k) až p) zákona č. 
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="priezvisko">
-        <CanGrow>true</CanGrow>
+      <Textbox Name="Textbox14">
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!priezvisko.Value, "ziadostOvodicak")</Value>
+                <Value>Súhlasím s udelením vodičského oprávnenia</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>priezvisko</rd:DefaultName>
-        <Top>0.48634cm</Top>
-        <Left>6.73454cm</Left>
-        <Height>0.4cm</Height>
-        <Width>3.55388cm</Width>
-        <ZIndex>17</ZIndex>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>7.87135cm</Top>
+        <Left>12.33859cm</Left>
+        <Height>0.47625cm</Height>
+        <Width>6.57013cm</Width>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1212,30 +1080,45 @@ d) spĺňam podmienky podľa § 77 ods. 1 písm. h) a i), k) až p) zákona č. 
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="rodnePriezvisko">
-        <CanGrow>true</CanGrow>
+      <Textbox Name="Textbox15">
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!rodnePriezvisko.Value, "ziadostOvodicak")</Value>
+                <Value>................................................................................</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>podpis zakonného zástupcu</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>rodnePriezvisko</rd:DefaultName>
-        <Top>0.48634cm</Top>
-        <Left>13.84772cm</Left>
-        <Height>0.4cm</Height>
-        <Width>3.35255cm</Width>
-        <ZIndex>18</ZIndex>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>8.74cm</Top>
+        <Left>12.33859cm</Left>
+        <Height>0.97896cm</Height>
+        <Width>6.57013cm</Width>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1247,16 +1130,12 @@ d) spĺňam podmienky podľa § 77 ods. 1 písm. h) a i), k) až p) zákona č. 
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>10.65625in</Height>
+    <Height>10.70833in</Height>
     <Style>
       <Border />
-      <BackgroundImage>
-        <Source>Embedded</Source>
-        <Value>ziadostOUdelenieVP_1strana_resized</Value>
-      </BackgroundImage>
     </Style>
   </Body>
-  <Width>7.95949in</Width>
+  <Width>7.84491in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
