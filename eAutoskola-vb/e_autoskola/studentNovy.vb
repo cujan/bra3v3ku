@@ -1,17 +1,10 @@
 ﻿Public Class studentNovy
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.autoskolaSkupinaVlastnik' table. You can move, or remove it, as needed.
+        Me.AutoskolaSkupinaVlastnikTableAdapter.Fill(Me.EAutoskolaDBDataSet.autoskolaSkupinaVlastnik)
         'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.ciselnikSkupina' table. You can move, or remove it, as needed.
-        Me.CiselnikSkupinaTableAdapter.FillBy_vlastnik(Me.EAutoskolaDBDataSet.ciselnikSkupina)
-
-
-        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.ciselnikSkupina' table. You can move, or remove it, as needed.
-
-        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.ciselnikSkupina' table. You can move, or remove it, as needed.
-
-        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.cislenikSkupina' table. You can move, or remove it, as needed.
-
-        'TODO: This line of code loads data into the 'EAutoskolaDBDataSet.student' table. You can move, or remove it, as needed.
+        Me.CiselnikSkupinaTableAdapter.Fill(Me.EAutoskolaDBDataSet.ciselnikSkupina)
 
 
 
@@ -19,18 +12,18 @@
         'Me.Controls.Add(aaa)
 
         'nacitanie udajov o skupinach do uchadzacCheckboxlistu
-        With uchadzacCheckedListBox
-            .DataSource = CiselnikSkupinaBindingSource
-            .DisplayMember = "skupina"
-            .ValueMember = "id"
-        End With
+        'With uchadzacCheckedListBox
+        '.DataSource = CiselnikSkupinaBindingSource
+        '.DisplayMember = "skupina"
+        '.ValueMember = "id"
+        'End With
 
         'nacitanie udajov o skupinach do vlastnikCheckboxlistu
-        With vlastnikCheckedListBox
-            .DataSource = CiselnikSkupinaBindingSource
-            .DisplayMember = "skupina"
-            .ValueMember = "id"
-        End With
+        'With vlastnikCheckedListBox
+        '.DataSource = CiselnikSkupinaBindingSource
+        '.DisplayMember = "skupina"
+        '.ValueMember = "id"
+        'End With
 
 
     End Sub
@@ -140,14 +133,21 @@
 
     End Sub
 
-    Private Sub CiselnikSkupinaBindingNavigatorSaveItem_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CiselnikSkupinaBindingNavigatorSaveItem.Click
+    Private Sub CiselnikSkupinaBindingNavigatorSaveItem_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.CiselnikSkupinaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.EAutoskolaDBDataSet)
 
     End Sub
 
-    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub CiselnikSkupinaBindingNavigatorSaveItem_Click_3(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CiselnikSkupinaBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.CiselnikSkupinaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.EAutoskolaDBDataSet)
 
     End Sub
 End Class
