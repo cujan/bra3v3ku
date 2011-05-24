@@ -12,18 +12,18 @@
         'Me.Controls.Add(aaa)
 
         'nacitanie udajov o skupinach do uchadzacCheckboxlistu
-        'With uchadzacCheckedListBox
-        '.DataSource = CiselnikSkupinaBindingSource
-        '.DisplayMember = "skupina"
-        '.ValueMember = "id"
-        'End With
+        With uchadzacCheckedListBox
+            .DataSource = AutoskolaSkupinaVlastnikBindingSource
+            .DisplayMember = "skupina"
+            .ValueMember = "id"
+        End With
 
         'nacitanie udajov o skupinach do vlastnikCheckboxlistu
-        'With vlastnikCheckedListBox
-        '.DataSource = CiselnikSkupinaBindingSource
-        '.DisplayMember = "skupina"
-        '.ValueMember = "id"
-        'End With
+        With vlastnikCheckedListBox
+            .DataSource = CiselnikSkupinaBindingSource
+            .DisplayMember = "skupina"
+            .ValueMember = "id"
+        End With
 
 
     End Sub
@@ -149,5 +149,12 @@
         Me.CiselnikSkupinaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.EAutoskolaDBDataSet)
 
+    End Sub
+
+    Private Sub Button1_Click_3(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim itemChecked As Object
+        For Each itemChecked In uchadzacCheckedListBox.CheckedItems
+            MsgBox(itemChecked.ToString)
+        Next
     End Sub
 End Class
