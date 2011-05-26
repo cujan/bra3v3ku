@@ -152,9 +152,17 @@
     End Sub
 
     Private Sub Button1_Click_3(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim itemChecked As Object
-        For Each itemChecked In uchadzacCheckedListBox.CheckedItems
-            MsgBox(itemChecked.ToString)
-        Next
+        Dim values As String = ""
+        Dim i As Integer
+        For i = 0 To i < 10
+            values = uchadzacCheckedListBox.CheckedItems.Item(i).value
+        Next i
+        '{
+        '  values = chbl.CheckedItems.Item[i].Value;
+        '}
+        'For Each uchadzacCheckedListBox.CheckedItems In uchadzacCheckedListBox.Items
+
+        'Next
+        MsgBox(values)
     End Sub
 End Class

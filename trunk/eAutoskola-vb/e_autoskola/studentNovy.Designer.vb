@@ -583,16 +583,18 @@ Partial Class studentNovy
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.uchadzacCheckedListBox.FormattingEnabled = True
         Me.uchadzacCheckedListBox.Location = New System.Drawing.Point(15, 422)
+        Me.uchadzacCheckedListBox.MultiColumn = True
         Me.uchadzacCheckedListBox.Name = "uchadzacCheckedListBox"
-        Me.uchadzacCheckedListBox.Size = New System.Drawing.Size(1040, 64)
+        Me.uchadzacCheckedListBox.Size = New System.Drawing.Size(1040, 19)
         Me.uchadzacCheckedListBox.TabIndex = 72
         '
         'vlastnikCheckedListBox
         '
         Me.vlastnikCheckedListBox.FormattingEnabled = True
         Me.vlastnikCheckedListBox.Location = New System.Drawing.Point(15, 624)
+        Me.vlastnikCheckedListBox.MultiColumn = True
         Me.vlastnikCheckedListBox.Name = "vlastnikCheckedListBox"
-        Me.vlastnikCheckedListBox.Size = New System.Drawing.Size(1029, 94)
+        Me.vlastnikCheckedListBox.Size = New System.Drawing.Size(1029, 34)
         Me.vlastnikCheckedListBox.TabIndex = 73
         '
         'Button1
