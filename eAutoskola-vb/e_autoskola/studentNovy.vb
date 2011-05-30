@@ -166,7 +166,7 @@
         'MsgBox(values)
         Dim itemChecked As Object
         For Each itemChecked In uchadzacCheckedListBox.CheckedItems
-            MsgBox(uchadzacCheckedListBox.Items.)
+            MsgBox(itemChecked.ToString)
         Next
 
 
